@@ -28,7 +28,6 @@ const HeaderLogo = () => {
     }
   `)
 
-  console.log(logoStyles)
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
