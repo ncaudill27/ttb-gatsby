@@ -2,26 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-function MenuLink({to, children, handleClick}) {
+import styles from './menuLink.module.css'
 
-  let color = window.location.pathname === to ? 'active' : '';
+const MenuLink = ({to, children}) => {
+
+  let active = window.location.pathname === to
+
+  console.log(active);
   
   if (!to) return null;
   return (
-      <Link to={to}>
-        <div onClick={handleClick}>
-          {children}
-        </div>
+    <div
+      role='menuitemradio'
+      aria-checked={active}
+      className={`${styles.menuItem} ${ active ? styles.active : styles.inactive }`}
+      tabIndex={0}  
+    >
+      <Link to={to} className={styles.link}>
+        {children}
       </Link>
+    </div>
   );
 }
 
-MenuLink.PropTypes = {
-  to: PropTypes.string,
-}
-
-MenuLink.defaultProps = {
-  to: '',
-}
+MenuLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
+}  
 
 export default MenuLink;

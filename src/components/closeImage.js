@@ -2,14 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import logoStyles from './headerLogo.module.css';
+import styles from './closeImage.module.css'
 
-const HeaderLogo = () => {
+const CloseImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "ttb-logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "close.png" }) {
         childImageSharp {
-          fluid(maxWidth: 290) {
+          fluid(maxWidth: 35) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -21,7 +21,7 @@ const HeaderLogo = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img className={logoStyles.logo} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img styles={styles.close} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
-export default HeaderLogo;
+export default CloseImage

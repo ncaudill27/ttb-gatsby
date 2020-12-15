@@ -24,8 +24,6 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div id='outer-container'>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,
@@ -33,7 +31,8 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main id='page-wrap'>{children}</main>
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main>{children}</main>
         <footer style={{
           marginTop: `2rem`
         }}>
@@ -42,7 +41,6 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </div>
   )
 }
 
