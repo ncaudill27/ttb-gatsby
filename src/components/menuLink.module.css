@@ -17,10 +17,10 @@
 }
 
 .inactive {
-  background-color: var(--color-sec-dark);
+  background-color: var(--sec-dark);
 }
 
 .active {
   
-  background-color: var(--color-carrot);
+  background-color: var(--carrot);
 }

@@ -1,11 +1,10 @@
 :root {
-  --color-pri-light: #faf2eb;
-  --color-pri-med: #f1dfcd;
-  --color-pri-dark: #f4dccd;
-  --color-sec-light: #b9db97;
-  --color-sec-dark: #adc9b8;
-  --color-carrot: #ffb548;
-  --color-grapefruit: #ca6d4f;
-  --color-beet: #e577cb;
-  --color-blueberry: #416ba9;
+  --pri-med: #f1dfcd;
+  --pri-dark: #f4dccd;
+  --sec-light: #b9db97;
+  --sec-dark: #adc9b8;
+  --carrot: #ffb548;
+  --grapefruit: #ca6d4f;
+  --beet: #e577cb;
+  --blueberry: #416ba9;
 }
