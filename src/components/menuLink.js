@@ -7,8 +7,6 @@ import styles from './menuLink.module.css'
 const MenuLink = ({to, children}) => {
 
   let active = window.location.pathname === to
-
-  console.log(active);
   
   if (!to) return null;
   return (
