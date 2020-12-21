@@ -21,8 +21,8 @@ const HeaderLogo = ({handleClick}) => {
     return <div>Picture not found</div>
   }
 
-  return <div onClick={handleClick}>
-    <Img className={styles.button} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <div className={styles.button} onClick={handleClick} tabIndex={0} role='button'>
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
   </div>
 }
 

@@ -1,0 +1,12 @@
+@import '../styles/custom-properties.css';
+
+.header {
+  width: 50%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  /* background-color: var(--color-sec-light); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

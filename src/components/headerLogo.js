@@ -21,7 +21,9 @@ const HeaderLogo = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img className={logoStyles.logo} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <div className={logoStyles.logo}>
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  </div>
 }
 
 export default HeaderLogo;
