@@ -1,0 +1,7 @@
+.section {
+  padding: 2rem 1rem;
+}
+
+.section:first-child {
+  padding-top: 6rem;
+}
