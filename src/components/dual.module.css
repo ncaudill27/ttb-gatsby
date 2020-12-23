@@ -1,0 +1,26 @@
+.dual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first,
+.second {
+  max-width: 515px;
+}
+
+.second {
+  margin-top: 2rem;
+}
+
+@media (min-width: 700px) {
+  .dual {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .second {
+    margin-top: 0;
+  }
+}
