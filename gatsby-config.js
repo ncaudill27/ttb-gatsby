@@ -1,3 +1,9 @@
+const breakpoints = {
+  sm: '(max-width: 700px)',
+  md: '(max-width: 1232px)',
+  l: '(min-width: 1233px)'
+}
+
 module.exports = {
   siteMetadata: {
     title: `The Tiny Beet`,
@@ -15,6 +21,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-breakpoints`,
+      options: {
+        queries: breakpoints
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

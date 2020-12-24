@@ -9,9 +9,9 @@ const BackgroundContainer = ({className, children}) => {
   const data = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "circles-vert-alt.png" }) {
+        mobile: file(relativePath: { eq: "circles-vert-alt.png" }) {
           childImageSharp {
-            fluid( maxWidth: 1920) {
+            fluid( maxWidth: 700) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -20,14 +20,14 @@ const BackgroundContainer = ({className, children}) => {
     `
   )
 
-  if (!data?.desktop?.childImageSharp?.fluid) {
+  if (!data?.mobile?.childImageSharp?.fluid) {
     return <div>{children}</div>
   }
   
   return (
     <BackgroundImage
       Tag='section'
-      fluid={data.desktop.childImageSharp.fluid}
+      fluid={data.mobile.childImageSharp.fluid}
       backgroundColor={`var(--pri-light)`}
       className={className}
     >
