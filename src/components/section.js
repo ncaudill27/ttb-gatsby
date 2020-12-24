@@ -10,7 +10,7 @@ const Section = React.forwardRef( ({className, color, children, ...props}, ref) 
   return (
     <section
       ref={ref}
-      className={styles.section}
+      className={className || styles.section}
       style={color}
       {...props}
     >
