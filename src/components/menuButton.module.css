@@ -5,4 +5,5 @@
   right: 1rem;
   top: 22px;
   cursor: pointer;
+  z-index: 1;
 }
