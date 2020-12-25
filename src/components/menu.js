@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
-// import useScroll from '../hooks/useScroll'
 
 import MenuLink from './menuLink'
-import CloseImage from './closeImage'
 
 import styles from './menu.module.css'
 
@@ -17,7 +14,6 @@ const Menu = ({open, toggleOpen}) => {
       onClick={toggleOpen}
       onKeyDown={toggleOpen}
     >
-      <CloseImage />
       <MenuLink to='/'>HOME</MenuLink>
       <MenuLink to='/about'>ABOUT</MenuLink>
       <MenuLink to='/contact'>CONTACT</MenuLink>

@@ -8,7 +8,7 @@ import Navigation from './navigation'
 const Header = () => (
   <header>
     <Link to="/">
-      <HeaderLogo tabIndex={0} role='button'  />
+      <HeaderLogo />
     </Link>
     <Navigation />
   </header>
