@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 import '../../styles/custom-properties.css'
 
-const BackgroundContainer = ({className, children}) => {
+const BackgroundContainer = ({className, children, color}) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -28,7 +28,7 @@ const BackgroundContainer = ({className, children}) => {
     <BackgroundImage
       Tag='section'
       fluid={data.mobile.childImageSharp.fluid}
-      backgroundColor={`var(--pri-light)`}
+      backgroundColor={`var(--${color})`}
       className={className}
     >
       {children}

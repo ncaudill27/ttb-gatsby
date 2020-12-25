@@ -11,7 +11,7 @@ const Intro = () => {
   const breakpoints = useBreakpoint()
 
   return (
-    <CirclesBackground>
+    <CirclesBackground color='pri-light'>
       <Section className={styles.landing}>
           <h1 className={styles.header}>
             Welcome 

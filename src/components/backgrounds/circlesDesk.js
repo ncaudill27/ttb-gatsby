@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 import '../../styles/custom-properties.css'
 
-const BackgroundContainer = ({className, children}) => {
+const BackgroundContainer = ({className, children, color}) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -23,12 +23,12 @@ const BackgroundContainer = ({className, children}) => {
   if (!data?.desktop?.childImageSharp?.fluid) {
     return <div>{children}</div>
   }
-  
+
   return (
     <BackgroundImage
       Tag='section'
       fluid={data.desktop.childImageSharp.fluid}
-      backgroundColor={`var(--pri-light)`}
+      backgroundColor={`var(--${color})`}
       className={className}
     >
       {children}
