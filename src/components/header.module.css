@@ -1,12 +1,18 @@
 @import '../styles/custom-properties.css';
 
 .header {
-  width: 50%;
-  height: 4rem;
+  width: 100%;
+  height: fit-content;
   position: fixed;
   top: 0;
-  background-color: var(--sec-light);
+  z-index: 1;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  padding: 1rem;
+  justify-content: flex-end;
   align-items: center;
 }

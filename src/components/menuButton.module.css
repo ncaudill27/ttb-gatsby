@@ -1,9 +1,6 @@
 .button {
-  position: fixed;
   width: 10%;
   max-width: 40px;
-  right: 1rem;
-  top: 22px;
   cursor: pointer;
   z-index: 1;
 }

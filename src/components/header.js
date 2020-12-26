@@ -5,12 +5,16 @@ import PropTypes from "prop-types"
 import HeaderLogo from './headerLogo'
 import Navigation from './navigation'
 
+import styles from './header.module.css'
+
 const Header = () => (
-  <header>
-    <Link to="/">
-      <HeaderLogo />
-    </Link>
-    <Navigation />
+  <header className={styles.header}>
+    <div className={styles.wrapper}>
+      <Link to="/" >
+        <HeaderLogo />
+      </Link>
+      <Navigation />
+    </div>
   </header>
 )
 
