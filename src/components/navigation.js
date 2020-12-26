@@ -1,47 +1,55 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import Menu from './menu'
 import MenuButton from './menuButton'
+import Navlink from './navlink'
 
 const Navigation = () => {
 
-  // const [seconds, setSeconds] = useState(0)
   const [isOpen, setOpen] = useState(false)
-
   const toggleOpen = () => setOpen( prev => !prev )
 
-  // useEffect( () => {
-  //   const timer = setInterval( () => {
-  //     setSeconds( seconds => seconds + 1 );
-  //   }, 1000);
-  //   return () => clearInterval(timer);
-  // }, [seconds]);
+  const breakpoints = useBreakpoint()
 
-  // const [count, setCount] = useState(0);
-
-  // const [isUpScroll, scrollTop] = useScroll();
-
-  // useEffect( () => {
-  //   const removeGlow = () => {
-  //       // menu.className.replace(/ down/g, '');
-  //   }
-
-  //   if ( (isUpScroll || scrollTop < 30) ) {
-  //     menu.style.top = '27px';
-  //     if (seconds > 5) addGlow();
-  //   } else {
-  //     menu.style.top = '-30px';
-  //     removeGlow();
-  //   }
-
-  // }, [count, seconds, isUpScroll, scrollTop]);
-
-  return (
-    <>
-      <MenuButton handleClick={toggleOpen} />
-      <Menu open={isOpen} toggleOpen={toggleOpen} />
-    </>
+  const data = useStaticQuery(
+    graphql`
+      query MyQuery {
+        allSitePage(filter: {path: {nin: ["/dev-404-page/", "/", "/404/", "/404.html"]}}) {
+          nodes {
+            path
+          }
+        }
+      }
+    `
   )
+  // paths query for possible dynamic links
+
+
+  if (breakpoints.sm) {
+    return (
+      <>
+        <MenuButton handleClick={toggleOpen} />
+        <Menu open={isOpen} toggleOpen={toggleOpen} />
+      </>
+    )
+  }
+  else if (breakpoints.md || breakpoints.l) {
+
+    if (!data?.allSitePage?.nodes) return null
+
+    return (
+      <>
+        {
+          data.allSitePage.nodes.map( ({path}) => {
+            return <Navlink path={path} />
+          })
+        }
+      </>
+    )
+  }
+  else return null
 }
 
 export default Navigation
