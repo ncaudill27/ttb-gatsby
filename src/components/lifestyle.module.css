@@ -1,0 +1,10 @@
+.intro {
+  max-width: 615px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  composes: dual from './dual.module.css';
+  max-width: 900px;
+  margin: 0 auto;
+}
