@@ -4,11 +4,13 @@ import { Link } from 'gatsby'
 
 import styles from './menuLink.module.css'
 
-const MenuLink = ({to, children}) => {
+const MenuLink = ({path}) => {
 
-  let active = window.location.pathname === to
+  const active = window.location.pathname === path
+  const copy = path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
   
-  if (!to) return null;
+  if (!path) return null;
+
   return (
     <div
       role='menuitemradio'
@@ -16,16 +18,15 @@ const MenuLink = ({to, children}) => {
       className={`${styles.menuItem} ${ active ? styles.active : styles.inactive }`}
       tabIndex={0}  
     >
-      <Link to={to} className={styles.link}>
-        {children}
+      <Link to={path} className={styles.link}>
+        {copy}
       </Link>
     </div>
   );
 }
 
 MenuLink.propTypes = {
-  to: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired
 }  
 
 export default MenuLink;

@@ -24,21 +24,18 @@ const Navigation = () => {
       }
     `
   )
-  // paths query for possible dynamic links
 
+  // escape if no data retrieved
+  if (!data?.allSitePage?.nodes) return null
 
   if (breakpoints.sm) {
     return (
       <>
         <MenuButton handleClick={toggleOpen} />
-        <Menu open={isOpen} toggleOpen={toggleOpen} />
+        <Menu open={isOpen} toggleOpen={toggleOpen} routes={data.allSitePage.nodes} />
       </>
     )
-  }
-  else if (breakpoints.md || breakpoints.l) {
-
-    if (!data?.allSitePage?.nodes) return null
-
+  } else if (breakpoints.md || breakpoints.l) {
     return (
       <>
         {

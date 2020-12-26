@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import MenuLink from './menuLink'
 
 import styles from './menu.module.css'
 
-const Menu = ({open, toggleOpen}) => {
+const Menu = ({open, toggleOpen, routes}) => {
 
   return (
     <div
@@ -14,11 +15,20 @@ const Menu = ({open, toggleOpen}) => {
       onClick={toggleOpen}
       onKeyDown={toggleOpen}
     >
-      <MenuLink to='/'>HOME</MenuLink>
-      <MenuLink to='/about'>ABOUT</MenuLink>
-      <MenuLink to='/contact'>CONTACT</MenuLink>
+      <MenuLink path='/' />
+      {
+        routes.map( ({path}) => {
+          return <MenuLink path={path} />
+        })
+      }
     </div>
   )
+}
+
+Menu.propTypes = {
+  open: PropTypes.bool.isRequired,
+  toggleOpen: PropTypes.func.isRequired,
+  routes: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Menu
