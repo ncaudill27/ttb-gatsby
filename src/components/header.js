@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-import HeaderLogo from './headerLogo'
+import HeaderLogo from './images/headerLogo'
 import Navigation from './navigation'
 
 import styles from './header.module.css'
