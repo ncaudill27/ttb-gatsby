@@ -15,7 +15,7 @@ const Lifestyle = () => (
         <p>We focus on our patients physical and mental well-being while looking for long term development of health for them to carry on into adulthood.</p>
         <p>One of our goals is for our kids learn healthy habits and carry them into adulthood—avoiding chronic illnesses that have become the norm in our world.</p>
       </div>
-      <Dual className={styles.wrapper}>
+      <Dual>
         <div first>
           <h2>Lifestyle Medicine is</h2>
           <ul>

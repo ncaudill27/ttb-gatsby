@@ -19,6 +19,8 @@
   .dual {
     flex-direction: row;
     align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .first,
