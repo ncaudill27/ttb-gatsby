@@ -2,8 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import styles from './chiaVert.module.css'
-
 const ChiaDesktop = (props) => {
   const data = useStaticQuery(graphql`
     query {
@@ -22,7 +20,7 @@ const ChiaDesktop = (props) => {
   }
 
   return (
-    <div className={styles.img} {...props}>
+    <div {...props}>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
     </div>
   )

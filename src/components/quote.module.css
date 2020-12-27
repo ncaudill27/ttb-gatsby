@@ -1,0 +1,15 @@
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 455px;
+  margin: 0 auto;
+}
+
+.by {
+  text-align: right;
+  margin-right: 2rem;
+}

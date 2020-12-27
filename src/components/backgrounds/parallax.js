@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import useBackground from '../../hooks/useBackground'
+import useParallax from '../../hooks/useParallax'
 
 import ChiaBackground from '../backgrounds/chia'
 
@@ -14,7 +14,7 @@ const ParallaxBackground = React.forwardRef( (props, ref) => (
 function ParallaxContainer({children}) {
   const sectionEl = useRef(null)
 
-  const backgroundStyle = useBackground(sectionEl)
+  const backgroundStyle = useParallax(sectionEl)
 
   return (
     <section className={styles.container}>
