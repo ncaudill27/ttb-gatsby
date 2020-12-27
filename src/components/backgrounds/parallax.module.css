@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.content {
+  composes: section from '../section.module.css';
+  width: 100%;
+  z-index: -2;
+}
