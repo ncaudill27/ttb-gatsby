@@ -6,7 +6,7 @@
 }
 
 .footer h3 {
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
 
 .wrapper {
@@ -28,11 +28,17 @@
 .icons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
 }
 
-.icons {
+.icon {
   width: 45px;
   height: 45px;
+}
+
+.icon:not(:first-child) {
+  margin-left: 0.5rem ;
 }
 
 .end > * {
@@ -40,7 +46,7 @@
   font-size: 0.85rem;
 }
 
-@media (min-width: var(--desktop)) {
+@media (min-width: 1233px) {
   .wrapper {
     margin: 0 auto;
   }
