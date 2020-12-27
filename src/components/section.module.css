@@ -2,6 +2,6 @@
   padding: 2rem 1rem;
 }
 
-.section:first-child {
+.section:first-of-type {
   padding-top: 6rem;
 }
