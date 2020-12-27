@@ -12,16 +12,16 @@ const MenuLink = ({path}) => {
   if (!path) return null;
 
   return (
-    <div
-      role='menuitemradio'
-      aria-checked={active}
-      className={`${styles.menuItem} ${ active ? styles.active : styles.inactive }`}
-      tabIndex={0}  
-    >
-      <Link to={path} className={styles.link}>
-        {copy}
-      </Link>
-    </div>
+    <Link to={path} className={styles.link}>
+      <div
+        role='menuitemradio'
+        aria-checked={active}
+        className={`${styles.menuItem} ${ active ? styles.active : styles.inactive }`}
+        tabIndex={0}  
+      >
+          {copy}
+      </div>
+    </Link>
   );
 }
 
