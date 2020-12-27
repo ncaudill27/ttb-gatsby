@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import useScroll from './useScroll'
 
 
 function useParallax(ref) {
-
-  const breakpoints = useBreakpoint()
 
   const screenHeight = window.innerHeight
   const [, scrollTop] = useScroll()
@@ -29,21 +26,11 @@ function useParallax(ref) {
     setImgTop(`${-50 - top / 9}px`)
 
     if (elInView) {
-      // position vertically for portrait
       setBackgroundStyle({
-        height: `${screenHeight}px`,
-        maxHeight: `${screenHeight}px`,
+        maxWidth: `${width}px`,
+        width: `${width}px`,
         top: `${imgTop}`,
       })
-
-      if (breakpoints.sm) {
-        // position horizontally for landscape
-        setBackgroundStyle({
-          maxWidth: `${width}px`,
-          width: `${width}px`,
-          top: `${imgTop}`,
-        })
-      }
     } else {
       setBackgroundStyle({
         display: 'none'

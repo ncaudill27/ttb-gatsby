@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const ChiaTablet = (props) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "chia-seeds-vert.png" }) {
+      placeholderImage: file(relativePath: { eq: "chia-seeds.png" }) {
         childImageSharp {
           fluid(maxWidth: 1232) {
             ...GatsbyImageSharpFluid
