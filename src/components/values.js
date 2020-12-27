@@ -10,7 +10,7 @@ import styles from './values.module.css'
 const Values = () => (
   <CirclesBackground color='sec-light'>
     <Section >
-      <h1>Core Values</h1>
+      <h1 className={styles.title}>Core Values</h1>
       <div className={styles.flex}>
         <div className={styles.item}>
           <BeetIcon className={styles.icon} />
