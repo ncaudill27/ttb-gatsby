@@ -26,4 +26,4 @@ const ChiaVert = (props) => {
   )
 }
 
-export default ChiaVert;
+export default ChiaVert

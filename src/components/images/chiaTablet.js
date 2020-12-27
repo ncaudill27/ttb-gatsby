@@ -26,4 +26,4 @@ const ChiaTablet = (props) => {
   )
 }
 
-export default ChiaTablet;
+export default ChiaTablet

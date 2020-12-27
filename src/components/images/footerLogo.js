@@ -2,12 +2,12 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const ChiaDesktop = (props) => {
+const FooterLogo = (props) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "chia-seeds-vert.png" }) {
+      placeholderImage: file(relativePath: { eq: "footer-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 2100) {
+          fluid(maxWidth: 150) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,4 +26,4 @@ const ChiaDesktop = (props) => {
   )
 }
 
-export default ChiaDesktop
+export default FooterLogo
