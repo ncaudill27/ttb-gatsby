@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import BackgroundImage from 'gatsby-background-image'
 
+import styles from '../section.module.css'
 import '../../styles/custom-properties.css'
 
 const BackgroundContainer = ({className, children, color}) => {
@@ -11,7 +12,7 @@ const BackgroundContainer = ({className, children, color}) => {
       query {
         desktop: file(relativePath: { eq: "circles.png" }) {
           childImageSharp {
-            fluid( maxWidth: 1920) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -29,7 +30,7 @@ const BackgroundContainer = ({className, children, color}) => {
       Tag='section'
       fluid={data.desktop.childImageSharp.fluid}
       backgroundColor={`var(--${color})`}
-      className={className}
+      className={className || styles.section}
     >
       {children}
     </BackgroundImage>

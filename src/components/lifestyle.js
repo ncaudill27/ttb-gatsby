@@ -1,14 +1,12 @@
 import React from 'react'
 
-import CirclesBackground from './backgrounds/circles'
 import Section from './section'
 import Dual from './dual'
 
 import styles from './lifestyle.module.css'
 
 const Lifestyle = () => (
-  <CirclesBackground color='sec-light'>
-    <Section>
+    <Section color='sec-light' background>
       <div className={styles.intro}>
         <h1>Lifestyle Medicine</h1>
         <p>The Tiny Beet strives for a comprehensive approach towards our patients health. Guided by the teachings of Lifestyle Medicine.</p>
@@ -35,7 +33,6 @@ const Lifestyle = () => (
         </div>
       </Dual>
     </Section>
-  </CirclesBackground>
 )
 
 export default Lifestyle

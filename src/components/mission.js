@@ -2,12 +2,10 @@ import React from 'react'
 
 import Section from './section'
 import Dual from './dual'
-import CirclesBackground from './backgrounds/circles'
 import Watergirl from './images/watergirl'
 
 const Mission = () => (
-  <CirclesBackground color='pri-med'>
-    <Section>
+    <Section color='pri-med' background>
       <Dual>
         <div first>
           <h1>Our Mission</h1>
@@ -19,7 +17,6 @@ const Mission = () => (
         <Watergirl second />
       </Dual>
     </Section>
-  </CirclesBackground>
 )
 
 export default Mission

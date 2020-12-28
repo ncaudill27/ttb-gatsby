@@ -2,7 +2,6 @@ import React from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import Section from './section'
-import CirclesBackground from './backgrounds/circles'
 
 import styles from './intro.module.css'
 
@@ -11,8 +10,7 @@ const Intro = () => {
   const breakpoints = useBreakpoint()
 
   return (
-    <CirclesBackground color='pri-light'>
-      <Section className={styles.landing}>
+      <Section className={styles.landing} color='pri-light' background>
           <h1 className={styles.header}>
             Welcome 
             {breakpoints.sm ? <br /> : ' '}
@@ -34,7 +32,6 @@ const Intro = () => {
             </p>
           </div>
       </Section>
-    </CirclesBackground>
   )
 }
 

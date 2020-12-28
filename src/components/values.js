@@ -1,15 +1,13 @@
 import React from 'react'
 
 import Section from './section'
-import CirclesBackground from './backgrounds/circles'
 
 import BeetIcon from './images/beet'
 
 import styles from './values.module.css'
 
 const Values = () => (
-  <CirclesBackground color='sec-light'>
-    <Section >
+    <Section color='sec-light' background>
       <h1 className={styles.title}>Core Values</h1>
       <div className={styles.flex}>
         <div className={styles.item}>
@@ -35,7 +33,6 @@ const Values = () => (
         </div>
       </div>
     </Section>
-  </CirclesBackground>
 )
 
 export default Values
