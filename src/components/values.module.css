@@ -3,7 +3,6 @@
 }
 
 .flex {
-  composes: section from './section.module.css';
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
