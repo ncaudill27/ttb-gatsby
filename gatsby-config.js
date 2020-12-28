@@ -28,12 +28,19 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          `Montserrat\:200,300,400,600`,
-          `Tenor Sans`
-        ]
+        fonts: {
+          google: [
+            {
+              family: 'Tenor Sans',
+            },
+            {
+              family: 'Montserrat',
+              variants: ['400', '600'],
+            },
+          ],
+        },
       },
     },
     {
