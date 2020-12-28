@@ -1,7 +1,7 @@
 import React from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
-import ChiaVert from '../images/chiaVert'
+import ChiaMobile from '../images/chiaMobile'
 import ChiaTablet from '../images/chiaTablet'
 import ChiaDesktop from '../images/chiaDesktop'
 
@@ -10,7 +10,7 @@ const ChiaBackground = (props) => {
   const breakpoints = useBreakpoint()
 
   if (breakpoints.sm) {
-    return <ChiaVert {...props} />
+    return <ChiaMobile {...props} />
   }
   else if (breakpoints.md) {
     return <ChiaTablet {...props} />

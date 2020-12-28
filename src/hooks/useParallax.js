@@ -23,7 +23,7 @@ function useParallax(ref) {
     const elInView = topInView || botInView
 
     // set updated screen changes
-    setImgTop(`${-50 - top / 9}px`)
+    setImgTop(`${15 - top / 9}px`)
 
     if (elInView) {
       setBackgroundStyle({
