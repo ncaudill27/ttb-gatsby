@@ -2,12 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import OfficeInfo from '../components/office'
 
 const ContactPage = () => (
   <Layout>
     <SEO title='Contact' />
-    <h1>Contact Page</h1>
-    <p>Test contact page</p>
+    <OfficeInfo />
   </Layout>
 )
 
