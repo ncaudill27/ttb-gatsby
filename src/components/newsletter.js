@@ -4,6 +4,7 @@ import Section from './section'
 import IconCopy from './iconCopy'
 
 import styles from './newsletter.module.css'
+import Button from './button'
 
 const Newsletter = () => (
   <Section color='pri-dark' background>
@@ -23,7 +24,7 @@ const Newsletter = () => (
           description="This is the address again because i'm out of fake content! 123 Address, Wilmington Island, GA"
         />
       </div>
-      {/* <Button className='sm-tmg' onClick={toggleShown} outlined>SUBSCRIBE</Button> */}
+      <Button />
     </div>
   </Section>
 )
