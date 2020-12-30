@@ -36,7 +36,6 @@ function addMarker(map, link) {
   const marker = new window.google.maps.Marker({
     map,
     position: link.coords,
-    // label: `1`,
     title: link.title
   })
 

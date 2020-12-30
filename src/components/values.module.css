@@ -7,20 +7,3 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.item {
-  display: flex;
-  padding: 1rem 0;
-  align-items: center;
-}
-
-.icon {
-  flex: 1 3 25%;
-}
-
-.copy {
-  max-width: 353px;
-}
-
-.copy h3 { margin-bottom: 0.5rem; }
-.copy p { margin-bottom: 0; }
