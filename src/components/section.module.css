@@ -3,5 +3,11 @@
 }
 
 .section:first-of-type {
-  padding-top: 6rem;
+  padding-top: 8rem;
+}
+
+@media (min-width: 1233px) {
+  .section {
+    padding: 4rem 1rem;
+  }
 }

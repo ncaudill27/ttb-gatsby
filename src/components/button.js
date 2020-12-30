@@ -3,17 +3,12 @@ import classNames from 'classnames'
 
 import styles from './button.module.css'
 
-const Button = ({className, copy, outlined, ...props}) => {
+const Button = ({className, copy, ...props}) => {
 
   const [status, setStatus] = useState(classNames(className))
 
   const active = () => setStatus(classNames(className, styles.active))
   const inactive = () => setStatus(classNames(className))
-
-  useEffect(() => {
-    if (outlined) setStatus(classNames(className, styles.outlined))
-  }, [])
-  
   
   return (
     <button
@@ -29,7 +24,6 @@ const Button = ({className, copy, outlined, ...props}) => {
 
 Button.defaultProps = {
   className: styles.button,
-  outlined: false,
   copy: 'button'
 }
 

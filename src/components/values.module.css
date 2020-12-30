@@ -6,4 +6,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  max-width: 869px;
+  margin: 0 auto;
 }

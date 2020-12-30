@@ -1,39 +1,22 @@
 @import '../styles/custom-properties.css';
 
 .button {
+  margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 600;
   width: 100%;
-  border: none;
   padding: 1rem;
-  background-color: var(--grapefruit);
-  color: #fff;
   border-radius: 40px;
-  opacity: 0.9;
-  transition: all 10ms ;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--grapefruit);
+  border: 3px solid var(--grapefruit);
+  cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  cursor: pointer;
-  opacity: 1;
-  border-radius: 40px;
+  background-color: var(--grapefruit);
+  color: #fff;
   border-color: var(--grapefruit);
   outline: none;
-}
-
-.outlined {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--grapefruit);
-  border: 2px solid var(--grapefruit);
-}
-
-.outlined:hover,
-.outlined:focus {
-  box-shadow: 0 0 4px 2px var(--grapefruit);
-    /* -2px -1px 1px 1px var(--grapefruit) inset,
-    2px 1px 1px 1px var(--grapefruit) inset,
-    -2px 1px 1px 1px var(--grapefruit) inset,
-    2px -1px 1px 1px var(--grapefruit) inset; */
-  opacity: 1;
 }
