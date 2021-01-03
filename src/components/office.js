@@ -15,7 +15,7 @@ const OfficeInfo = () => (
       <h3>EMAIL</h3>
       <p>thetinybeet@mailchimp.com</p>
       <h3>ADDRESS</h3>
-      <p>123 Address, Wilmington Island, GA</p>
+      <p>51 Johnny Mercer Blvd.<br/>Wilmington Island, GA 31400</p>
     </div>
   </Section>
 )

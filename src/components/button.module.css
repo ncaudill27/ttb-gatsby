@@ -11,12 +11,29 @@
   color: var(--grapefruit);
   border: 3px solid var(--grapefruit);
   cursor: pointer;
+  transition: 
+    transform ease-in-out 100ms,
+    box-shadow ease-in 250ms;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   background-color: var(--grapefruit);
   color: #fff;
-  border-color: var(--grapefruit);
   outline: none;
+}
+
+.button:focus {
+  outline: none;
+  /* box-shadow: 0 0 2px 2px var(--grapefruit); */
+}
+
+.active {
+  transform: scale(0.95);
+  border-color: #914c35;
+  background: 
+    linear-gradient(
+      to left,
+      #914c35,
+      #914c35
+    );
 }

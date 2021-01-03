@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 
 import styles from './button.module.css'
@@ -7,13 +7,17 @@ const Button = ({className, copy, ...props}) => {
 
   const [status, setStatus] = useState(classNames(className))
 
-  const active = () => setStatus(classNames(className, styles.active))
-  const inactive = () => setStatus(classNames(className))
+  const setActive = () => setStatus(classNames(className, styles.active))
+  const setInactive = () => setStatus(classNames(className))
+
+  const handleClick = () => {
+    setActive()
+    setTimeout(setInactive, 100)
+  }
   
   return (
     <button
-      onMouseDown={active}
-      onMouseUp={inactive}
+      onClick={handleClick}
       className={status}
       {...props}
     >
