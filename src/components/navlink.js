@@ -8,7 +8,9 @@ const Navlink = ({path}) => {
 
   return (
     <Link to={path} className={styles.link} role='button' tabIndex={0}>
-      {path.replace(/\//g, '').toUpperCase()}
+      <div className={styles.line}>
+        {path.replace(/\//g, '').toUpperCase()}
+      </div>
     </Link>
   )
 }

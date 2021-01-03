@@ -1,6 +1,24 @@
 .link {
   color: black;
+  height: 1.5em;
   text-decoration: none;
   padding: 0 0.5em;
   cursor: pointer;
+}
+
+.line {
+  position: relative;
+}
+
+.line:after {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.line:hover {
+  /* height: calc(1em + 1px); */
+  border-bottom: 1px solid black;
 }
