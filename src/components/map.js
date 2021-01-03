@@ -25,7 +25,7 @@ export default function Map({ options, onMount, className, onMountProps }) {
   
   // if (typeof window !== 'undefined') return null
   return (
-    <div
+    <section
       {...{ ref, className }}
     />
   )

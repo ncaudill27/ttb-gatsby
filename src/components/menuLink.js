@@ -12,7 +12,7 @@ const MenuLink = ({path}) => {
     if (typeof window !== 'undefined') {
       setIsActive(window.location.pathname === path)
     }
-  }, [])
+  }, [path])
 
   const copy = path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
   
