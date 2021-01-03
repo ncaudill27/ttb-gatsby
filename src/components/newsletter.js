@@ -24,7 +24,7 @@ const Newsletter = () => (
           description="This is the address again because i'm out of fake content! 123 Address, Wilmington Island, GA"
         />
       </div>
-      <Button outlined />
+      <Button copy='subscribe' />
     </div>
   </Section>
 )
