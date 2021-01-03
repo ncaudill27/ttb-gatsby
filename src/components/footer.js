@@ -12,26 +12,26 @@ function Footer() {
       <div className={styles.wrapper}>
         <FooterLogo className={styles.logo} />
         <div className={styles.info}>
-          <div className={styles.item}>
+          <div>
             <h3>ADDRESS</h3>
             <p>51 Johnny Mercer Blvd.<br/>Wilmington Island, GA 31400</p>
           </div>
-          <div className={styles.item}>
+          <div>
             <h3>SOCIAL</h3>
             <div className={styles.icons}>
               <FB className={styles.icon} />
               <Insta className={styles.icon} />
             </div>
           </div>
-          <div className={styles.item}>
+          <div>
             <h3>PHONE</h3>
             <p>(912) 123-4567</p>
           </div>
-          <div className={styles.item}>
+          <div>
             <h3>EMAIL</h3>
             <p>thetinybeet@mailchimp.com</p>
           </div>
-          <div className={styles.item}>
+          <div>
             <h3>HOURS</h3>
             <p>Monday - Friday, 9am - 4pm</p>
           </div>
@@ -45,4 +45,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer 
