@@ -11,6 +11,13 @@ const Navigation = () => {
   const [isOpen, setOpen] = useState(false)
   const toggleOpen = () => setOpen( prev => !prev )
 
+  const handleKeyDown = e => {
+    // if enter key
+    if (e.keyCode === 13) {
+      toggleOpen()
+    }
+  }
+
   const breakpoints = useBreakpoint()
 
   const data = useStaticQuery(
@@ -31,8 +38,15 @@ const Navigation = () => {
   if (breakpoints.sm) {
     return (
       <>
-        <MenuButton handleClick={toggleOpen} />
-        <Menu open={isOpen} toggleOpen={toggleOpen} routes={data.allSitePage.nodes} />
+        <MenuButton
+          handleClick={toggleOpen}
+          handleKeyDown={handleKeyDown}
+        />
+        <Menu
+          open={isOpen}
+          toggleOpen={toggleOpen}
+          routes={data.allSitePage.nodes}
+        />
       </>
     )
   } else if (breakpoints.md || breakpoints.l) {

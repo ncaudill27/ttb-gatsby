@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import styles from './menuButton.module.css';
 
-const HeaderLogo = ({handleClick}) => {
+const HeaderLogo = ({handleClick, handleKeyDown}) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "menu.png" }) {
@@ -24,6 +24,7 @@ const HeaderLogo = ({handleClick}) => {
   return (
     <div className={styles.button}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
       tabIndex={0}
       role='button'
     >

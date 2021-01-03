@@ -33,7 +33,7 @@ export default function Map({ options, onMount, className, onMountProps }) {
 
 function addMarker(map, link) {
   
-  const marker = new window.google.maps.Marker({
+  new window.google.maps.Marker({
     map,
     position: link.coords,
     title: link.title
