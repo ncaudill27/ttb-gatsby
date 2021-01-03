@@ -6,6 +6,8 @@ import styles from './menuLink.module.css'
 
 const MenuLink = ({path}) => {
 
+  if (typeof window !== 'undefined') return null
+  
   const active = window.location.pathname === path
   const copy = path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
   

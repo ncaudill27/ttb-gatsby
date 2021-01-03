@@ -5,6 +5,9 @@ function useScroll() {
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect( () => {
+
+    if (typeof window !== 'undefined') return // gatsby check
+
     const onScroll = e => {
       setScrollTop(e.target.documentElement.scrollTop);
       setScrollingUp(e.target.documentElement.scrollTop < scrollTop);

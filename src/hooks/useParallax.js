@@ -4,6 +4,8 @@ import useScroll from './useScroll'
 
 function useParallax(ref) {
 
+  if (typeof window !== 'undefined') return
+  
   const screenHeight = window.innerHeight
   const [, scrollTop] = useScroll()
   const [backgroundStyle, setBackgroundStyle] = useState(null)
