@@ -4,7 +4,7 @@ import Section from './section'
 import Dual from './dual'
 import Button from './button'
 
-import Watergirl from './images/watergirl'
+import MotherDaughter from './images/motherDaughter'
 
 import styles from './lifestyle.module.css'
 
@@ -19,7 +19,7 @@ const Lifestyle = () => (
           </p>
           <Button>Learn more about Lifestyle Medicine</Button>
         </div>
-        <Watergirl className={styles.img} second />
+        <MotherDaughter className={styles.img} second />
       </Dual>
     </Section>
 )
