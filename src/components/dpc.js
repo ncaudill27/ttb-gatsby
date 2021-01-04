@@ -5,6 +5,8 @@ import Section from './section'
 import Dual from './dual'
 import Button from './button'
 
+import styles from './dpc.module.css'
+
 const DPCButton = () => <Button>Learn more about DPC</Button>
 
 const DPC = () => {
@@ -25,7 +27,9 @@ const DPC = () => {
           { (breakpoints.md || breakpoints. l) && <DPCButton /> }
         </div>
         <div second>
-          
+          <div className={styles.grid}>
+            
+          </div>
           { breakpoints.sm && <DPCButton /> }
         </div>
       </Dual>
