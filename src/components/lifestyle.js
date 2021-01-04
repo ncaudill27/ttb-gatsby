@@ -11,7 +11,7 @@ import styles from './lifestyle.module.css'
 const Lifestyle = () => (
     <Section color='pri-dark'>
       <Dual>
-        <div className={styles.copy} second>
+        <div className={styles.copy} first>
           <h1>Why Lifestyle Medicine?</h1>
           <p>
             The Lifestyle Medicine approach is comprehensive, evidence-based and focuses on the root cause of the patient's health.
@@ -19,7 +19,7 @@ const Lifestyle = () => (
           </p>
           <Button>Learn more about Lifestyle Medicine</Button>
         </div>
-        <Watergirl className={styles.img} first />
+        <Watergirl className={styles.img} second />
       </Dual>
     </Section>
 )

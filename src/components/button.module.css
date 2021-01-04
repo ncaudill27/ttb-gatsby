@@ -1,11 +1,12 @@
 @import '../styles/custom-properties.css';
 
 .button {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  width: 70%;
-  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 336px;
+  padding: 0.5rem;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0);
   color: var(--beet);
@@ -29,11 +30,19 @@
 
 .active {
   transform: scale(0.95);
-  border-color: #914c35;
+  color: rgb(221, 221, 221);
+  border-color: #ac4694;
   background: 
     linear-gradient(
       to left,
-      #914c35,
-      #914c35
+      #ac4694,
+      #ac4694
     );
+}
+
+@media (min-width: 700px) {
+  .button {
+    width: 60%;
+    min-width: 260px;
+  }
 }

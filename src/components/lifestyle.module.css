@@ -1,3 +1,7 @@
+.img {
+  width: calc(40% - 1rem);
+}
+
 @media (max-width: 700px) {
   .img {
     width: calc(100% - 4rem);
@@ -6,12 +10,10 @@
   }
 
   .copy {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 1rem;
     order: 2;
-  }
-}
-
-@media (min-width: 701px) {
-  .img {
-    width: calc(40% - 1rem);
   }
 }
