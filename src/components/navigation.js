@@ -1,22 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import Menu from './menu'
-import MenuButton from './menuButton'
 import Navlink from './navlink'
 
 const Navigation = () => {
-
-  const [isOpen, setOpen] = useState(false)
-  const toggleOpen = () => setOpen( prev => !prev )
-
-  const handleKeyDown = e => {
-    // if enter key
-    if (e.keyCode === 13) {
-      toggleOpen()
-    }
-  }
 
   const breakpoints = useBreakpoint()
 
@@ -36,23 +25,7 @@ const Navigation = () => {
   if (!data?.allSitePage?.nodes) return null
 
   if (breakpoints.sm) {
-    return (
-      <>
-        <MenuButton
-          id='menubutton'
-          handleClick={toggleOpen}
-          handleKeyDown={handleKeyDown}
-          aria-haspopup='true'
-          aris-controls='menu'
-          aria-expanded={isOpen}
-        />
-        <Menu
-          isOpen={isOpen}
-          toggleOpen={toggleOpen}
-          routes={data.allSitePage.nodes}
-        />
-      </>
-    )
+    return <Menu routes={data.allSitePage.nodes} />
   } else if (breakpoints.md || breakpoints.l) {
     return (
       <>
