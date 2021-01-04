@@ -39,15 +39,53 @@ const DPC = () => {
         <div style={{display: 'flex', flexDirection: 'column'}} second>
           <div className={styles.container}>
             <div className={styles.grid}>
-              <BoardIcon />
-              <ClockIcon />
-              <DoctorIcon />
-              <HoopIcon />
-              <HouseIcon />
-              <PhoneIcon />
-              <SyringeIcon />
-              <TimerIcon />
-              <VeggiesIcon />
+              <div className={styles.item}>
+                <BoardIcon className={styles.icon} />
+                <p>teaching how to cook healthy meals</p>
+                <p>(with budget and timing in mind)</p>
+              </div>
+              <div className={styles.item}>
+                <ClockIcon className={styles.icon} />
+                <p>
+                  30min, blocked visits with the doctor &amp; minimal or no wait times
+                </p>
+              </div>
+              <div className={styles.item}>
+                <DoctorIcon className={styles.icon} />
+                <p>
+                  in-office visits
+                </p>
+              </div>
+              <div className={styles.item}>
+                <HoopIcon className={styles.icon} />
+                <p>
+                  sport physicals
+                </p>
+              </div>
+              <div className={styles.item}>
+                <HouseIcon className={styles.icon} />
+                <p>
+                  at home visits for new borns
+                </p>
+              </div>
+              <div className={styles.item}>
+                <PhoneIcon className={styles.icon} />
+                <p>
+                  text, phone, telemedicine
+                </p>
+              </div>
+              <div className={styles.item}>
+                <SyringeIcon className={styles.icon} />
+                <p>immunizations</p>
+              </div>
+              <div className={styles.item}>
+                <TimerIcon className={styles.icon} />
+                <p>minimal of no wait times in waiting room</p>
+              </div>
+              <div className={styles.item}>
+                <VeggiesIcon className={styles.icon} />
+                <p>Lifestyle Medicine teachings for patients or consults</p>
+              </div>
             </div>
           </div>
           { breakpoints.sm && <DPCButton /> }
