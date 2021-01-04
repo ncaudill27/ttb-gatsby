@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
@@ -14,18 +15,20 @@ const MenuLink = ({path}) => {
     }
   }, [path])
 
-  const copy = path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
+  const copy =
+    path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
+
+  const styling =
+    isActive ? classNames(styles.menuItem, styles.active) : classNames(styles.menuItem, styles.inactive)
   
   if (!path) return null;
-
   return (
-    <Link to={path} className={styles.link}>
-      <div
-        role='menuitemradio'
-        aria-checked={isActive}
-        className={`${styles.menuItem} ${ isActive ? styles.active : styles.inactive }`}
-        tabIndex={0}  
-      >
+    <Link
+      to={path}
+      className={styles.link}
+      tabIndex={-1}
+    >
+      <div className={styling} role='menuitem' tabIndex={0}>
           {copy}
       </div>
     </Link>

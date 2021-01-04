@@ -39,11 +39,15 @@ const Navigation = () => {
     return (
       <>
         <MenuButton
+          id='menubutton'
           handleClick={toggleOpen}
           handleKeyDown={handleKeyDown}
+          aria-haspopup='true'
+          aris-controls='menu'
+          aria-expanded={isOpen}
         />
         <Menu
-          open={isOpen}
+          isOpen={isOpen}
           toggleOpen={toggleOpen}
           routes={data.allSitePage.nodes}
         />
