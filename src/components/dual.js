@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './dual.module.css'
 
-const Dual = ({children, section, ...props}) => {
+const Dual = ({className, children, section, ...props}) => {
 
   const updatedChildren = () => React.Children.map(children, child => {
     if (React.isValidElement(child)) {
@@ -17,7 +17,7 @@ const Dual = ({children, section, ...props}) => {
   })
 
   return (
-    <div className={styles.dual} {...props}>
+    <div className={classNames(className, styles.dual)} {...props}>
       {updatedChildren()}
     </div>
   );

@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './button.module.css'
 
-const Button = ({className, copy, ...props}) => {
+const Button = ({className, children, ...props}) => {
 
   const [status, setStatus] = useState(classNames(className))
 
@@ -21,7 +21,7 @@ const Button = ({className, copy, ...props}) => {
       className={status}
       {...props}
     >
-        {copy.toUpperCase()}
+        {children}
     </button>
   )
 }

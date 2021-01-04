@@ -27,4 +27,4 @@ const MomImage = (props) => {
   )
 }
 
-export default MomImage;
+export default MomImage
