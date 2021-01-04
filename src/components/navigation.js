@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import Menu from './menu'
-import Navlink from './navlink'
+import Navbar from './navbar'
 
 const Navigation = () => {
 
@@ -24,19 +24,12 @@ const Navigation = () => {
   // escape if no data retrieved
   if (!data?.allSitePage?.nodes) return null
 
-  if (breakpoints.sm) {
-    return <Menu routes={data.allSitePage.nodes} />
-  } else if (breakpoints.md || breakpoints.l) {
-    return (
-      <>
-        {
-          data.allSitePage.nodes.map( ({path}) => {
-            return <Navlink path={path} />
-          })
-        }
-      </>
-    )
-  }
+  if (breakpoints.sm) return (
+    <Menu routes={data.allSitePage.nodes} />
+  )
+  else if (breakpoints.md || breakpoints.l) return (
+    <Navbar routes={data.allSitePage.nodes} />
+  )
   else return null
 }
 
