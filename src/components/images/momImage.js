@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const MomImage = (props) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "dr-rivera.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "dr-rivera.png" }) {
         childImageSharp {
           fluid(maxWidth: 515) {
             ...GatsbyImageSharpFluid
@@ -19,6 +19,7 @@ const MomImage = (props) => {
     return <div>Picture not found</div>
   }
 
+  console.log(props)
   return (
     <div {...props}>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />

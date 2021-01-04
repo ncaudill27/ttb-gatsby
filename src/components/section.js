@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import CirclesBackground from './backgrounds/circles'
 
@@ -25,7 +26,7 @@ const Section = React.forwardRef((
     return (
       <section
         ref={ref}
-        className={className || styles.section}
+        className={classNames(className, styles.section)}
         style={color}
         {...props}
       >
@@ -37,7 +38,7 @@ const Section = React.forwardRef((
 
     return (
       <CirclesBackground
-        className={className}
+        className={classNames(className, styles.section)}
         color={color}
         {...props}
       >

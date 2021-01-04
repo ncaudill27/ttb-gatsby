@@ -6,7 +6,7 @@ const Navbar = ({routes}) => (
   <>
     {
       routes.map( ({path}) => {
-        return <Navlink path={path} />
+        return <Navlink path={path} key={path} />
       })
     }
   </>

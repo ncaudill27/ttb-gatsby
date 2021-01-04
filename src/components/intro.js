@@ -2,6 +2,8 @@ import React from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import Section from './section'
+import Dual from './dual'
+import MomImage from './images/momImage'
 
 import styles from './intro.module.css'
 
@@ -11,26 +13,31 @@ const Intro = () => {
 
   return (
       <Section className={styles.landing} color='pri-light' background>
-          <h1 className={styles.header}>
-            Welcome 
-            {breakpoints.sm ? <br /> : ' '}
-            to
-            <br />
-            The Tiny Beet
-          </h1>
-          <div className={styles.intro}>
+        <Dual>
+          <div className={styles.copy} first>
+            <h1 className={styles.header}>
+              Welcome 
+              { breakpoints.sm ? <br /> : ' ' }
+              to
+              <br />
+              The Tiny Beet,
+            </h1>
             <p>
-              After being in Savannah for 12 years, many of you already know me as Dr. Yolanda Rivera-Caudill.
-              I’m ecstatic to announce that I will be opening my own practice: The Tiny Beet Lifestyle Medicine Pediatrics.
+              After 30 years of practicing peds, I’m excited to announce the founding of my practice.
             </p>
             <p>
-              At The Tiny Beet we strive to provide a comprehensive medical approach to our
-              patients—doing more than just treating illnesses.
+              A general pediatric DPC practice specializing in Lifestyle Medicine to be able to focus on the root cause of my patients’ health.
             </p>
             <p>
-              Keep scrolling to read more on how my team and I are making this possible.
+              I invite you and your family to join me in improving the health in our community, a tiny step at a time.
+            </p>
+            <p>
+              Dr. Yolanda Rivera-Caudill, MD, FAAP, DipABLM <br />
+              “The Dr. Beet” 
             </p>
           </div>
+          <MomImage className={styles.img} second />
+        </Dual>
       </Section>
   )
 }
