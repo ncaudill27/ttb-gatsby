@@ -5,6 +5,16 @@ import Section from './section'
 import Dual from './dual'
 import Button from './button'
 
+import BoardIcon from './images/iconBoard'
+import ClockIcon from './images/iconClock'
+import DoctorIcon from './images/iconDoctor'
+import HoopIcon from './images/iconHoop'
+import HouseIcon from './images/iconHouse'
+import PhoneIcon from './images/iconPhone'
+import SyringeIcon from './images/iconSyringe'
+import TimerIcon from './images/iconTimer'
+import VeggiesIcon from './images/iconVeggies'
+
 import styles from './dpc.module.css'
 
 const DPCButton = () => <Button>Learn more about DPC</Button>
@@ -24,11 +34,21 @@ const DPC = () => {
             A DPC model, similar to a concierge style, allows for this tailored experience and works as a monthly membership.
             These are some of its advantages: 
           </p>
-          { (breakpoints.md || breakpoints. l) && <DPCButton /> }
+          { !breakpoints.sm && <DPCButton /> }
         </div>
-        <div second>
-          <div className={styles.grid}>
-            
+        <div style={{display: 'flex', flexDirection: 'column'}} second>
+          <div className={styles.container}>
+            <div className={styles.grid}>
+              <BoardIcon />
+              <ClockIcon />
+              <DoctorIcon />
+              <HoopIcon />
+              <HouseIcon />
+              <PhoneIcon />
+              <SyringeIcon />
+              <TimerIcon />
+              <VeggiesIcon />
+            </div>
           </div>
           { breakpoints.sm && <DPCButton /> }
         </div>
@@ -36,3 +56,5 @@ const DPC = () => {
     </Section>
   )
 }
+
+export default DPC
