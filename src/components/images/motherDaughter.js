@@ -14,8 +14,7 @@ const MotherDaughter = (props) => {
       }
     }
   `)
-  
-  console.log(data)
+
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }

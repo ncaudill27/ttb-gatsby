@@ -17,7 +17,7 @@ import VeggiesIcon from './images/iconVeggies'
 
 import styles from './dpc.module.css'
 
-const DPCButton = () => <Button>Learn more about DPC</Button>
+const DPCButton = () => <Button color='blueberry'>Learn more about DPC</Button>
 
 const DPC = () => {
   const breakpoints = useBreakpoint()

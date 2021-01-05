@@ -1,5 +1,5 @@
 .img {
-  width: calc(40% - 1rem);
+  width: calc(40% - 0.1rem);
 }
 
 @media (max-width: 700px) {

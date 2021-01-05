@@ -1,6 +1,7 @@
 @import '../styles/custom-properties.css';
 
-.button {
+/* old button */
+/* .button {
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 auto;
@@ -15,16 +16,43 @@
   transition: 
     transform ease-in-out 100ms,
     box-shadow ease-in 250ms;
+} */
+
+.button {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 6    00;
+  line-height: 1.2;
+  width: 100%;
+  max-width: 336px;
+  min-height: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  border:  none;
+  cursor: pointer;
+  transition: 
+    transform ease-in-out 100ms,
+    box-shadow ease-in 250ms;
+  opacity: 1;
+}
+
+.button:before
+.button:after {
+  box-sizing: border-box;
 }
 
 .button:hover {
   background-color: var(--beet);
   color: #fff;
   outline: none;
+  opacity: 0.85;
 }
 
 .button:focus {
   outline: none;
+  border: 2px solid black;
+
+  box-sizing: border-box;
   /* box-shadow: 0 0 2px 2px var(--grapefruit); */
 }
 
