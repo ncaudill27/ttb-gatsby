@@ -9,6 +9,8 @@ module.exports = {
     title: `The Tiny Beet`,
     description: `Using Lifestyle Medicine to nuture a better life for your children and family.`,
     author: `Dr. Yolanda Rivera-Caudill`,
+    url: `https://thetinybeet.netlify.app`,
+    image: `/images.dr-rivera.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

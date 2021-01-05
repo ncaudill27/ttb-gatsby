@@ -80,7 +80,7 @@ const DPC = () => {
               </div>
               <div className={styles.timer}>
                 <TimerIcon className={styles.icon} />
-                <p>minimal of no wait times in waiting room</p>
+                <p>minimal or no wait times in waiting room</p>
               </div>
               <div className={styles.veggies}>
                 <VeggiesIcon className={styles.icon} />
