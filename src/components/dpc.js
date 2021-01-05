@@ -39,50 +39,50 @@ const DPC = () => {
         <div style={{display: 'flex', flexDirection: 'column'}} second>
           <div className={styles.container}>
             <div className={styles.grid}>
-              <div className={styles.item}>
+              <div className={styles.board}>
                 <BoardIcon className={styles.icon} />
                 <p>teaching how to cook healthy meals</p>
                 <p>(with budget and timing in mind)</p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.clock}>
                 <ClockIcon className={styles.icon} />
                 <p>
                   30min, blocked visits with the doctor &amp; minimal or no wait times
                 </p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.doctor}>
                 <DoctorIcon className={styles.icon} />
                 <p>
                   in-office visits
                 </p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.hoop}>
                 <HoopIcon className={styles.icon} />
                 <p>
                   sport physicals
                 </p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.house}>
                 <HouseIcon className={styles.icon} />
                 <p>
                   at home visits for new borns
                 </p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.phone}>
                 <PhoneIcon className={styles.icon} />
                 <p>
                   text, phone, telemedicine
                 </p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.syringe}>
                 <SyringeIcon className={styles.icon} />
                 <p>immunizations</p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.timer}>
                 <TimerIcon className={styles.icon} />
                 <p>minimal of no wait times in waiting room</p>
               </div>
-              <div className={styles.item}>
+              <div className={styles.veggies}>
                 <VeggiesIcon className={styles.icon} />
                 <p>Lifestyle Medicine teachings for patients or consults</p>
               </div>

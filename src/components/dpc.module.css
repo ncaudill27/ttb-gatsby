@@ -6,8 +6,10 @@
 
 .grid {
   display: grid;
-  margin: -2rem 0 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "clock phone house"
+  "doctor timer board"
+  "veggies hoop syringe";
 }
 
 .icon {
@@ -40,4 +42,55 @@
   top: 0;
   left: 0;
   width: 40%;
+}
+
+.clock {
+  composes: item;
+  grid-area: clock;
+}
+
+.phone {
+  composes: item;
+  grid-area: phone;
+}
+
+.house {
+  composes: item;
+  grid-area: house;
+}
+
+.doctor {
+  composes: item;
+  grid-area: doctor;
+}
+
+.timer {
+  composes: item;
+  grid-area: timer;
+}
+
+.board {
+  composes: item;
+  grid-area: board;
+}
+
+.veggies {
+  composes: item;
+  grid-area: veggies;
+}
+
+.hoop {
+  composes: item;
+  grid-area: hoop;
+}
+
+.syringe {
+  composes: item;
+  grid-area: syringe;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    margin: -2rem 0 2rem;
+  }
 }
