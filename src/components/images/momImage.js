@@ -19,7 +19,6 @@ const MomImage = (props) => {
     return <div>Picture not found</div>
   }
 
-  console.log(props)
   return (
     <div {...props}>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
