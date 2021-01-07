@@ -38,8 +38,6 @@ const Dual = ({className, children, ...props}) => {
     }
   })
 
-  console.log(updatedChildren())
-
   return (
     <div ref={dualEl} className={classNames(className, styles.dual)} {...props}>
       {updatedChildren()}
@@ -49,7 +47,7 @@ const Dual = ({className, children, ...props}) => {
 
 Dual.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.arrayOf([PropTypes.element, PropTypes.element]),
+  children: PropTypes.arrayOf(PropTypes.element),
 }
 
 export default Dual

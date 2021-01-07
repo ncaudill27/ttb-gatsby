@@ -44,7 +44,7 @@ const Menu = ({routes}) => {
         <MenuLink path='/' />
         {
           routes.map( ({path}) => {
-            return <MenuLink path={path} />
+            return <MenuLink path={path} key={path} />
           })
         }
       </div>

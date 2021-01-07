@@ -33,7 +33,7 @@ const Testimonials = () => (
     <h1 className={styles.header}>Testimonials</h1>
     <div className={styles.testimonials}>
       {
-        testimonials.map( props => <Testimonial {...props} /> )
+        testimonials.map( props => <Testimonial key={props.name} {...props} /> )
       }
     </div>
   </Section>
