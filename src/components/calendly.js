@@ -4,10 +4,10 @@ import Section from './section'
 import Dual from './dual'
 import CalendlyButton from './calendlyButton'
 
-import styles from './connect.module.css'
+import styles from './calendly.module.css'
 
-const Connect = () => (
-  <Section color='sec-dark'>
+const Calendly = () => (
+  <Section color='sec-dark' background>
     <Dual>
       <div first>
         <h2 className={styles.ready}>
@@ -24,4 +24,4 @@ const Connect = () => (
   </Section>
 )
 
-export default Connect
+export default Calendly
