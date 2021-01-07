@@ -10,10 +10,14 @@ const Connect = () => (
   <Section color='sec-dark'>
     <Dual>
       <div first>
-        <h2 className={styles.ready}>READY TO BECOME A MEMBER?</h2>
-        <h1>Schedule a meet &amp; with the Doctor Beet!</h1>
+        <h2 className={styles.ready}>
+          <div className={styles.line}>
+            READY TO BECOME A MEMBER?
+          </div>
+        </h2>
+        <h1>Schedule a meet &amp; greet with the Doctor Beet!</h1>
       </div>
-      <div second>
+      <div className={styles.button} second>
         <CalendlyButton url='https://calendly.com/nelson-a-caudill/initial-meet' />
       </div>
     </Dual>      
