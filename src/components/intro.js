@@ -20,14 +20,14 @@ const Intro = () => (
           After 30 years of practicing peds, I’m excited to announce the founding of my practice.
         </p>
         <p>
-          A general pediatric DPC practice specializing in Lifestyle Medicine to be able to focus on the root cause of my patients’ health.
+          We are a general pediatric Direct Primary Care (DPC) practice specializing in Lifestyle Medicine to be able to focus on the root cause of my patients’ health.
         </p>
         <p>
-          I invite you and your family to join me in improving the health in our community, a tiny step at a time.
+          "I invite you and your family to join me in improving the health in our community, a tiny step at a time."
         </p>
         <p>
           Dr. Yolanda Rivera-Caudill, MD, FAAP, DipABLM <br />
-          “The Dr. Beet” 
+          -The Dr. Beet
         </p>
       </div>
       <MomImage className={styles.img} second />
