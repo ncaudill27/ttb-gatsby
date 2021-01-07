@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Mission from '../components/mission'
 import Quote from '../components/quote'
 import Values from '../components/values'
-import OfficeInfo from '../components/office'
 import Map from '../components/map'
 import Newsletter from '../components/newsletter'
 
@@ -18,9 +17,8 @@ const AboutPage = () => (
       by='Maya Angelou'
     />
     <Values />
-    <OfficeInfo />
-    { typeof window !== 'undefined' && <Map /> }
     <Newsletter />
+    { typeof window !== 'undefined' && <Map /> }
   </Layout>
 )
 
