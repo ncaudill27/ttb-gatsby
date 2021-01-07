@@ -5,16 +5,22 @@ import SEO from '../components/seo'
 import Mission from '../components/mission'
 import Quote from '../components/quote'
 import Values from '../components/values'
+import OfficeInfo from '../components/office'
+import Map from '../components/map'
+import Newsletter from '../components/newsletter'
 
 const AboutPage = () => (
   <Layout>
-    <SEO title='About' />
+    <SEO title='About Us' />
     <Mission />
     <Quote
       quote='Success is liking yourself, liking what you do, and liking how you do it.'
       by='Maya Angelou'
     />
     <Values />
+    <OfficeInfo />
+    { typeof window !== 'undefined' && <Map /> }
+    <Newsletter />
   </Layout>
 )
 

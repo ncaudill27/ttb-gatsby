@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { parsePath } from '../utils/parsePath'
 
 import styles from './menuLink.module.css'
 
@@ -16,7 +17,7 @@ const MenuLink = ({path}) => {
   }, [path])
 
   const copy =
-    path === '/' ? 'HOME' : path.replace(/\//g, '').toUpperCase()
+    path === '/' ? 'HOME' : parsePath(path)
 
   const styling =
     isActive ? classNames(styles.menuItem, styles.active) : classNames(styles.menuItem, styles.inactive)
