@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import classNames from 'classnames'
 
 import styles from './dual.module.css'
 
-const Dual = ({className, children, section, ...props}) => {
+const Dual = ({className, children, ...props}) => {
   const breakpoints = useBreakpoint()
 
   const dualEl = useRef(null)
@@ -22,7 +23,7 @@ const Dual = ({className, children, section, ...props}) => {
         return React.cloneElement(
           child, {
              className: classNames(child.props.className, styles.first),
-             style: breakpoints.sm ? {} : {height: height}
+             style: breakpoints.sm ? {...child.props.style} : {...child.props.style, height: height}
           }
         )
       }
@@ -30,20 +31,25 @@ const Dual = ({className, children, section, ...props}) => {
         return React.cloneElement(
           child, {
              className: classNames(child.props.className, styles.second),
-             style: breakpoints.sm ? {} : {height: height}
+             style: breakpoints.sm ? {...child.props.style} : {...child.props.style, height: height}
           }
         )
       }
     }
   })
 
-  console.log(height)
+  console.log(updatedChildren())
 
   return (
     <div ref={dualEl} className={classNames(className, styles.dual)} {...props}>
       {updatedChildren()}
     </div>
   );
+}
+
+Dual.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.arrayOf([PropTypes.element, PropTypes.element]),
 }
 
 export default Dual

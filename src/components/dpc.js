@@ -36,7 +36,7 @@ const DPC = () => {
           </p>
           { !breakpoints.sm && <DPCButton /> }
         </div>
-        <div style={{display: 'flex', flexDirection: 'column'}} second>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} second>
           <div className={styles.container}>
             <div className={styles.grid}>
               <div className={styles.board}>
