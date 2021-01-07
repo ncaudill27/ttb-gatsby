@@ -5,7 +5,10 @@ import SEO from "../components/seo"
 import Intro from '../components/intro'
 import Lifestyle from '../components/lifestyle'
 import DPC from '../components/dpc'
+import Connect from '../components/connect'
 import Quote from '../components/quote'
+
+import '../styles/calendly.css'
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +16,7 @@ const IndexPage = () => (
     <Intro />
     <Lifestyle />
     <DPC />
+    <Connect />
     <Quote
       quote='The doctor or the future will give no medicine but will interest his patients in the care of the human frame, in diet and in the cause and prevention of disease.'
       by='Thomas A. Edison'

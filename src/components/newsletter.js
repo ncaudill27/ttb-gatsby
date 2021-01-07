@@ -9,8 +9,8 @@ import Button from './button'
 const Newsletter = () => (
   <Section color='pri-dark' background>
     <div className={styles.wrapper}>
-      <div className={styles.flex}>
-        <h1>Want to sign-up for our newsletter?</h1>
+      <h1>Want to sign-up for our newsletter?</h1>
+      <div className={styles.icons}>
         <IconCopy
           header='Recipes'
           description='Receive the tastiest veggies recipes'

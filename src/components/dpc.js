@@ -17,13 +17,13 @@ import VeggiesIcon from './images/iconVeggies'
 
 import styles from './dpc.module.css'
 
-const DPCButton = () => <Button color='blueberry'>Learn more about DPC</Button>
+const DPCButton = () => <Button>Learn more about DPC</Button>
 
 const DPC = () => {
   const breakpoints = useBreakpoint()
   
   return (
-    <Section color='sec-light'>
+    <Section color='pri-dark'>
       <Dual>
         <div first>
           <h1>
@@ -47,7 +47,7 @@ const DPC = () => {
               <div className={styles.clock}>
                 <ClockIcon className={styles.icon} />
                 <p>
-                  30min, blocked visits with the doctor &amp; minimal or no wait times
+                  30 - 60min visits with the doctor
                 </p>
               </div>
               <div className={styles.doctor}>

@@ -9,7 +9,7 @@ import MotherDaughter from './images/motherDaughter'
 import styles from './lifestyle.module.css'
 
 const Lifestyle = () => (
-    <Section color='pri-dark'>
+    <Section color='pri-med'>
       <Dual>
         <div className={styles.copy} first>
           <h1>Why Lifestyle Medicine?</h1>

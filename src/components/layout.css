@@ -87,7 +87,7 @@ h1 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 2rem;
+  font-size: 2.8rem;
   line-height: 1.1;
 }
 mark {
@@ -283,7 +283,7 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -348,7 +348,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -361,7 +361,7 @@ ul {
   list-style-image: none;
 }
 ol {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -402,7 +402,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 pre {
   margin-left: 0;
@@ -453,7 +453,7 @@ form {
   margin-bottom: 1.45rem;
 }
 label {
-  font-size: 1.125rem; 
+  font-size: 1rem; 
 }
 noscript {
   margin-left: 0;
