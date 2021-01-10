@@ -1,6 +1,9 @@
 import React, { useState, useEffect, createRef } from 'react'
+import classNames from 'classnames'
 
-const Form = ({showForm, toggleForm, children}) => {
+import styles from './form.module.css'
+
+const Form = ({showForm, toggleForm, children, ...props}) => {
   const formEl = createRef()
 
   const [left, setLeft] = useState('0px')
@@ -13,19 +16,21 @@ const Form = ({showForm, toggleForm, children}) => {
       setLeft(`-${formWidth / 2}px`);
       setTop(`-${formHeight / 2}px`);
     }
-  }, [showForm])
+  }, [showForm, formEl])
+
+  const open = showForm ? styles.open : false;
 
   return (
     <>
       <div
-        className={`overlay${shown ? ' open' : ''}`}
+        className={classNames(styles.overlay, open)}
         onClick={toggleForm}
       />
       <form
-        className={`${shown ? 'open' : ''}`}
+        className={classNames(styles.form, open)}
         ref={formEl}
         style={{marginLeft: left, marginTop: top}}
-        onSubmit={handleSubmit}
+        {...props}
       >
         {children}
       </form>

@@ -1,25 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Section from './section'
 import IconCopy from './iconCopy'
-
-import styles from './newsletter.module.css'
+import SubscribeForm from './subscribeForm'
 import Button from './button'
 
-const Newsletter = () => {
-  const [email, setEmail] = useState('')
-  const handleChange = e => setEmail(e.target.value)
+import styles from './newsletter.module.css'
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    fetch('/.netlify/functions/mailchimp-sub'
-      + '?email=' + email
-    )
-    .then( res => res.json() )
-    .then( data => console.log(data.msg) )
-    .catch( err => console.log(err.msg) )
-  }
-  
+const Newsletter = () => {
+
+  const [showForm, setShowForm] = useState(false)
+  const toggleForm = () => setShowForm( prev => !prev )
+
+
  return (
   <Section color='pri-dark' background>
     <div className={styles.wrapper}>
@@ -38,7 +31,8 @@ const Newsletter = () => {
           description="This is the address again because i'm out of fake content! 123 Address, Wilmington Island, GA"
         />
       </div>
-      <Button>Subscribe</Button>
+      <Button onClick={toggleForm}>Subscribe</Button>
+      <SubscribeForm showForm={showForm} toggleForm={toggleForm} />
     </div>
   </Section>
  )
