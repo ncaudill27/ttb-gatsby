@@ -6,7 +6,21 @@ import IconCopy from './iconCopy'
 import styles from './newsletter.module.css'
 import Button from './button'
 
-const Newsletter = () => (
+const Newsletter = () => {
+  const [email, setEmail] = useState('')
+  const handleChange = e => setEmail(e.target.value)
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    fetch('/.netlify/functions/mailchimp-sub'
+      + '?email=' + email
+    )
+    .then( res => res.json() )
+    .then( data => console.log(data.msg) )
+    .catch( err => console.log(err.msg) )
+  }
+  
+ return (
   <Section color='pri-dark' background>
     <div className={styles.wrapper}>
       <h1>Want to sign-up for our newsletter?</h1>
@@ -27,6 +41,7 @@ const Newsletter = () => (
       <Button>Subscribe</Button>
     </div>
   </Section>
-)
+ )
+}
 
 export default Newsletter
