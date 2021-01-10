@@ -14,7 +14,7 @@ export default function Map({ options, onMount, className, onMountProps }) {
       const script = document.createElement(`script`)
       script.src =
         `https://maps.googleapis.com/maps/api/js?key=` +
-        process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+        process.env.GATSBY_GOOGLE_MAPS_API_KEY
       document.head.append(script)
       script.addEventListener(`load`, onLoad)
       return () => script.removeEventListener(`load`, onLoad)
