@@ -32,12 +32,12 @@ const SubscribeForm = (props) => {
         placeholder='Please enter your email'
         handleChange={handleChange}
       />
-      <TextField
+      {/* <TextField
         id='firstName'
         name={firstName}
         placeholder='Please enter your first name'
         handleChange={handleChange}
-      />
+      /> */}
       <Button>Subscribe to our newsletter</Button>
     </Form>
   )

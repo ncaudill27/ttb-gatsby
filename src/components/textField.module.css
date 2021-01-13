@@ -4,12 +4,23 @@
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 273px;
+}
+
+.label {
+  padding-left: 1rem;
 }
 
 .input {
+  width: 100%;
   border-radius: 20px;
-  padding: 0.25em 1em;
+  padding: 0.25rem 1rem;
   border: 2px solid #f3e2d5;
+}
+
+.input::placeholder {
+  font-size: 0.9rem;
 }
 
 .input:focus {
@@ -19,6 +30,6 @@
 .input:focus,
 .input:active {
   box-shadow: 
-    inset 0 0 10px 1px #e577cb;
+    inset 0 0 5px 1px #e577cbd2;
 }
 

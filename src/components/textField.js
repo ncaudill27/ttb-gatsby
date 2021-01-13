@@ -17,7 +17,12 @@ const TextField = ({id, name, placeholder, handleChange}) => {
 
 
   return <div className={styles.container}>
-    <label htmlFor={id}>{parseLabel()}</label>
+    <label
+      className={styles.label}
+      htmlFor={id}
+    >
+      {parseLabel()}
+    </label>
     <input
       id={id}
       className={styles.input}
