@@ -1,7 +1,7 @@
 @import '../styles/custom-properties.css';
 
 .header {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   position: fixed;
   top: 0;
