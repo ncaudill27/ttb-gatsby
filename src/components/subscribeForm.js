@@ -10,20 +10,20 @@ const SubscribeForm = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(email)
-    // fetch('/.netlify/functions/mailchimp-sub'
-    //   + '?email=' + email
-    // )
-    // .then( res => res.json() )
-    // .then( data => console.log(data.msg) )
-    // .catch( err => console.log(err.msg) )
+
+    fetch('/.netlify/functions/mailchimp-sub'
+      + '?email=' + email
+    )
+    // .then( res => res.msg )
+    .then( msg => console.log(msg) )
+    .catch( err => console.log(err) )
   }
 
   return (
     <Form onSubmit={handleSubmit} {...props}>
       <h1>Subscribe</h1>
-      <label>Email</label>
-      <input value={email} onChange={handleChange} />
+      <label htmlFor='email'>Email</label>
+      <input id='email' value={email} onChange={handleChange} />
       <Button>Subscribe to our newsletter</Button>
     </Form>
   )

@@ -9,6 +9,8 @@ exports.handler = async function(event, context) {
 
   const email = event.queryStringParameters.email;
 
+  console.log(process.env.MAILCHIMP_API_KEY)
+
   if (!email) {
     return {
       statusCode: 500,
@@ -17,43 +19,43 @@ exports.handler = async function(event, context) {
   }
 
   // used in requests required use of mailchimps email id
-  // const emailHash = crypto.createHash('md5').update(email).digest('hex');
+  const emailHash = crypto.createHash('md5').update(email).digest('hex');
 
   //todo figure out why this isnt working
   //todo contact mailchimp
   // mailchimp.setConfig({
-  //   apiKey: process.env.REACT_APP_MAILCHIMP_KEY,
+  //   apiKey: process.env.MAILCHIMP_API_KEY,
   //   server: 'https://us8.admin.mailchimp.com/'
   // })
   // const response = await mailchimp.ping.get();
   try {
-    const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        Authorization: `Bearer ${process.env.REACT_APP_MAILCHIMP_KEY}`
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status: 'subscribed',
-        merge_fields: {}
-      })
-    })
+    // const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/', {
+    //   method: 'POST',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     Authorization: `Bearer ${process.env.MAILCHIMP_API_KEY}`
+    //   },
+    //   body: JSON.stringify({
+    //     email_address: email,
+    //     status: 'subscribed',
+    //     merge_fields: {}
+    //   })
+    // })
 
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response }
-    }
+    // if (!response.ok) {
+    //   // NOT res.status >= 200 && res.status < 300
+    //   return { statusCode: response.status, body: response }
+    // }
 
-    const subscription = await response.json();    
-    console.log(subscription);
+    // const subscription = await response.json();    
+    // console.log(subscription);
     /* ------
       LIST GET REQUEST
     ------ */
     // const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d', {
     //   headers: {
     //     Accept: 'application/json',
-    //     Authorization: `Bearer ${process.env.REACT_APP_MAILCHIMP_KEY}`
+    //     Authorization: `Bearer ${process.env.MAILCHIMP_API_KEY}`
     //   },
     // })
     
@@ -62,13 +64,16 @@ exports.handler = async function(event, context) {
     /* ----------
       DELETE SUB REQ
     ---------- */
-    // const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/' + emailHash, {
-    //   method: 'DELETE',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     Authorization: `Bearer ${process.env.REACT_APP_MAILCHIMP_KEY}`
-    //   }
-    // })
+    const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/' + emailHash, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Bearer ${process.env.MAILCHIMP_API_KEY}`
+      }
+    })
+
+    const deleted = await response.json()
+    console.log(deleted)
 
     return {
       statusCode: 200,
