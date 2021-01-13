@@ -1,0 +1,12 @@
+@import '../styles//custom-properties.css';
+
+.header {
+  font-size: 2rem;
+}
+
+.inputs {
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--pri-med);
+  border-top: 2px solid var(--pri-med);
+}

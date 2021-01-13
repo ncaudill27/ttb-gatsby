@@ -1,3 +1,5 @@
+@import '../styles//custom-properties.css';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,7 @@
   width: 100%;
   border-radius: 20px;
   padding: 0.25rem 1rem;
-  border: 2px solid #f3e2d5;
+  border: 2px solid var(--pri-med);
 }
 
 .input::placeholder {

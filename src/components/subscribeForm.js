@@ -4,6 +4,8 @@ import Form from './form'
 import Button from './button'
 import TextField from './textField'
 
+import styles from './subscribeForm.module.css'
+
 const SubscribeForm = (props) => {
 
   const [email, setEmail] = useState('')
@@ -25,19 +27,21 @@ const SubscribeForm = (props) => {
 
   return (
     <Form onSubmit={handleSubmit} {...props}>
-      <h1>Subscribe</h1>
-      <TextField
-        id='email'
-        name={email}
-        placeholder='Please enter your email'
-        handleChange={handleChange}
-      />
-      {/* <TextField
-        id='firstName'
-        name={firstName}
-        placeholder='Please enter your first name'
-        handleChange={handleChange}
-      /> */}
+      <h1 className={styles.header}>Subscribe</h1>
+      <div className={styles.inputs}>
+        <TextField
+          id='email'
+          name={email}
+          placeholder='Please enter your email'
+          handleChange={handleChange}
+        />
+        {/* <TextField
+          id='firstName'
+          name={firstName}
+          placeholder='Please enter your first name'
+          handleChange={handleChange}
+        /> */}
+      </div>
       <Button>Subscribe to our newsletter</Button>
     </Form>
   )
