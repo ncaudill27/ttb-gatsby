@@ -10,12 +10,13 @@ const SubscribeForm = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     fetch('/.netlify/functions/mailchimp-sub'
-      + '?email=' + email
+      + '?email=' + email, {
+        method: 'POST'
+      }
     )
-    // .then( res => res.msg )
-    .then( msg => console.log(msg) )
+    .then( res => res.json() )
+    .then( data => console.log(data) )
     .catch( err => console.log(err) )
   }
 
