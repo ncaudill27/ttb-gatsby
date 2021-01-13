@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  border-radius: 20px;
+  padding: 0.25em 1em;
+  border: 2px solid #f3e2d5;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus,
+.input:active {
+  box-shadow: 
+    inset 0 0 10px 1px #e577cb;
+}
+
