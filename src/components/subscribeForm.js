@@ -9,7 +9,6 @@ import styles from './subscribeForm.module.css'
 const SubscribeForm = (props) => {
 
   const [email, setEmail] = useState('')
-  const [firstName, setFirstName] = useState('')
 
   const handleChange = e => setEmail(e.target.value)
 
@@ -35,12 +34,6 @@ const SubscribeForm = (props) => {
           placeholder='Please enter your email'
           handleChange={handleChange}
         />
-        {/* <TextField
-          id='firstName'
-          name={firstName}
-          placeholder='Please enter your first name'
-          handleChange={handleChange}
-        /> */}
       </div>
       <Button>Subscribe to our newsletter</Button>
     </Form>
