@@ -2,11 +2,9 @@
 
 .header {
   font-size: 2rem;
+  margin-bottom: 0;
 }
 
 .inputs {
-  margin-bottom: 1rem;
   padding: 1rem 0;
-  border-bottom: 2px solid var(--pri-med);
-  border-top: 2px solid var(--pri-med);
 }
