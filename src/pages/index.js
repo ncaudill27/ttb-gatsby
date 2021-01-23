@@ -8,6 +8,7 @@ import DPC from '../components/dpc'
 import Calendly from '../components/calendly'
 import Quote from '../components/quote'
 import Testimonials from '../components/testimonials'
+import FAQ from '../components/faq'
 
 import '../styles/calendly.css'
 
@@ -17,12 +18,13 @@ const IndexPage = () => (
     <Intro />
     <Lifestyle />
     <DPC />
+    <Testimonials />
+    <FAQ />
     <Calendly />
     <Quote
       quote='The doctor or the future will give no medicine but will interest his patients in the care of the human frame, in diet and in the cause and prevention of disease.'
       by='Thomas A. Edison'
     />
-    <Testimonials />
   </Layout>
 )
 

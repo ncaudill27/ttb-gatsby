@@ -12,7 +12,7 @@ const BackgroundContainer = React.forwardRef(({className, children, color}, ref)
       query {
         mobile: file(relativePath: { eq: "circles-vert-alt.png" }) {
           childImageSharp {
-            fluid( maxWidth: 700) {
+            fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

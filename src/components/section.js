@@ -50,9 +50,13 @@ const Section = React.forwardRef((
 })
 
 Section.propTypes = {
-  background: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  background: PropTypes.bool,
   className: PropTypes.string,
   color: PropTypes.string
+}
+
+Section.defaultProps = {
+  color: 'pri-light'
 }
 
 export default Section;
