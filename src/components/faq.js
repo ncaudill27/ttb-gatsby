@@ -11,7 +11,7 @@ const qaList = [
     answer: 'This is the answer'
   },
   {
-    question: 'Question number two',
+    question: 'Question number two. Lets test a longer question length.',
     answer: 'This is the answer'
   },
   {
@@ -31,7 +31,7 @@ const FAQ = () => {
       <h1>We know you probably have many questions. Here are some FAQ's.</h1>
       <ul className={styles.list}>
         {qaList.map(qa => (
-          <QA {...qa} />
+          <QA key={qa.answer} {...qa} />
         ))}
       </ul>
     </Section>
