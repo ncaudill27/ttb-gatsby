@@ -1,4 +1,5 @@
 import React from 'react'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import Section from './section'
 import QA from './qa'
@@ -25,15 +26,22 @@ const qaList = [
 ]
 
 const FAQ = () => {
+  const breakpoints = useBreakpoint()
 
   return (
     <Section color='sec-dark'>
-      <h1>We know you probably have many questions. Here are some FAQ's.</h1>
-      <ul className={styles.list}>
-        {qaList.map(qa => (
-          <QA key={qa.answer} {...qa} />
-        ))}
-      </ul>
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>
+          We know you probably have many questions.
+          { !breakpoints.sm ? <br /> : ' '}
+          Here are some FAQ's.
+        </h1>
+        <ul className={styles.list}>
+          {qaList.map(qa => (
+            <QA key={qa.answer} {...qa} />
+          ))}
+        </ul>
+      </div>
     </Section>
   )
 }

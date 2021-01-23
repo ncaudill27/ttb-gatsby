@@ -4,7 +4,7 @@ import Chevron from './images/iconChevron'
 
 import styles from './qa.module.css'
 
-const QA = ({className, question, answer}) => {
+const QA = ({question, answer}) => {
   
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => setIsOpen( prev => !prev )
@@ -19,8 +19,8 @@ const QA = ({className, question, answer}) => {
         <Chevron className={iconStyles} />
       </div>
       {<div className={answerStyles}>
-          {answer}
-        </div>}
+        {answer}
+      </div>}
     </li>
   )
 }
