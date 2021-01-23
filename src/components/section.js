@@ -38,6 +38,7 @@ const Section = React.forwardRef((
 
     return (
       <CirclesBackground
+        ref={ref}
         className={classNames(className, styles.section)}
         color={color}
         {...props}

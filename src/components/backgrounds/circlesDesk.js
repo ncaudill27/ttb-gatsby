@@ -6,7 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import styles from '../section.module.css'
 import '../../styles/custom-properties.css'
 
-const BackgroundContainer = ({className, children, color}) => {
+const BackgroundContainer = React.forwardRef(({className, children, color}, ref) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -29,12 +29,14 @@ const BackgroundContainer = ({className, children, color}) => {
     <BackgroundImage
       Tag='section'
       fluid={data.desktop.childImageSharp.fluid}
-      backgroundColor={`var(--${color})`}
+      backgroundColor={`var(--${color})`}      
       className={className || styles.section}
     >
-      {children}
+      <div ref={ref}>
+        {children}
+      </div>
     </BackgroundImage>
   )
-}
+})
 
 export default BackgroundContainer

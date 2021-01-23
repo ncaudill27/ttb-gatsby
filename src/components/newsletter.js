@@ -8,13 +8,13 @@ import Button from './button'
 import styles from './newsletter.module.css'
 
 const Newsletter = () => {
+  const sectionEl = React.useRef()
 
   const [showForm, setShowForm] = useState(false)
   const toggleForm = () => setShowForm( prev => !prev )
 
-
  return (
-  <Section color='pri-dark' background>
+  <Section ref={sectionEl} color='pri-dark' background>
     <div className={styles.wrapper}>
       <h1>Want to sign-up for our newsletter?</h1>
       <div className={styles.icons}>
@@ -32,7 +32,7 @@ const Newsletter = () => {
         />
       </div>
       <Button onClick={toggleForm}>Subscribe</Button>
-      <SubscribeForm showForm={showForm} toggleForm={toggleForm} />
+      <SubscribeForm sectionEl={sectionEl} showForm={showForm} toggleForm={toggleForm} />
     </div>
   </Section>
  )

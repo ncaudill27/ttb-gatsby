@@ -3,33 +3,29 @@ import classNames from 'classnames'
 
 import styles from './form.module.css'
 
-const Form = ({showForm, toggleForm, children, ...props}) => {
+const Form = ({sectionEl, showForm, toggleForm, children, ...props}) => {
   const formEl = createRef()
 
   const [left, setLeft] = useState('0px')
   const [top, setTop] = useState('0px')
   
-  const noScroll = () => {
+  const noScroll = top => e => {
     if (typeof window !== 'undefined') {
-      window.scroll(0, 0)
+      console.log(top)
+      window.scroll(0, top)
     }
   }
 
   useEffect(() => {
+    console.log(sectionEl)
     if (showForm) {
       const formWidth = formEl.current.getBoundingClientRect().width;
       const formHeight = formEl.current.getBoundingClientRect().height;
-      const formTop = formEl.current.getBoundingClientRect().top;
-      console.log(formTop)
+
       setLeft(`-${formWidth / 2}px`);
       setTop(`-${formHeight / 2}px`);
-
-      if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', noScroll)
-      }
     }
-    return () => window.removeEventListener('scroll', noScroll)
-  }, [showForm, formEl, noScroll])
+  }, [showForm, formEl, sectionEl])
 
   const open = showForm ? styles.open : false;
 
