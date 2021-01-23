@@ -32,9 +32,7 @@ const FAQ = () => {
     <Section color='sec-dark'>
       <div className={styles.wrapper}>
         <h1 className={styles.title}>
-          We know you probably have many questions.
-          { !breakpoints.sm ? <br /> : ' '}
-          Here are some FAQ's.
+          We know you probably have many questions. Here are some FAQ's.
         </h1>
         <ul className={styles.list}>
           {qaList.map(qa => (

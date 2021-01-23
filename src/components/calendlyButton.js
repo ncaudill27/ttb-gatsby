@@ -8,7 +8,7 @@ import '../styles/calendly.css'
 const CalendlyButton = ({ url, prefill, pageSettings, utm}) => {
   const onClick = () => openPopupWidget({ url, prefill, pageSettings, utm})
 
-  return <Button onClick={onClick} color='blueberry'>Schedule now</Button>
+  return <Button onClick={onClick}>Schedule now</Button>
 }
 
 export default CalendlyButton
