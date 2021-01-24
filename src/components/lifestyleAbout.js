@@ -26,7 +26,7 @@ const pillars = [
   },
   {
     text: 'SUBSTANCE ABUSE',
-    color: 'peach'
+    color: 'peachpuff'
   },
   {
     text: 'INTERPERSONAL COMMUNICATION',
@@ -55,6 +55,7 @@ const Lifestyle = () => {
           </ul>
         </div>
         <div className={styles.wrapper} second>
+          <h3>Test</h3>
           <div className={styles.grid}>
             {pillars.map(pillar => (
               <TextSpin {...pillar} />

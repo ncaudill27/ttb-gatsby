@@ -1,5 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 200px);  
+  width: 100%;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
 }
