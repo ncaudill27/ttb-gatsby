@@ -17,11 +17,11 @@ const Testimonial = ({name, testimonial}) => {
     }
   }, [testimonialEl]) //TODO add useWidth hook to dependencies
 
-  const color = `var(--${['beet', 'blueberry', 'carrot'][Math.floor(Math.random() * Math.floor(3))]})`
+  // const color = `var(--${['beet', 'blueberry', 'carrot'][Math.floor(Math.random() * Math.floor(3))]})`
 
   return (
     <div className={styles.root} style={{gridRowEnd}}>
-      <h3 className={styles.name} style={{color}}>{name}</h3>
+      <h3 className={styles.name}>{name}</h3>
       <p className={styles.testimonial} ref={testimonialEl}>{testimonial}</p>
     </div>
   )
