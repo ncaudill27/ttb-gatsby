@@ -7,34 +7,38 @@ import styles from './testimonials.module.css'
 const testimonials = [
   {
     name: 'Eva Gonzalez',
-    years: 'X',
     testimonial: `
-      "She's been amazing, incredible. Best doc ever. Patient for x years. Our 8 kids love her. "
+      Absolutely the best we could ever ask for in a doctor for my son. My family has been with Dr. Caudill since the beginning (newborn) and we absolutely love her! She is family to us, not just our son’s doctor.
     `
   },
   {
-    name: 'Patient from Savannah',
-    years: 'X',
+    name: 'Quentin & Karen English',
     testimonial: `
-      "Comfortable around her. So helpful, goes out of her way. Truly best experience."
+      Absolutely the best we could ever ask for in a doctor for my son. My family has been with Dr. Caudill since the beginning (newborn) and we absolutely love her! She is family to us, not just our son’s doctor. She took care of him from birth in Miami when we used to live there and is now taking care of my son here in Georgia. 21 years together and I wouldn’t have it any other way. 
     `
   },
   {
-    name: 'Martha Roman',
-    years: 'X',
+    name: 'Maria Hernandez',
     testimonial: `
-      "Mejor doctora que hemos tenido. Una maravilla. La Dr. Caudill es una hermosura."
+      Dr. Caudill has a true passion for her profession. Patients love her for her warmth and funny ways. Parents love her for her knowledge, bedside manners, and experience. She is an exceptional doctor and your kids will absolutely love her!
     `
-  }
+  },
 ]
 
 const Testimonials = () => (
-  <Section color='pri-med'>
-    <h1 className={styles.header}>Testimonials</h1>
-    <div className={styles.testimonials}>
-      {
-        testimonials.map( props => <Testimonial key={props.name} {...props} /> )
-      }
+  <Section color='pri-med' background>
+    <div className={styles.root}>
+      <div className={styles.header}>
+        <h1>
+          Family <br />
+          Testimonials
+        </h1>
+      </div>
+      <div className={styles.grid}>
+        {testimonials.map( props => (
+          <Testimonial key={props.name} {...props} />
+        ))}
+      </div>
     </div>
   </Section>
 )
