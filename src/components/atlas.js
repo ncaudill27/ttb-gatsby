@@ -14,7 +14,7 @@ const Atlas = (props) => (
       </h2>
     </div>
     <h1>Click the button below to sign up with our EMR.</h1>
-    <Link style={{width: '100%', margin: '0 auto'}}>
+    <Link style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <Button>
         Become a Member
       </Button>
