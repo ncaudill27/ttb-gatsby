@@ -2,6 +2,7 @@
   max-width: unset;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .first { max-width: 750px; }

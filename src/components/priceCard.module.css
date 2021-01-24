@@ -1,0 +1,27 @@
+@import '../styles/custom-properties.css';
+
+.root {
+  margin: 0 1.5rem;
+  padding: 2rem 3rem;
+  height: 305px;
+  width: 285px;
+  background-color: var(--pri-light);
+  box-shadow: 5px 4px 17px 2px rgba(0, 0, 0, 0.166);
+  border-radius: 3px;
+}
+
+.price {
+  position: relative; 
+  margin: 0 0 2.5rem 2px;
+}
+
+.sign {
+  font-size: 1rem;
+  position: absolute;
+  left: -13px;
+  bottom: 40%;
+}
+
+.pricing {
+  margin-bottom: 0.25rem;
+}

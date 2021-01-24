@@ -2,8 +2,27 @@ import React from 'react'
 
 import Section from './section'
 import Dual from './dual'
+import PriceCard from './priceCard'
 
 import styles from './pricing.module.css'
+
+const prices = [
+  {
+    price: 70,
+    pricing: 'Individual Child',
+    details: 'Blah blah blah'
+  },
+  {
+    price: 30,
+    pricing: 'Gonzalez Package',
+    details: 'Blah blah blah'
+  },
+  {
+    price: 50,
+    pricing: 'Teenager Package',
+    details: 'Blah blah blah'
+  }
+]
 
 const Pricing = () => (
   <Section color='pri-med'>
@@ -18,7 +37,9 @@ const Pricing = () => (
       </div>
     </Dual>
     <div style={{display: 'flex', justifyContent: 'center'}}>
-
+      {prices.map(price => (
+        <PriceCard {...price} />
+      ))}
     </div>
   </Section>
 )
