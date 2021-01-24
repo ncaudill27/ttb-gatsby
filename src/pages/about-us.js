@@ -7,6 +7,7 @@ import Quote from '../components/quote'
 import Values from '../components/values'
 import Newsletter from '../components/newsletter'
 import Lifestyle from '../components/lifestyleAbout'
+import Pricing from '../components/pricing'
 import Map from '../components/map'
 
 const AboutPage = () => (
@@ -19,6 +20,7 @@ const AboutPage = () => (
     />
     <Values />
     <Lifestyle />
+    <Pricing />
     <Newsletter />
     { typeof window !== 'undefined' && <Map /> }
   </Layout>

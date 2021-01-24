@@ -1,0 +1,14 @@
+.dual {
+  max-width: unset;
+  justify-content: center;
+  align-items: center;
+}
+
+.first { max-width: 750px; }
+.second {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.title,
+.copy { margin: 0; }
