@@ -38,7 +38,7 @@ const Lifestyle = () => {
 
   return (
     <Section>
-      <Dual>
+      <Dual className={styles.dual}>
         <div first>
           <h1>The Lifestyle Medicine Approach</h1>
           <p>
@@ -46,16 +46,31 @@ const Lifestyle = () => {
             Using evidence-based medicine, LM treats each patient from the root cause.
             We will focus on the 6 pillars of LM together (listed in the circles) and help you develop healthier lifestyle decisions to prevent any chronic illness in your future.
           </p>
-          <h3>Helpful resources on Lifestyle Medicine</h3>
-          <ul>
-            <li><Link>Link to an article</Link></li>
-            <li><Link>Link to an article</Link></li>
-            <li><Link>Link to an article</Link></li>
-            <li><Link>Link to an article</Link></li>
+          <h3 className={styles.subheader}>Helpful resources on Lifestyle Medicine:</h3>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <Link className={styles.link}>
+                Link to an article
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link}>
+                Link to an article
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link}>
+                Link to an article
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link}>
+                Link to an article
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.wrapper} second>
-          <h3>Test</h3>
           <div className={styles.grid}>
             {pillars.map(pillar => (
               <TextSpin {...pillar} />
