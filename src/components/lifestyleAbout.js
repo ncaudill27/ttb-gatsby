@@ -2,37 +2,10 @@ import React from 'react'
 
 import Section from './section'
 import Dual from './dual'
-import TextSpin from './textSpin'
-import { Link } from 'gatsby'
+import LinkList from './lifestyleAboutLinkList'
+import PillarsGrid from './pillarsGrid'
 
 import styles from './lifestyleAbout.module.css'
-
-const pillars = [
-  {
-    text: 'SLEEP',
-    color: 'blue'
-  },
-  {
-    text: 'FOOD',
-    color: 'green'
-  },
-  {
-    text: 'STRESS MANAGEMENT',
-    color: '#e577cb'
-  },
-  {
-    text: 'PHYSICAL ACTIVITY',
-    color: 'orange'
-  },
-  {
-    text: 'SUBSTANCE ABUSE',
-    color: 'peachpuff'
-  },
-  {
-    text: 'INTERPERSONAL COMMUNICATION',
-    color: 'brown'
-  },
-]
 
 const Lifestyle = () => {
 
@@ -47,35 +20,10 @@ const Lifestyle = () => {
             We will focus on the 6 pillars of LM together (listed in the circles) and help you develop healthier lifestyle decisions to prevent any chronic illness in your future.
           </p>
           <h3 className={styles.subheader}>Helpful resources on Lifestyle Medicine:</h3>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <Link className={styles.link}>
-                Link to an article
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link className={styles.link}>
-                Link to an article
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link className={styles.link}>
-                Link to an article
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link className={styles.link}>
-                Link to an article
-              </Link>
-            </li>
-          </ul>
+          <LinkList />
         </div>
         <div className={styles.wrapper} second>
-          <div className={styles.grid}>
-            {pillars.map(pillar => (
-              <TextSpin {...pillar} />
-            ))}
-          </div>
+          <PillarsGrid />
         </div>
       </Dual>
     </Section>
