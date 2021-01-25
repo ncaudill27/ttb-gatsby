@@ -2,9 +2,7 @@
 
 .overlay {
   position: absolute;
-  top: -2rem;
-  left: -1rem;
-  height: 100vh;
+  height: calc(100% + 4rem);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -16,17 +14,13 @@
   transition-duration: 500ms;
 }
 
-@media (min-width: 700px) {
-  .overlay {
-    top: -4rem;
-  }
+@media (min-width: 1233px) {
+  .overlay { height: calc(100% + 8rem);}
 }
 
 .form {
   position: absolute;
   width: 100vw;
-  left: 50%;
-  top: 50%;
   z-index: 2;
   padding: 1rem;
   background-color: var(--pri-light);
@@ -39,7 +33,7 @@
   visibility: none;
   opacity: 0;
   transition-property: visibility, opacity;
-  transition-duration: 500ms;
+  transition-duration: 250ms;
 }
 
 .open {
@@ -50,6 +44,8 @@
 @media (min-width: 700px) {
   .form {
     max-width: 500px;
-    border-radius: 8px;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
   }
 }

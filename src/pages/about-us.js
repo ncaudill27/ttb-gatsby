@@ -21,7 +21,7 @@ const AboutPage = () => (
     <Values />
     <Lifestyle />
     <Pricing />
-    {/* <Newsletter /> */}
+    <Newsletter />
     { typeof window !== 'undefined' && <Map /> }
   </Layout>
 )

@@ -1,24 +1,18 @@
 import React, { useState, useEffect, createRef } from 'react'
 import classNames from 'classnames'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import styles from './form.module.css'
 
 const Form = ({sectionEl, showForm, toggleForm, children, ...props}) => {
+  const breakpoints = useBreakpoint()
   const formEl = createRef()
 
   const [left, setLeft] = useState('0px')
   const [top, setTop] = useState('0px')
-  
-  const noScroll = top => e => {
-    if (typeof window !== 'undefined') {
-      console.log(top)
-      window.scroll(0, top)
-    }
-  }
 
   useEffect(() => {
-    console.log(sectionEl)
-    if (showForm) {
+    if (!breakpoints.sm) {
       const formWidth = formEl.current.getBoundingClientRect().width;
       const formHeight = formEl.current.getBoundingClientRect().height;
 
@@ -27,7 +21,7 @@ const Form = ({sectionEl, showForm, toggleForm, children, ...props}) => {
     }
   }, [showForm, formEl, sectionEl])
 
-  const open = showForm ? styles.open : false;
+  const open = showForm ? styles.open : false
 
   return (
     <>
