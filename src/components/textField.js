@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './textField.module.css'
 
-const TextField = ({id, name, placeholder, handleChange}) => {
+const TextField = ({id, name, handleChange, ...props}) => {
 
   const parseLabel = () => {
     // space 'camelCase' into 'camel Case'
@@ -28,7 +28,7 @@ const TextField = ({id, name, placeholder, handleChange}) => {
       className={styles.input}
       value={name}
       onChange={handleChange}
-      placeholder={placeholder}
+      {...props}
     />
   </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { postMailchimpSubscriber } from '../utils/requests'
 
 import Form from './form'
 import Button from './button'
@@ -8,20 +9,24 @@ import styles from './subscribeForm.module.css'
 
 const SubscribeForm = (props) => {
 
+  const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
+  const [response, setResponse] = useState('')
 
   const handleChange = e => setEmail(e.target.value)
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    fetch('/.netlify/functions/mailchimp-sub'
-      + '?email=' + email, {
-        method: 'POST'
-      }
-    )
-    .then( res => res.json() )
-    .then( data => console.log(data) )
-    .catch( err => console.log(err) )
+
+    setLoading(true)
+    const { data, error } = await postMailchimpSubscriber(email)
+    setLoading(false)
+
+    if (error) {
+      return setResponse(error)
+    }
+
+    return setResponse(data)
   }
 
   return (
@@ -33,9 +38,11 @@ const SubscribeForm = (props) => {
           name={email}
           placeholder='Please enter your email'
           handleChange={handleChange}
+          autofocus
         />
       </div>
-      <Button>Subscribe to our newsletter</Button>
+      <div className={styles.response}>{response}</div>
+      <Button disabled={loading}>Join our newsletter</Button>
     </Form>
   )
 }

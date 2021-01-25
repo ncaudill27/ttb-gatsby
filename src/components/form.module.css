@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
 
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   transition-property: visibility, opacity;
   transition-duration: 250ms;

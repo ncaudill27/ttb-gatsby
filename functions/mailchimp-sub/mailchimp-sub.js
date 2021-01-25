@@ -13,8 +13,8 @@ exports.handler = async function(event, context) {
 
   if (!email) {
     return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: 'You trying something funny, buster?' }),
+      statusCode: 400,
+      body: JSON.stringify({ error: 'You trying something funny, buster?' }),
     }
   }
 
@@ -46,7 +46,10 @@ exports.handler = async function(event, context) {
 
     if (!response.ok) {
       // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response }
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({ error: response }) 
+      }
     }
 
     const subscription = await response.json();    
@@ -79,13 +82,13 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ msg: 'Thank you for subscribing' }),
+      body: JSON.stringify({ data: 'Thank you for subscribing!' }),
     }
   } catch (err) {
     console.log(err) // output to netlify function log
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
+      body: JSON.stringify({ error: err }), // Could be a custom message or object i.e. JSON.stringify(err)
     }
   }
 }
