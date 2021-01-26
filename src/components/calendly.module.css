@@ -28,3 +28,18 @@
   padding: 0.5em;
   text-align: center;
 }
+
+.link {
+  composes: button from './button.module.css';
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link:focus {
+  outline: none;
+  border: 2px solid black;
+
+  box-sizing: border-box;
+}

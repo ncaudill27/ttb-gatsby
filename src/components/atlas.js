@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import classNames from 'classnames'
 
-import Button from './button'
 
 import styles from './calendly.module.css'
 
@@ -14,10 +13,8 @@ const Atlas = (props) => (
       </h2>
     </div>
     <h1>Click the button below to sign up with our EMR.</h1>
-    <Link style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-      <Button>
-        Become a Member
-      </Button>
+    <Link className={styles.link}>
+      Become a Member
     </Link>
   </div>
 )

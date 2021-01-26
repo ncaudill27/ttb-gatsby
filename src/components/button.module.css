@@ -1,23 +1,5 @@
 @import '../styles/custom-properties.css';
 
-/* old button */
-/* .button {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 336px;
-  padding: 0.5rem;
-  border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--beet);
-  border: 3px solid var(--beet);
-  cursor: pointer;
-  transition: 
-    transform ease-in-out 100ms,
-    box-shadow ease-in 250ms;
-} */
-
 .button {
   font-size: 1rem;
   font-weight: 6    00;
@@ -28,6 +10,9 @@
   padding: 0.5rem 1rem;
   border-radius: 40px;
   border:  none;
+
+  background-color: var(--beet);
+  color: white;
   cursor: pointer;
   transition: 
     transform ease-in-out 100ms,
