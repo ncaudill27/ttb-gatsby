@@ -14,6 +14,11 @@
   border-bottom: 1px solid white;
 }
 
+.root :focus {
+  padding: 0.5em;
+  margin: -0.5em;
+}
+
 .question {
   position: relative;
 }
