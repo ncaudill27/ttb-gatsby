@@ -4,7 +4,7 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import styles from './form.module.css'
 
-const Form = ({sectionEl, showForm, toggleForm, children, ...props}) => {
+const Form = ({showForm, toggleForm, children, ...props}) => {
   const breakpoints = useBreakpoint()
   const formEl = createRef()
 
@@ -19,7 +19,7 @@ const Form = ({sectionEl, showForm, toggleForm, children, ...props}) => {
       setLeft(`-${formWidth / 2}px`);
       setTop(`-${formHeight / 2}px`);
     }
-  }, [showForm, formEl, sectionEl])
+  }, [showForm, formEl, breakpoints])
 
   const open = showForm ? styles.open : false
 

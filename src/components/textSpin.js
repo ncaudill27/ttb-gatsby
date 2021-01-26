@@ -8,9 +8,8 @@ const TextSpin = ({color, text}) => (
       d="M18 5.3675
         a 12.7327 12.7327 0 0 1 0 25.465
         a 12.7327 12.7327 0 0 1 0 -25.465"
-      fill="none"
-      id="circle"
       fill='transparent'
+      id="circle"
     />
     <text className={styles.text}>
       <textPath xlinkHref='#circle'>
