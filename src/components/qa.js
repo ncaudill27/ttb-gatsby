@@ -16,8 +16,9 @@ const QA = ({question, answer}) => {
   const iconStyles = isOpen ? classNames(styles.icon, styles.open) : classNames(styles.icon)
   const answerStyles = isOpen ? classNames(styles.answer, styles.open) : classNames(styles.answer)
   return (
-    <li className={rootStyles}>
+    <li>
       <div
+      className={rootStyles}
         onClick={toggleOpen}
         onKeyDown={handleEnterKey}
         tabIndex={0}
