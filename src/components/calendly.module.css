@@ -22,11 +22,16 @@
   bottom: 0;
 }
 
-.title {
+.header {
   font-size: 1.25rem;
   margin: 0;
   padding: 0.5em;
   text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
 .link {
