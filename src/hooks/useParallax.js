@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import useScroll from './useScroll'
 
 
-function useParallax(ref) {
+export default function useParallax(ref) {
 
   const [, scrollTop] = useScroll()
   const [backgroundStyle, setBackgroundStyle] = useState(null)
@@ -45,5 +45,3 @@ function useParallax(ref) {
 
   return backgroundStyle
 }
-
-export default useParallax

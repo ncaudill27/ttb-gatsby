@@ -1,21 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import useWindowSize from '../hooks/useWindowSize'
 import classNames from 'classnames'
 
 import styles from './dual.module.css'
 
 const Dual = ({className, children, ...props}) => {
   const breakpoints = useBreakpoint()
+  const [, isResizing] = useWindowSize()
 
   const dualEl = useRef(null)
   const [height, setHeight] = useState()
 
   useEffect(() => {
-    if (!!dualEl) {
       setHeight(dualEl.current.getBoundingClientRect().height)
-    }
-  }, [dualEl, height])
+      console.log(isResizing);
+
+      if (isResizing) setHeight(dualEl.current.getBoundingClientRect().height)
+  }, [dualEl, isResizing])
 
   const updatedChildren = () => React.Children.map(children, child => {
     if (React.isValidElement(child)) {
