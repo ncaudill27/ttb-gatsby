@@ -7,19 +7,23 @@ export default function useWindowSize() {
   const [windowSize, setWindowSize] = useState(isSSR ? 1200 : window.innerWidth)
   const [isResizing, setIsResizing] = useState(false)
   
-  const changeWindowSize = () => setWindowSize(window.innerWidth)
+  const changeWindowSize = () => {
+    if (windowSize !== window.innerWidth) {
+      setIsResizing(true)
+    }
+
+    setWindowSize(window.innerWidth)
+  }
 
   useEffect(() => {
     window.addEventListener("resize", changeWindowSize)
 
-    if (windowSize !== window.innerWidth) {
-      setIsResizing(true)
-    } else {
-      setIsResizing(false)
-    }
+    const timer = setTimeout(() => setIsResizing(false), 10)
+
     return () => {
       window.removeEventListener("resize", changeWindowSize)
-    };
+      clearTimeout(timer)
+    }
   }, [windowSize]);
 
   return [windowSize, isResizing]

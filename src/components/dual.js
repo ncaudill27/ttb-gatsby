@@ -14,11 +14,17 @@ const Dual = ({className, children, ...props}) => {
   const [height, setHeight] = useState()
 
   useEffect(() => {
-      setHeight(dualEl.current.getBoundingClientRect().height)
+    if (!breakpoints.sm) {
+      const height = dualEl.current.getBoundingClientRect().height
+      setHeight(height)
       console.log(isResizing);
 
-      if (isResizing) setHeight(dualEl.current.getBoundingClientRect().height)
-  }, [dualEl, isResizing])
+      if (isResizing) {
+        console.log(height)
+        setHeight(height)
+      }
+    }
+  }, [dualEl, isResizing, breakpoints])
 
   const updatedChildren = () => React.Children.map(children, child => {
     if (React.isValidElement(child)) {
