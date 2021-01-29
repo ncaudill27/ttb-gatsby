@@ -23,7 +23,8 @@ const SubscribeForm = (props) => {
     setLoading(false)
 
     if (error) {
-      return setResponse(error)
+      setResponse('Oopsy! Something seems to have gone wrong! Try again!')
+      throw new Error(error)
     }
 
     return setResponse(data)

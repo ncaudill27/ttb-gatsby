@@ -13,9 +13,9 @@ const Atlas = (props) => (
       </h2>
     </div>
     <h3 className={styles.title}>Click the button below to sign up with our EMR.</h3>
-    <Link className={styles.link} tabIndex={0}>
+    <a className={styles.link} tabIndex={0}>
       Become a Member
-    </Link>
+    </a>
   </div>
 )
 

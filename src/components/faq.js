@@ -32,7 +32,7 @@ const FAQ = () => (
       </h1>
       <ul className={styles.list}>
         {qaList.map(qa => (
-          <QA key={qa.answer} {...qa} />
+          <QA key={qa.question} {...qa} />
         ))}
       </ul>
     </div>
