@@ -4,7 +4,7 @@ export default function useWindowSize() {
 
   const isSSR = typeof window !== "undefined"
 
-  const [windowSize, setWindowSize] = useState(isSSR ? 1200 : window.innerWidth)
+  const [windowSize, setWindowSize] = useState(typeof window !== 'undefined' ? isSSR ? 1200 : window.innerWidth : null)
   const [isResizing, setIsResizing] = useState(false)
   
   const changeWindowSize = () => {
