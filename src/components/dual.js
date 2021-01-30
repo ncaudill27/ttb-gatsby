@@ -14,16 +14,12 @@ const Dual = ({className, children, ...props}) => {
   const [height, setHeight] = useState()
 
   useEffect(() => {
-    if (!breakpoints.sm) {
       const height = dualEl.current.getBoundingClientRect().height
       setHeight(height)
-      console.log(isResizing);
 
       if (isResizing) {
-        console.log(height)
         setHeight(height)
       }
-    }
   }, [dualEl, isResizing, breakpoints])
 
   const updatedChildren = () => React.Children.map(children, child => {
