@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
         }
         metaImage: file(relativePath: {eq: "main-logo.png"}) {
           childImageSharp {
-            fixed(width: 64) {
+            fixed(width: 64, height: 82) {
               src
               width
               height

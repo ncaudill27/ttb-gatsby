@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 
 export default function useWindowSize() {
 
@@ -26,5 +26,5 @@ export default function useWindowSize() {
     }
   }, [windowSize]);
 
-  return [windowSize, isResizing]
+  return [windowSize, isResizing, changeWindowSize]
 }
