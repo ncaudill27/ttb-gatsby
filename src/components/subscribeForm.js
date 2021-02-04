@@ -35,27 +35,32 @@ const SubscribeForm = (props) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    // clear any current responses
     setResponse([])
-
+    // call validation function to check inputs and log any discrepancies
     const { validName, validEmail } = await validateSubmission({
         loggingFunc: updateResponse,
         name,
         email
       })
-    
+    // update styling if errors
     if (!validName) setNameError(true)
     if (!validEmail) setEmailError(true)
+    // block from sending request to mailchimp if not validated
+    if (!validName || !validEmail) return
 
     setLoading(true)
-    const { data, error } = await postMailchimpSubscriber(email)
+    const { error } = await postMailchimpSubscriber(email)
     setLoading(false)
 
     if (error) {
-      setResponse('Oopsy! Something seems to have gone wrong! Try again!')
+      updateResponse('Oopsy! Something seems to have gone wrong! Try again!')
       throw new Error(error)
     }
 
-    return setResponse(data)
+    updateResponse("You're all signed up! Thank you!")
+    //? anything useful we can do with the return data
+    //? possibly log is somewhere
   }
 
   const responseStyles = nameError || emailError ? classNames(styles.response, styles.error) : styles.response
