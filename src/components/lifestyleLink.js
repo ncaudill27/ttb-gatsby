@@ -4,7 +4,7 @@ import styles from './lifestyleLink.module.css'
 
 const LifestyleLink = ({to, copy}) => (
   <li className={styles.root}>
-    <a href={to} className={styles.a}>
+    <a href={to} className={styles.link}>
       {copy}
     </a>
   </li>

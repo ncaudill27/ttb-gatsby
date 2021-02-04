@@ -13,3 +13,9 @@
 }
 .title,
 .copy { margin: 0; }
+
+@media (max-width: 1450px) {
+  .second {
+    margin-left: 1rem;
+  }
+}

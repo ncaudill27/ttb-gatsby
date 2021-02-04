@@ -4,11 +4,10 @@
 }
 
 .link {
-  font-weight: 600;
   text-decoration: none;
   color: black;
 }
 
-.link:hover { 
+.link:hover {
   border-bottom: 1px solid black;
 }

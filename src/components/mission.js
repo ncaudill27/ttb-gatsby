@@ -5,7 +5,7 @@ import Dual from './dual'
 import Watergirl from './images/watergirl'
 
 const Mission = () => (
-    <Section color='pri-med' background>
+    <Section color='pri-med'>
       <Dual>
         <div first>
           <h1>Our Mission</h1>
