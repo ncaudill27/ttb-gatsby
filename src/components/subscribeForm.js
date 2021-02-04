@@ -14,20 +14,32 @@ const SubscribeForm = (props) => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [response, setResponse] = useState([])
+  const [nameError , setNameError] = useState(false)
+  const [emailError , setEmailError] = useState(false)
+
+  const clearNameError = () => {
+    if (nameError) setNameError(false)
+  }
+  const clearEmailError = () => {
+    if (emailError) setEmailError(false)
+  }
 
   const updateResponse = string => {
     setResponse(responses => [...responses, string])
   }
-  const handleChange = setFn => e => {
+  const handleChange = (setFn, clearErrorFn) => e => {
     setFn(e.target.value)
+    clearErrorFn()
   }
 
   const handleSubmit = async e => {
     e.preventDefault();
+    setResponse([])
 
-    const { valid } = await validateSubmission()
-    console.log(valid)
-    console.log(response)
+    const { validName, validEmail } = await validateSubmission()
+    
+    if (!validName) setNameError(true)
+    if (!validEmail) setEmailError(true)
 
     // setLoading(true)
     // const { data, error } = await postMailchimpSubscriber(email)
@@ -42,7 +54,7 @@ const SubscribeForm = (props) => {
   }
 
   const validateSubmission = async () => {
-    let valid = true
+    let [validName, validEmail] = [true, true]
 
     if (!name) updateResponse('First Name cannot be empty')
     if (!email) updateResponse('Email cannot be empty')
@@ -52,14 +64,18 @@ const SubscribeForm = (props) => {
 
     if (
       !name
-      || !email
       || !validateName(name)
+    ) validName = false
+
+    if(
+      !email
       || !validateEmail(email)
-    ) valid = false
+    ) validEmail = false
     
-    return { valid }
+    return { validName, validEmail }
   }
 
+  console.log(nameError, emailError);
   return (
     <Form onSubmit={handleSubmit} {...props}>
       <h1 className={styles.header}>Subscribe</h1>
@@ -68,16 +84,18 @@ const SubscribeForm = (props) => {
           id='firstName'
           name={name}
           placeholder='Please enter your first name'
-          handleChange={handleChange(setName)}
+          handleChange={handleChange(setName, clearNameError)}
           disabled={loading}
+          error={nameError}
           autoFocus
         />
         <TextField
           id='email'
           name={email}
           placeholder='Please enter your email'
-          handleChange={handleChange(setEmail)}
+          handleChange={handleChange(setEmail, clearEmailError)}
           disabled={loading}
+          error={emailError}
         />
       </div>
       {!!response.length &&

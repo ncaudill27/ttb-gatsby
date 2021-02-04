@@ -1,4 +1,4 @@
-@import '../styles//custom-properties.css';
+@import '../styles/custom-properties.css';
 
 .container {
   display: flex;
@@ -35,3 +35,10 @@
     inset 0 0 5px 1px #e577cbd2;
 }
 
+input.error:not(:focus, :active) {
+  /* background-color: rgba(255, 54, 54, 0.604); */
+  box-shadow: 0px 0px 0 1px red;
+  border: 2px solid red;
+  color: red;
+  font-weight: bold;
+}
