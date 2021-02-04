@@ -8,7 +8,29 @@ const validateEmail = (email) => {
   return regex.test(email)
 }
 
+// update to array of Refs and map over allowing it to be more generic
+const validateSubmission = async ({loggingFunc, name, email}) => {
+  let [validName, validEmail] = [true, true]
+
+  if (!name) loggingFunc('First Name cannot be empty')
+  if (!email) loggingFunc('Email cannot be empty')
+  
+  if (!validateEmail(email)) loggingFunc('Please enter a valid email')
+  if (!validateName(name)) loggingFunc('Please enter a valid first name')
+
+  if (
+    !name
+    || !validateName(name)
+  ) validName = false
+
+  if(
+    !email
+    || !validateEmail(email)
+  ) validEmail = false
+  
+  return { validName, validEmail }
+}
+
 export {
-  validateEmail,
-  validateName
+  validateSubmission
 }
