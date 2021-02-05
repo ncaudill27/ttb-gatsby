@@ -38,7 +38,7 @@ const Pricing = () => (
     </Dual>
     <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
       {prices.map(price => (
-        <PriceCard {...price} />
+        <PriceCard key={price.price} {...price} />
       ))}
     </div>
   </Section>

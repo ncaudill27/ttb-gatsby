@@ -19,10 +19,6 @@ const SubscribeForm = (props) => {
   const [emailError, setEmailError] = useState(false)
   const [serverError, setServerError] = useState(false)
 
-  React.useEffect(() => {
-    if (!props.formForm) resetState()
-  }, [props.showForm, resetState])
-
   const resetState = () => {
     setLoading(false)
     setEmail('')

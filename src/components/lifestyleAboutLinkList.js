@@ -22,11 +22,11 @@ const links = [
     copy: 'Link to an article'
   }
 ]
-
+// TODO use a real key when there is real data
 const LinkList = () => (
   <ul className={styles.root}>
-    {links.map(link => (
-      <Link {...link} />
+    {links.map((link, idx) => (
+      <Link key={idx} {...link} />
     ))}
   </ul>
 )

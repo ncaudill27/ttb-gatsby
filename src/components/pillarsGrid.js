@@ -34,7 +34,7 @@ const pillars = [
 const PillarsGrid = () => (
   <div className={styles.root}>
     {pillars.map(pillar => (
-      <TextSpin {...pillar} />
+      <TextSpin key={pillar.text} {...pillar} />
     ))}
   </div>
 )
