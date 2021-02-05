@@ -27,12 +27,14 @@ const DPC = () => {
       <Dual>
         <div first>
           <h1>
-            Why DPC?
+            The benefits of a DPC practice.
           </h1>
           <p>
+            A DPC model, similar to concierge medicine, allows for a tailored experience with each individual patient and works as a monthly membership.
             One of the things I’m most looking forward to in opening The Tiny Beet is spending more time with my patients.
-            A DPC model, similar to a concierge style, allows for this tailored experience and works as a monthly membership.
-            These are some of its advantages: 
+          </p>
+          <p>
+            Here are some of its advantages:
           </p>
           { !breakpoints.sm && <DPCButton /> }
         </div>

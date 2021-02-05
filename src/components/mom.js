@@ -11,10 +11,7 @@ const Mom = () => (
     <Dual>
       <div className={styles.copy} first>
         <h1 className={styles.header}>
-          Welcome
-          to
-          <br />
-          The Tiny Beet,
+          Hi, I'm Dr. Yolanda Rivera-Caudill.
         </h1>
         <p>
           After 30 years of practicing peds, I’m excited to announce the founding of my practice.
