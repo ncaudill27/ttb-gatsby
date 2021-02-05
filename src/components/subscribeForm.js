@@ -15,8 +15,9 @@ const SubscribeForm = (props) => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [response, setResponse] = useState([])
-  const [nameError , setNameError] = useState(false)
-  const [emailError , setEmailError] = useState(false)
+  const [nameError, setNameError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
+  const [serverError, setServerError] = useState(false)
 
   const clearNameError = () => {
     if (nameError) setNameError(false)
@@ -50,12 +51,14 @@ const SubscribeForm = (props) => {
     if (!validName || !validEmail) return
 
     setLoading(true)
-    const { error } = await postMailchimpSubscriber(email)
+    const { data, error } = await postMailchimpSubscriber(email, name)
     setLoading(false)
 
     if (error) {
       updateResponse('Oopsy! Something seems to have gone wrong! Try again!')
-      throw new Error(error)
+      setServerError(true)
+      //TODO implement some type of error logging serverside
+      console.log(error)
     }
 
     updateResponse("You're all signed up! Thank you!")
@@ -63,7 +66,7 @@ const SubscribeForm = (props) => {
     //? possibly log is somewhere
   }
 
-  const responseStyles = nameError || emailError ? classNames(styles.response, styles.error) : styles.response
+  const responseStyles = nameError || emailError || serverError ? classNames(styles.response, styles.error) : styles.response
 
   return (
     <Form onSubmit={handleSubmit} {...props}>

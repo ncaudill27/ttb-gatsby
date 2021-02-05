@@ -7,9 +7,7 @@ exports.handler = async function(event, context) {
   console.log('Event: \n', event) //! DELETE
   console.log('Context: \n', context) //! DELETE
 
-  const email = event.queryStringParameters.email;
-
-  console.log(process.env.MAILCHIMP_API_KEY)
+  const { email, name } = JSON.parse(event.body)
 
   if (!email) {
     return {
@@ -29,6 +27,37 @@ exports.handler = async function(event, context) {
   // })
   // const response = await mailchimp.ping.get();
   try {
+    /* ------
+      LIST GET REQUEST
+    ------ */
+    const getResponse = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members', {
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Bearer ${process.env.MAILCHIMP_API_KEY}`
+      },
+    })
+
+    if (!getResponse.ok) {
+      // NOT res.status >= 200 && res.status < 300
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({ error: response }) 
+      }
+    }
+
+    const getData = await getResponse.json()
+    
+    const memberEmails = getData.members.map(member => member.email_address)
+
+    if (memberEmails.includes(email)) {
+      return {
+        statusCode: 409,
+        body: JSON.stringify({ error: 'Email already in list!'})
+      }
+    }
+    /* ----------
+      POST MEMBER REQUEST
+    ---------- */
     const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/', {
       method: 'POST',
       headers: {
@@ -38,7 +67,9 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({
         email_address: email,
         status: 'subscribed',
-        merge_fields: {}
+        merge_fields: {
+          FNAME: name
+        }
       })
     })
 
@@ -54,18 +85,6 @@ exports.handler = async function(event, context) {
 
     const subscription = await response.json();    
     console.log(subscription);
-    /* ------
-      LIST GET REQUEST
-    ------ */
-    // const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d', {
-    //   headers: {
-    //     Accept: 'application/json',
-    //     Authorization: `Bearer ${process.env.MAILCHIMP_API_KEY}`
-    //   },
-    // })
-    
-    // const data = await response.json()
-    // console.log(data);
     /* ----------
       DELETE SUB REQ
     ---------- */
