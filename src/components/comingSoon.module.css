@@ -1,0 +1,24 @@
+@import '../styles/custom-properties.css';
+
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  max-width: 900px;
+  color: #ca6d4f; 
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}

@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Intro from '../components/intro'
+import ComingSoon from '../components/comingSoon'
 import Mom from '../components/mom'
 import Lifestyle from '../components/lifestyle'
 import DPC from '../components/dpc'
@@ -16,7 +16,7 @@ import '../styles/calendly.css'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Intro />
+    <ComingSoon />
     <Mom />
     <Lifestyle />
     <DPC />

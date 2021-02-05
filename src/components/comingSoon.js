@@ -2,9 +2,9 @@ import React from 'react'
 
 import Section from './section'
 
-import styles from './intro.module.css'
+import styles from './comingSoon.module.css'
 
-const Intro = () => (
+const ComingSoon = () => (
   <Section color='pri-light' className={styles.root}>
     <h1 className={styles.title}>
       Coming soon! Dr. Caudill is pleased to announce opening her pediatric practice, the tiny beet.
@@ -15,4 +15,4 @@ const Intro = () => (
   </Section>
 )
 
-export default Intro
+export default ComingSoon
