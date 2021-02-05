@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 
 import styles from './textField.module.css'
 
 const TextField = React.forwardRef(({id, name, handleChange, error, ...props}, ref) => {
-
-  const [inputStyles, setInputStyles] = useState(styles.input)
-
-  useEffect(() => {
-    if (error) setInputStyles(classNames(styles.input, styles.error))
-    else setInputStyles(styles.input)
-  }, [error, setInputStyles])
 
   const parseLabel = () => {
     // space 'camelCase' into 'camel Case'
@@ -23,6 +16,11 @@ const TextField = React.forwardRef(({id, name, handleChange, error, ...props}, r
     return titleized
   }
 
+  const inputStyles =
+    error
+    ? classNames(styles.input, styles.error)
+    : styles.input
+  
   return <div className={styles.container}>
     <label
       className={styles.label}
