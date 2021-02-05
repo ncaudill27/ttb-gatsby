@@ -17,7 +17,7 @@ exports.handler = async function(event, context) {
   }
 
   // used in requests required use of mailchimps email id
-  const emailHash = crypto.createHash('md5').update(email).digest('hex');
+  // const emailHash = crypto.createHash('md5').update(email).digest('hex')
 
   //todo figure out why this isnt working
   //todo contact mailchimp
@@ -39,9 +39,10 @@ exports.handler = async function(event, context) {
 
     if (!getResponse.ok) {
       // NOT res.status >= 200 && res.status < 300
+      console.log('Get response error: ', getResponse)
       return {
         statusCode: response.status,
-        body: JSON.stringify({ error: response }) 
+        body: JSON.stringify({ error: 'Oopsy! Seems our mailing service is down! Try again soon!' }) 
       }
     }
 
@@ -58,7 +59,7 @@ exports.handler = async function(event, context) {
     /* ----------
       POST MEMBER REQUEST
     ---------- */
-    const response = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/', {
+    const postResponse = await fetch('https://us8.api.mailchimp.com/3.0/lists/8e838bbe5d/members/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -73,18 +74,17 @@ exports.handler = async function(event, context) {
       })
     })
 
-    console.log(response);
-
-    if (!response.ok) {
+    if (!postResponse.ok) {
       // NOT res.status >= 200 && res.status < 300
+      console.log('Post response error: ', postResponse);
       return {
-        statusCode: response.status,
-        body: JSON.stringify({ error: response }) 
+        statusCode: postResponse.status,
+        body: JSON.stringify({ error: 'Oopsy! Seems our mailing service is down! Try again soon!' }) 
       }
     }
 
-    const subscription = await response.json();    
-    console.log(subscription);
+    const subscription = await postResponse.json();    
+    console.log('Succesfull subscription: ', subscription);
     /* ----------
       DELETE SUB REQ
     ---------- */
@@ -104,10 +104,10 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ data: 'Thank you for subscribing!' }),
     }
   } catch (err) {
-    console.log(err) // output to netlify function log
+    console.log(err) //TODO implement logging for errors
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: err }), // Could be a custom message or object i.e. JSON.stringify(err)
+      body: JSON.stringify({ error: 'Oopsy! Seems our mailing service is down! Try again soon!' }),
     }
   }
 }

@@ -19,6 +19,20 @@ const SubscribeForm = (props) => {
   const [emailError, setEmailError] = useState(false)
   const [serverError, setServerError] = useState(false)
 
+  React.useEffect(() => {
+    if (!props.formForm) resetState()
+  }, [props.showForm, resetState])
+
+  const resetState = () => {
+    setLoading(false)
+    setEmail('')
+    setName('')
+    setResponse([])
+    setNameError(false)
+    setEmailError(false)
+    setServerError(false)
+  }
+  
   const clearNameError = () => {
     if (nameError) setNameError(false)
   }
@@ -55,10 +69,9 @@ const SubscribeForm = (props) => {
     setLoading(false)
 
     if (error) {
-      updateResponse('Oopsy! Something seems to have gone wrong! Try again!')
+      updateResponse(error)
       setServerError(true)
-      //TODO implement some type of error logging serverside
-      console.log(error)
+      return // kick out response
     }
 
     updateResponse("You're all signed up! Thank you!")
