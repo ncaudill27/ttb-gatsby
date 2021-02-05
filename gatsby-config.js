@@ -38,7 +38,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-anchor-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -66,6 +65,12 @@ module.exports = {
             },
           ],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-anchor-links`,
+      options: {
+        offset: -111
       },
     },
     {
