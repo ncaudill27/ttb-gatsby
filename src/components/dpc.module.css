@@ -1,0 +1,3 @@
+.anchor {
+  composes: link from './calendly.module.css';
+}

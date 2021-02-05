@@ -25,7 +25,7 @@ const prices = [
 ]
 
 const Pricing = () => (
-  <Section color='pri-med'>
+  <Section color='pri-med' id='pricing'>
     <Dual className={styles.dual}>
       <div className={styles.first} first>
         <h1 className={styles.title}>How the direct patient care Membership model works.</h1>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import Section from './section'
 import Dual from './dual'
@@ -8,7 +9,15 @@ import Button from './button'
 
 import styles from './dpc.module.css'
 
-const DPCButton = () => <Button>Learn more about DPC</Button>
+const DPCButton = () => (
+  <AnchorLink
+    to='/about-us#pricing'
+    title='DPC pricing'
+    className={styles.anchor}
+  >
+    Learn more about DPC
+  </AnchorLink>
+)
 
 const DPC = () => {
   const breakpoints = useBreakpoint()
