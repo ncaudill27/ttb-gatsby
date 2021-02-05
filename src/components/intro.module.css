@@ -1,5 +1,13 @@
 @import '../styles/custom-properties.css';
 
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   margin: 0 auto;
   padding-bottom: 1rem;

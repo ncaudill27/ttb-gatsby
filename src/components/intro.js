@@ -5,7 +5,7 @@ import Section from './section'
 import styles from './intro.module.css'
 
 const Intro = () => (
-  <Section color='pri-light' style={{padding: '14rem 1rem'}}>
+  <Section color='pri-light' className={styles.root}>
     <h1 className={styles.title}>
       Coming soon! Dr. Caudill is pleased to announce opening her pediatric practice, the tiny beet.
     </h1>
