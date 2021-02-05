@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './textField.module.css'
 
-const TextField = ({id, name, handleChange, error, ...props}) => {
+const TextField = React.forwardRef(({id, name, handleChange, error, ...props}, ref) => {
 
   const [inputStyles, setInputStyles] = useState(styles.input)
 
@@ -32,6 +32,7 @@ const TextField = ({id, name, handleChange, error, ...props}) => {
     </label>
     <input
       id={id}
+      ref={ref}
       className={inputStyles}
       value={name}
       onChange={handleChange}
@@ -39,6 +40,6 @@ const TextField = ({id, name, handleChange, error, ...props}) => {
     />
   </div>
 
-}
+})
 
 export default TextField

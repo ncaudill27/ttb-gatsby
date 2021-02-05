@@ -5,7 +5,6 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Section from './section'
 import Dual from './dual'
 import Grid from './dpcGrid'
-import Button from './button'
 
 import styles from './dpc.module.css'
 

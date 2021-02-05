@@ -44,6 +44,14 @@ const SubscribeForm = (props) => {
     clearErrorFn()
   }
 
+  const handleEscKeyClose = e => {
+    if (e.key !== 'Escape') {
+      return
+    } else {
+      props.toggleForm()
+    }
+  }
+
   const handleSubmit = async e => {
     e.preventDefault();
     // clear any current responses
@@ -61,7 +69,7 @@ const SubscribeForm = (props) => {
     if (!validName || !validEmail) return
 
     setLoading(true)
-    const { data, error } = await postMailchimpSubscriber(email, name)
+    const { error } = await postMailchimpSubscriber(email, name)
     setLoading(false)
 
     if (error) {
@@ -78,7 +86,11 @@ const SubscribeForm = (props) => {
   const responseStyles = nameError || emailError || serverError ? classNames(styles.response, styles.error) : styles.response
 
   return (
-    <Form onSubmit={handleSubmit} {...props}>
+    <Form
+      onSubmit={handleSubmit}
+      resetForm={resetState}
+      {...props}
+    >
       <h1 className={styles.header}>Subscribe</h1>
       <div className={styles.inputs}>
         <TextField
@@ -86,15 +98,16 @@ const SubscribeForm = (props) => {
           name={name}
           placeholder='Please enter your first name'
           handleChange={handleChange(setName, clearNameError)}
+          onKeyDown={handleEscKeyClose}
           disabled={loading}
           error={nameError}
-          autoFocus
         />
         <TextField
           id='email'
           name={email}
           placeholder='Please enter your email'
           handleChange={handleChange(setEmail, clearEmailError)}
+          onKeyDown={handleEscKeyClose}
           disabled={loading}
           error={emailError}
         />
@@ -105,7 +118,12 @@ const SubscribeForm = (props) => {
             <div key={response}>{response}</div>
           ))}
         </div>}
-      <Button disabled={loading}>Join our newsletter</Button>
+      <Button
+        disabled={loading}
+        onKeyDown={handleEscKeyClose}
+      >
+        Join our newsletter
+      </Button>
     </Form>
   )
 }

@@ -1,16 +1,15 @@
-import React, { useState, useEffect, createRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import styles from './form.module.css'
 
-const Form = ({showForm, toggleForm, children, ...props}) => {
+const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
   const breakpoints = useBreakpoint()
-  const formEl = createRef()
+  const formEl = useRef()
 
   const [left, setLeft] = useState('0px')
   const [top, setTop] = useState('0px')
-
   useEffect(() => {
     if (!breakpoints.sm) {
       const formWidth = formEl.current.getBoundingClientRect().width;
@@ -21,6 +20,17 @@ const Form = ({showForm, toggleForm, children, ...props}) => {
     }
   }, [showForm, formEl, breakpoints])
 
+
+  const [resetCalled, setResetCalled] = useState(false)
+  useEffect(() => {
+    if (!showForm && !resetCalled) {
+      resetForm()
+      setResetCalled(true)
+    }
+    if (showForm && resetCalled) setResetCalled(false)
+  }, [showForm, resetForm])
+
+
   const open = showForm ? styles.open : false
 
   return (
@@ -28,6 +38,7 @@ const Form = ({showForm, toggleForm, children, ...props}) => {
       <div
         className={classNames(styles.overlay, open)}
         onClick={toggleForm}
+        aria-hidden='true'
       />
       <form
         className={classNames(styles.form, open)}
