@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ComingSoon from '../components/comingSoon'
+import Intro from '../components/intro'
 import Mom from '../components/mom'
 import Lifestyle from '../components/lifestyle'
 import DPC from '../components/dpc'
@@ -17,6 +18,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <ComingSoon />
+    <Intro />
     <Mom />
     <Lifestyle />
     <DPC />
