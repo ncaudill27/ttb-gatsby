@@ -102,7 +102,7 @@ const SubscribeForm = (props) => {
       {!!response.length &&
         <div className={responseStyles}>
           {response.map(response => (
-            <div>{response}</div>
+            <div key={response}>{response}</div>
           ))}
         </div>}
       <Button disabled={loading}>Join our newsletter</Button>

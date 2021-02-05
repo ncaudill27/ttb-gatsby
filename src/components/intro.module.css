@@ -1,24 +1,16 @@
-@media (max-width: 700px) {
-  .landing {
-    padding: 4rem 1rem 2rem;
-  }
+@import '../styles/custom-properties.css';
 
-  .img {
-    order: 0;
-    margin-top: -2rem;
-  }
-
-  .copy {
-    order: 1;
-  }
-
-  .header {
-    margin-top: -1rem;
-  }
+.title {
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  max-width: 900px;
+  color: #ca6d4f; 
+  border-bottom: 2px solid black;
+  text-align: center;
 }
 
-@media (min-width: 701px) {
-  .header {
-    font-size: 2.5rem;
-  }
+.caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
 }
