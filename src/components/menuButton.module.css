@@ -1,6 +1,5 @@
 .button {
-  width: 10%;
-  max-width: 40px;
+  width: 45px;
   cursor: pointer;
   z-index: 1;
 }

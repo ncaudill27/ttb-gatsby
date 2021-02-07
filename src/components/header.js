@@ -8,10 +8,10 @@ import Navigation from './navigation'
 import styles from './header.module.css'
 
 const Header = () => (
-  <header className={styles.header}>
+  <header className={styles.root}>
     <div className={styles.wrapper}>
       <Link to="/" >
-        <HeaderLogo />
+        <HeaderLogo className={styles.logo} />
       </Link>
       <Navigation />
     </div>

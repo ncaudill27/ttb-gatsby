@@ -2,12 +2,10 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import logoStyles from './headerLogo.module.css';
-
-const HeaderLogo = () => {
+const HeaderLogo = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "ttb-logo.png" }) {
+      logo: file(relativePath: { eq: "ttb-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 290) {
             ...GatsbyImageSharpFluid
@@ -17,17 +15,13 @@ const HeaderLogo = () => {
     }
   `)
   
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
   return (
-    <div
-      className={logoStyles.logo}
-      tabIndex={0}
-      role='button'
-    >
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+    <div {...props}>
+      <Img fluid={data.logo.childImageSharp.fluid} />
     </div>
   )
 }

@@ -14,13 +14,13 @@ const Menu = ({routes}) => {
 
   const handleKeyDown = e => {
     // if enter key
-    if (e.keyCode === 13) {
-      toggleOpen()
-    }
+    if (e.keyCode === 13) toggleOpen()
   }
 
   const styling =
-    isOpen ? classNames(styles.menu, styles.open) : classNames(styles.menu)
+    isOpen
+      ? classNames(styles.menu, styles.open)
+      : classNames(styles.menu)
   
   return (
     <>
