@@ -97,8 +97,6 @@ const SubscribeForm = (props) => {
       ? classNames(styles.response, styles.error)
       : styles.response
 
-  console.log(firstInputEl)
-
   if (!props.showForm) return null
   return (
     <Form
@@ -108,7 +106,6 @@ const SubscribeForm = (props) => {
     >
       <h1 className={styles.header}>Subscribe</h1>
       <div className={styles.inputs}>
-      {props.showForm &&
         <TextField
         id='firstName'
         ref={firstInputEl}
@@ -119,7 +116,7 @@ const SubscribeForm = (props) => {
         disabled={loading}
         error={nameError}
         formOpen={props.showForm}
-      />}
+      />
       <TextField
         id='email'
         name={email}

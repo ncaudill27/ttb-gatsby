@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { parsePath } from '../utils/parsePath'
+import { parsePath } from '../utils/parse'
 
 import styles from './menuLink.module.css'
 
