@@ -12,13 +12,11 @@ import Map from '../components/map'
 
 const AboutPage = () => (
   <Layout>
-    <SEO title='About Us' />
-    <Mission />
+    <SEO title='Learn More' />
     {/* <Quote
       quote='Success is liking yourself, liking what you do, and liking how you do it.'
       by='Maya Angelou'
     /> */}
-    <Values />
     <Lifestyle />
     <Pricing />
     <Newsletter />

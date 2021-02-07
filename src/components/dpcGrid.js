@@ -23,7 +23,7 @@ const Grid = () => (
       <div className={styles.clock}>
         <ClockIcon className={styles.icon} />
         <p>
-          30 - 60min visits with the doctor
+          30min visits with the doctor
         </p>
       </div>
       <div className={styles.doctor}>

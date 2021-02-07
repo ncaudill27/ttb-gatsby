@@ -10,7 +10,7 @@ import styles from './dpc.module.css'
 
 const DPCButton = () => (
   <AnchorLink
-    to='/about-us#pricing'
+    to='/learn-more#pricing'
     title='DPC pricing'
     className={styles.anchor}
   >
