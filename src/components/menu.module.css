@@ -12,7 +12,7 @@
   width: 100vw;
   top: 0;
   left: 0;
-  background: #26262690;
+  background: var(--sec-dark);
 }
 
 .down { animation: glow 1s linear 1; }

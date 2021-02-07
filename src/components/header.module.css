@@ -2,11 +2,12 @@
 
 .root {
   width: 100vw;
-  height: 45px;
+  height: 37px;
   position: fixed;
-  top: 2rem;
-  padding: 0 1rem;
+  top: 0;
+  padding: 2.5rem 1rem;
   z-index: 1;
+  background-color: var(--pri-light);
 }
 
 .wrapper {
