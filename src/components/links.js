@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import MenuLink from './menuLink'
 
@@ -24,20 +24,13 @@ const MenuLinks = ({routes, toggleOpen}) => {
       toggleOpen={toggleOpen}
       tabIndex={1}
     />
-    {routes.map( ({path}, idx) => {
-      console.log('len: ', routes.length);
-      console.log('idx: ', idx)
-      const isLastLink = routes.length === idx + 1
-      return (
-        <MenuLink
-          key={path}
-          path={path}
-          toggleOpen={toggleOpen}
-          lastLink={isLastLink}
-          tabIndex={idx + 2}
-        />
-      )
-    })}
+    {routes.map( ({path}) => (
+      <MenuLink
+        key={path}
+        path={path}
+        toggleOpen={toggleOpen}
+      />
+    ))}
   </div>
   )
 }
