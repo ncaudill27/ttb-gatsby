@@ -2,9 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import styles from './menuButton.module.css';
-
-const HeaderLogo = ({handleClick, handleKeyDown}) => {
+const HeaderLogo = (props) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "menu.png" }) {
@@ -22,12 +20,7 @@ const HeaderLogo = ({handleClick, handleKeyDown}) => {
   }
 
   return (
-    <div className={styles.button}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role='button'
-    >
+    <div {...props}>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
     </div>
   )
