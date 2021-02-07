@@ -1,76 +1,44 @@
 import React, { useState, useEffect, useRef } from 'react'
-import classNames from 'classnames'
+import { handleEnterKey } from '../utils/handlers'
 import PropTypes from 'prop-types'
 
 import MenuButton from './menuButton'
-import MenuLink from './menuLink'
+import MenuLinks from './links'
 
 import styles from './menu.module.css'
 
 const Menu = ({routes}) => {
-  const linksEl = useRef()
-
-  const [left, setLeft] = useState('0px')
-  const [top, setTop] = useState('0px')
-  useEffect(() => {
-      const linksWidth = linksEl.current.getBoundingClientRect().width
-      const linksHeight = linksEl.current.getBoundingClientRect().height
-
-      setLeft(`-${linksWidth / 2}px`)
-      setTop(`-${linksHeight / 2}px`)
-  }, [])
-
+  
   const [isOpen, setOpen] = useState(false)
   const toggleOpen = () => setOpen( prev => !prev )
 
-  const handleKeyDown = e => {
-    // if enter key
-    if (e.keyCode === 13) toggleOpen()
-  }
-
-  const openStyles =
-    isOpen
-      ? styles.open
-      : false
-
-      console.log(linksEl);
-  
   return (
     <>
       <MenuButton
         id='menubutton'
         className={styles.button}
         // handlers
-        onKeyDown={handleKeyDown}
+        onKeyDown={toggleOpen}
         onClick={toggleOpen}
         // accessibility
         tabIndex={0}
-        handleKeyDown={handleKeyDown}
+        handleEnterKey={handleEnterKey(toggleOpen)}
         role='button'
         aria-haspopup='true'
         aria-controls='menu'
         aria-expanded={isOpen}
       />
-      <div
-        className={classNames(styles.overlay, openStyles)}
-        aria-hidden='true'
-        onClick={toggleOpen}
-      />
-      <div
-        id='menu'
-        ref={linksEl}
-        className={classNames(styles.menu, openStyles)}
-        style={{marginLeft: left, marginTop: top}}
-        onKeyDown={handleKeyDown}
-        role='menu'
-        aria-labelledby='menubutton'
-        tabIndex={0}
-      >
-        <MenuLink path='/' />
-        {routes.map( ({path}) => (
-          <MenuLink path={path} key={path} />
-        ))}
-      </div>
+      {isOpen && <>
+        <div
+          className={styles.overlay}
+          aria-hidden='true'
+          onClick={toggleOpen}
+        />
+        <MenuLinks
+          toggleOpen={toggleOpen}
+          routes={routes}
+        />
+      </>}
     </>
   )
 }

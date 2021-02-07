@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import classNames from 'classnames'
 import { postMailchimpSubscriber } from '../utils/requests'
 import { validateSubmission } from '../utils/inputValidation'
+import { handleEscKey } from '../utils/handlers'
 
 import Form from './form'
 import Button from './button'
@@ -49,14 +50,6 @@ const SubscribeForm = (props) => {
   const handleChange = (setFn, clearErrorFn) => e => {
     setFn(e.target.value)
     clearErrorFn()
-  }
-
-  const handleEscKeyClose = e => {
-    if (e.key !== 'Escape') {
-      return
-    } else {
-      props.toggleForm()
-    }
   }
 
   const handleSubmit = async e => {
@@ -112,7 +105,7 @@ const SubscribeForm = (props) => {
         name={name}
         placeholder='Please enter your first name'
         handleChange={handleChange(setName, clearNameError)}
-        onKeyDown={handleEscKeyClose}
+        onKeyDown={handleEscKey(props.toggleForm)}
         disabled={loading}
         error={nameError}
       />
@@ -121,7 +114,7 @@ const SubscribeForm = (props) => {
         name={email}
         placeholder='Please enter your email'
         handleChange={handleChange(setEmail, clearEmailError)}
-        onKeyDown={handleEscKeyClose}
+        onKeyDown={handleEscKey(props.toggleForm)}
         disabled={loading}
         error={emailError}
       />
@@ -134,7 +127,7 @@ const SubscribeForm = (props) => {
       </div>}
       <Button
         disabled={loading}
-        onKeyDown={handleEscKeyClose}
+        onKeyDown={handleEscKey(props.toggleForm)}
       >
         Join our newsletter
     </Button>

@@ -4,11 +4,9 @@ import Navlink from './navlink'
 
 const Navbar = ({routes}) => (
   <>
-    {
-      routes.map( ({path}) => {
-        return <Navlink path={path} key={path} />
-      })
-    }
+    {routes.map( ({path}) => (
+      <Navlink path={path} key={path} />
+    ))}
   </>
 )
 
