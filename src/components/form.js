@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import classNames from 'classnames'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import styles from './form.module.css'
@@ -30,18 +29,15 @@ const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
     if (showForm && resetCalled) setResetCalled(false)
   }, [showForm, resetForm, resetCalled, setResetCalled])
 
-
-  const open = showForm ? styles.open : false
-
   return (
     <>
       <div
-        className={classNames(styles.overlay, open)}
+        className={styles.overlay}
         onClick={toggleForm}
         aria-hidden='true'
       />
       <form
-        className={classNames(styles.form, open)}
+        className={styles.form}
         ref={formEl}
         style={{marginLeft: left, marginTop: top}}
         {...props}

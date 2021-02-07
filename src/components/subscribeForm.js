@@ -115,7 +115,6 @@ const SubscribeForm = (props) => {
         onKeyDown={handleEscKeyClose}
         disabled={loading}
         error={nameError}
-        formOpen={props.showForm}
       />
       <TextField
         id='email'
