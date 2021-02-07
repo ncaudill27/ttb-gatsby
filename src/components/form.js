@@ -12,11 +12,11 @@ const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
   const [top, setTop] = useState('0px')
   useEffect(() => {
     if (!breakpoints.sm) {
-      const formWidth = formEl.current.getBoundingClientRect().width;
-      const formHeight = formEl.current.getBoundingClientRect().height;
+      const formWidth = formEl.current.getBoundingClientRect().width
+      const formHeight = formEl.current.getBoundingClientRect().height
 
-      setLeft(`-${formWidth / 2}px`);
-      setTop(`-${formHeight / 2}px`);
+      setLeft(`-${formWidth / 2}px`)
+      setTop(`-${formHeight / 2}px`)
     }
   }, [showForm, formEl, breakpoints])
 
@@ -28,7 +28,7 @@ const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
       setResetCalled(true)
     }
     if (showForm && resetCalled) setResetCalled(false)
-  }, [showForm, resetForm])
+  }, [showForm, resetForm, resetCalled, setResetCalled])
 
 
   const open = showForm ? styles.open : false

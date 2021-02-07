@@ -1,20 +1,18 @@
 import React from 'react'
 import classNames from 'classnames'
+import { parseLabel } from '../utils/parse'
 
 import styles from './textField.module.css'
 
-const TextField = React.forwardRef(({id, name, handleChange, error, ...props}, ref) => {
-
-  const parseLabel = () => {
-    // space 'camelCase' into 'camel Case'
-    const titleizeRest = id.replace(/([A-Z])/g, ' $1')
-
-    // capitalize first letter and attach the rest
-    // resulting in 'camel Case' to 'Camel Case'
-    const titleized = titleizeRest.charAt(0).toUpperCase() + titleizeRest.slice(1)
-    
-    return titleized
-  }
+const TextField = React.forwardRef((  {
+  id,
+  name,
+  handleChange,
+  error,
+  ...props
+  },
+  ref
+) => {
 
   const inputStyles =
     error
@@ -26,7 +24,7 @@ const TextField = React.forwardRef(({id, name, handleChange, error, ...props}, r
       className={styles.label}
       htmlFor={id}
     >
-      {parseLabel()}
+      {parseLabel(id)}
     </label>
     <input
       id={id}

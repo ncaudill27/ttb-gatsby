@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import classNames from 'classnames'
 import { postMailchimpSubscriber } from '../utils/requests'
 import { validateSubmission } from '../utils/inputValidation'
@@ -10,7 +10,14 @@ import TextField from './textField'
 import styles from './subscribeForm.module.css'
 
 const SubscribeForm = (props) => {
+  const firstInputEl = useRef()
 
+  useEffect(() => {
+    if (props.showForm) {
+      firstInputEl.current.focus()
+    }
+  }, [props.showForm])
+  
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -66,7 +73,7 @@ const SubscribeForm = (props) => {
     if (!validName) setNameError(true)
     if (!validEmail) setEmailError(true)
     // block from sending request to mailchimp if not validated
-    if (!validName || !validEmail) return
+    if (!validName || !validEmail) return 
 
     setLoading(true)
     const { error } = await postMailchimpSubscriber(email, name)
@@ -83,8 +90,16 @@ const SubscribeForm = (props) => {
     //? possibly log is somewhere
   }
 
-  const responseStyles = nameError || emailError || serverError ? classNames(styles.response, styles.error) : styles.response
+  const responseStyles =
+    nameError
+    || emailError
+    || serverError
+      ? classNames(styles.response, styles.error)
+      : styles.response
 
+  console.log(firstInputEl)
+
+  if (!props.showForm) return null
   return (
     <Form
       onSubmit={handleSubmit}
@@ -93,37 +108,40 @@ const SubscribeForm = (props) => {
     >
       <h1 className={styles.header}>Subscribe</h1>
       <div className={styles.inputs}>
+      {props.showForm &&
         <TextField
-          id='firstName'
-          name={name}
-          placeholder='Please enter your first name'
-          handleChange={handleChange(setName, clearNameError)}
-          onKeyDown={handleEscKeyClose}
-          disabled={loading}
-          error={nameError}
-        />
-        <TextField
-          id='email'
-          name={email}
-          placeholder='Please enter your email'
-          handleChange={handleChange(setEmail, clearEmailError)}
-          onKeyDown={handleEscKeyClose}
-          disabled={loading}
-          error={emailError}
-        />
-      </div>
+        id='firstName'
+        ref={firstInputEl}
+        name={name}
+        placeholder='Please enter your first name'
+        handleChange={handleChange(setName, clearNameError)}
+        onKeyDown={handleEscKeyClose}
+        disabled={loading}
+        error={nameError}
+        formOpen={props.showForm}
+      />}
+      <TextField
+        id='email'
+        name={email}
+        placeholder='Please enter your email'
+        handleChange={handleChange(setEmail, clearEmailError)}
+        onKeyDown={handleEscKeyClose}
+        disabled={loading}
+        error={emailError}
+      />
+    </div>
       {!!response.length &&
         <div className={responseStyles}>
           {response.map(response => (
             <div key={response}>{response}</div>
           ))}
-        </div>}
+      </div>}
       <Button
         disabled={loading}
         onKeyDown={handleEscKeyClose}
       >
         Join our newsletter
-      </Button>
+    </Button>
     </Form>
   )
 }

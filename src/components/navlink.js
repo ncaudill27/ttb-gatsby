@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { parsePath } from '../utils/parsePath'
+import { parsePath } from '../utils/parse'
 
 import styles from './navlink.module.css'
 
