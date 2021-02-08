@@ -1,6 +1,11 @@
 .root {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   list-style-type: none;
+}
+
+@media (min-width: 305px) {
+  .root {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
