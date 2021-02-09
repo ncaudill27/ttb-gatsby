@@ -12,7 +12,7 @@ const Lifestyle = () => {
   return (
     <Section id='lifestyle' background>
       <Dual className={styles.dual}>
-        <div first>
+        <div className={styles.copy} first>
           <h1>The Lifestyle Medicine Approach</h1>
           <p>
             Lifestyle Medicine is the specialty I came across that ultimately pushed me to open my own practice.
@@ -22,7 +22,7 @@ const Lifestyle = () => {
           <h3 className={styles.subheader}>Helpful resources on Lifestyle Medicine:</h3>
           <LinkList />
         </div>
-        <div second>
+        <div className={styles.grid} second>
           <PillarsGrid />
         </div>
       </Dual>

@@ -5,4 +5,15 @@
     max-width: 1300px;
     justify-content: center;
   }
+
+  .copy {
+    flex-grow: 1;
+    max-width: unset;
+  }
+
+  .grid {
+    flex-grow: 1;
+    width: fit-content;
+    max-width: unset;
+  }
 }

@@ -1,6 +1,6 @@
 .root {
   display: grid;
-  width: 99%;
+  /* width: 99%; */
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
@@ -10,5 +10,13 @@
     margin-left: 2rem;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(2, 200px);
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 305px) {
+  .root {
+    display: flex;
+    flex-direction: column;
   }
 }
