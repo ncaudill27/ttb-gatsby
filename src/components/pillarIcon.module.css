@@ -1,0 +1,18 @@
+.root {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  /* color: blue; */
+  z-index: 1;
+  font-size: 2rem;
+}
+
+.img {
+  width: 100%;
+}

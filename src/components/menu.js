@@ -22,7 +22,7 @@ const Menu = ({routes}) => {
         onClick={toggleOpen}
         // accessibility
         tabIndex={0}
-        handleEnterKey={handleEnterKey(toggleOpen)}
+        onKeyDown={handleEnterKey(toggleOpen)}
         role='button'
         aria-haspopup='true'
         aria-controls='menu'

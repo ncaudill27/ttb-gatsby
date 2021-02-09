@@ -1,40 +1,55 @@
 import React from 'react'
 
-import TextSpin from './textSpin'
+// import TextSpin from './textSpin'
+import Abuse from './images/pillarAbuse'
+import Connection from './images/pillarConnection'
+import Eating from './images/pillarEating'
+import Physical from './images/pillarPhysical'
+import Sleep from './images/pillarSleep'
+import Stress from './images/pillarStress'
+
+import PillarIcon from './pillarIcon'
 
 import styles from './pillarsGrid.module.css'
 
 const pillars = [
   {
     text: 'SLEEP',
-    color: 'blue'
+    color: 'blue',
+    image: <Sleep />
   },
   {
     text: 'FOOD',
-    color: 'green'
+    color: 'green',
+    image: <Eating />
   },
   {
     text: 'STRESS MANAGEMENT',
-    color: '#e577cb'
+    color: '#e577cb',
+    image: <Stress />
   },
   {
     text: 'PHYSICAL ACTIVITY',
-    color: 'orange'
+    color: 'orange',
+    image: <Physical />
   },
   {
     text: 'SUBSTANCE ABUSE',
-    color: 'peachpuff'
+    color: 'peachpuff',
+    image: <Abuse />
   },
   {
-    text: 'INTERPERSONAL COMMUNICATION',
-    color: 'brown'
+    text: 'CONNECTION',
+    color: 'brown',
+    image: <Connection />
   },
 ]
 
 const PillarsGrid = () => (
   <div className={styles.root}>
     {pillars.map(pillar => (
-      <TextSpin key={pillar.text} {...pillar} />
+      // <TextSpin key={pillar.text} {...pillar} />
+      <PillarIcon key={pillar.text} {...pillar} />
     ))}
   </div>
 )
