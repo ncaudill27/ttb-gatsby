@@ -15,32 +15,32 @@ import styles from './pillarsGrid.module.css'
 const pillars = [
   {
     text: 'SLEEP',
-    color: 'blue',
+    color: '#387EC3',
     image: <Sleep />
   },
   {
     text: 'FOOD',
-    color: 'green',
+    color: '#97BF67',
     image: <Eating />
   },
   {
-    text: 'STRESS MANAGEMENT',
-    color: '#e577cb',
+    text: 'STRESS',
+    color: '#E578CB',
     image: <Stress />
   },
   {
-    text: 'PHYSICAL ACTIVITY',
-    color: 'orange',
+    text: 'ACTIVITY',
+    color: '#F9951D',
     image: <Physical />
   },
   {
-    text: 'SUBSTANCE ABUSE',
-    color: 'peachpuff',
+    text: 'AWARENESS',
+    color: '#FFB693',
     image: <Abuse />
   },
   {
     text: 'CONNECTION',
-    color: 'brown',
+    color: '#CA6D50',
     image: <Connection />
   },
 ]
