@@ -22,7 +22,7 @@ const Lifestyle = () => {
           <h3 className={styles.subheader}>Helpful resources on Lifestyle Medicine:</h3>
           <LinkList />
         </div>
-        <div className={styles.wrapper} second>
+        <div second>
           <PillarsGrid />
         </div>
       </Dual>

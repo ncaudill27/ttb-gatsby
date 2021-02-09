@@ -1,20 +1,23 @@
-.root {
-  position: relative;
+.label {
+  display: block;
+  width: 90%;
+  min-width: 130px;
+  margin: 0 auto;
+  padding: 0.2em;
 }
 
 .title {
-  position: absolute;
-  top: 10%;
-  left: 0;
+  margin: 0;
   text-align: center;
-  z-index: 1;
   font-size: 1.2rem;
-  padding: 0.2em;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
 .img {
-  width: 152px;
-  float: right;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .label {
+    min-width: 148px;
+  }
 }
