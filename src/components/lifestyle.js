@@ -20,7 +20,7 @@ const Lifestyle = () => (
             It involves counseling patients on their lifestyle choices and how to prevent chronic diseases.
           </p>
           <AnchorLink
-            to='/learn-more#lifestyle'
+            to='/learn-more'
             title='Learn more about Lifestyle Medicine'
             className={styles.anchor}
           />

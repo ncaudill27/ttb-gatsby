@@ -6,12 +6,12 @@ import styles from './lifestyleAboutLinkList.module.css'
 
 const links = [
   {
-    to: '',
-    copy: 'Link to an article'
+    to: 'https://nutritionfacts.org/',
+    copy: 'Nutrition Facts'
   },
   {
-    to: '',
-    copy: 'Link to an article'
+    to: 'https://nutritionstudies.org/whole-food-plant-based-diet-guide/',
+    copy: 'Plant based diet guide'
   },
   {
     to: '',

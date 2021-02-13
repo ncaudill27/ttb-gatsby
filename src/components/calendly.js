@@ -13,7 +13,7 @@ const Calendly = (props) => (
     </div>
     <h3 className={styles.title}>Schedule a meet &amp; greet with the Doctor Beet!</h3>
     <CalendlyButton
-      url='https://calendly.com/nelson-a-caudill/initial-meet'
+      url='https://calendly.com/thetinybeet/meet-greet'
       pageSettings={{
         hideLandingPageDetails: true,
         hideEventTypeDetails: true
