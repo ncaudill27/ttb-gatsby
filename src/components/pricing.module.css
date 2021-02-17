@@ -1,21 +1,25 @@
-.dual {
-  max-width: unset;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-.first { max-width: 750px; }
-.second {
-  max-width: 500px;
+.wrapper {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
-.title,
-.copy { margin: 0; }
 
-@media (max-width: 1450px) {
-  .second {
-    margin-left: 1rem;
+.title {
+  font-size: 4rem;
+  margin-right: 2rem;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list {
+  width: 380px;
+  margin: 0 0 0 1.5rem;
+}
+
+@media (min-width: 1353px) {
+  .wrapper {
+    justify-content: center;
   }
 }

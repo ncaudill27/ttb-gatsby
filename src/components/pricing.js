@@ -25,17 +25,35 @@ const prices = [
 ]
 
 const Pricing = () => (
-  <Section color='pri-med' id='pricing'>
-    <Dual className={styles.dual}>
-      <div className={styles.first} first>
-        <h1 className={styles.title}>How the direct patient care Membership model works.</h1>
+  <Section color='sec-light' id='pricing'>
+    <div className={styles.wrapper}>
+      <h1 className={styles.title}>
+        Our <br/>
+        memberships <br/>
+        include:
+      </h1>
+      <div className={styles.lists}>
+        <ul className={styles.list}>
+          <li>Personal number to communicate with Dr. Caudill or scheduled Telemedicine.</li>
+          <li>Lifestyle Medicine education</li>
+          <li>Lactation support</li>
+          <li>Same day or next day appointments</li>
+          <li>30 minute blocked visits</li>
+          <li>Minimal to no wait time in waiting room</li>
+          <li>All well check up visits as per American Academy of Pediatrics (AAP)</li>
+          <li>Immunizations as per AAP</li>
+        </ul>
+        <ul className={styles.list}>
+          <li>Sick visits, same day or next, with appointment</li>
+          <li>Discounted price on medications</li>
+          <li>Most labs included</li>
+          <li>Incision/drainage and simple sutures</li>
+          <li>Chronic care management and coordinations</li>
+          <li>Developmental screenings per age group</li>
+          <li>Events and workshops at discounted rate</li>
+        </ul>
       </div>
-      <div className={styles.second} second>
-        <p className={styles.copy}>
-          I know you may have many questions. Please take a look at our FAQ section or schedule an online meet and greet with me personally. 
-        </p>
-      </div>
-    </Dual>
+    </div>
     <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
       {prices.map(price => (
         <PriceCard key={price.price} {...price} />
