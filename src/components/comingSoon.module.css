@@ -9,11 +9,9 @@
 }
 
 .title {
-  margin: 0 auto;
-  padding-bottom: 1rem;
+  margin: 0 auto 1rem;
   max-width: 900px;
-  color: #ca6d4f; 
-  border-bottom: 2px solid black;
+  color: var(--grapefruit);
   text-align: center;
 }
 

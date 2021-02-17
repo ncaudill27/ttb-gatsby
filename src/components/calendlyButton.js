@@ -5,10 +5,10 @@ import Button from './button'
 
 import '../styles/calendly.css'
 
-const CalendlyButton = ({ url, prefill, pageSettings, utm}) => {
-  const onClick = () => openPopupWidget({ url, prefill, pageSettings, utm})
+const CalendlyButton = ({url, prefill, pageSettings, utm}) => {
+  const handleClick = () => openPopupWidget({url, prefill, pageSettings, utm})
 
-  return <Button onClick={onClick}>Schedule now</Button>
+  return <Button onClick={handleClick}>Schedule meeting</Button>
 }
 
 export default CalendlyButton

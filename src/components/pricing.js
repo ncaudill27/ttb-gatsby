@@ -8,8 +8,8 @@ import styles from './pricing.module.css'
 
 const prices = [
   {
-    price: 70,
-    pricing: 'Individual Child',
+    price: 120,
+    pricing: 'Sprouts \n0-2 y/o',
     details: 'Blah blah blah'
   },
   {
