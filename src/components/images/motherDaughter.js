@@ -21,7 +21,7 @@ const MotherDaughter = (props) => {
 
   return (
     <div {...props}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      <Img fluid={data.placeholderImage.childImageSharp.fluid}  style={{borderRadius: '50%'}} />
     </div>
   )
 }
