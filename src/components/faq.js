@@ -73,7 +73,7 @@ const qaList = [
 ]
 
 const FAQ = () => (
-  <Section color='sec-dark'>
+  <Section color='sec-light'>
     <div className={styles.wrapper}>
       <h1 className={styles.title}>
         We know you probably have many questions. Here are some FAQ's.

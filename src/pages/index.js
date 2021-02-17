@@ -26,9 +26,9 @@ const IndexPage = () => (
     />
     <Mom />
     <DPC />
-    <Testimonials />
     <FAQ />
     <Join />
+    <Testimonials />
   </Layout>
 )
 

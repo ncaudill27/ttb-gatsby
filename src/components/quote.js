@@ -5,11 +5,11 @@ import ParallaxBackground from './backgrounds/parallax'
 
 import styles from './quote.module.css'
 
-function Quote({quote, by}) {
+function Quote({quote, by, color}) {
 
   
   return (
-    <ParallaxBackground>
+    <ParallaxBackground color={color}>
       <div className={styles.quote}>
         <div className={styles.wrapper}>
           <blockquote>{quote}</blockquote>
@@ -22,7 +22,12 @@ function Quote({quote, by}) {
 
 Quote.propTypes = {
   quote: PropTypes.string.isRequired,
-  by: PropTypes.string.isRequired
+  by: PropTypes.string.isRequired,
+  color: PropTypes.string
+}
+
+Quote.defaultProps = {
+  color: 'sec-light'
 }
 
 export default Quote

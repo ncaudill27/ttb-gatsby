@@ -6,7 +6,7 @@ import MainLogo from './images/mainLogo'
 import styles from './intro.module.css'
 
 const Intro = () => (
-  <Section color='pri-med' className={styles.root}>
+  <Section color='pri-light' className={styles.root}>
     <MainLogo className={styles.img} />
     <div className={styles.copy}>
       <h1 className={styles.title}>

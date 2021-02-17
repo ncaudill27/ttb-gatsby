@@ -22,7 +22,7 @@ const DPC = () => {
   const breakpoints = useBreakpoint()
   
   return (
-    <Section color='pri-dark'>
+    <Section color='pri-med'>
       <Dual>
         <div first>
           <h1>

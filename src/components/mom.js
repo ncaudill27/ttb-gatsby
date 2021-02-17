@@ -7,7 +7,7 @@ import MomImage from './images/momImage'
 import styles from './mom.module.css'
 
 const Mom = () => (
-  <Section className={styles.landing} color='pri-light' background>
+  <Section className={styles.landing} color='sec-dark'>
     <Dual>
       <div className={styles.copy} first>
         <h1 className={styles.header}>

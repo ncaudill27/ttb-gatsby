@@ -6,12 +6,12 @@ import ChiaBackground from '../backgrounds/chia'
 import styles from './parallax.module.css'
 
 const ParallaxBackground = React.forwardRef( (props, ref) => (
-  <div className={styles.content} ref={ref}>
+  <div className={styles.content} ref={ref} style={{backgroundColor: `var(--${props.color})`}}>
     {props.children}
   </div>
 ))
 
-function ParallaxContainer({children}) {
+function ParallaxContainer({children, color}) {
   const sectionEl = useRef(null)
 
   const backgroundStyle = useParallax(sectionEl)
@@ -19,11 +19,15 @@ function ParallaxContainer({children}) {
   return (
     <section className={styles.container}>
         <ChiaBackground className={styles.background} style={backgroundStyle} />
-        <ParallaxBackground ref={sectionEl}>
+        <ParallaxBackground ref={sectionEl} color={color}>
           {children}
         </ParallaxBackground>
     </section>
   )
+}
+
+ParallaxContainer.defaultProps = {
+  color: 'sec-light'
 }
 
 export default ParallaxContainer

@@ -1,17 +1,14 @@
 import React from 'react'
 
 import Section from './section'
-import Dual from './dual'
 import Calendly from './calendly'
-import Atlas from './atlas'
+import ParallaxBackground from './backgrounds/parallax'
+
 
 const Join = () => (
-  <Section color='sec-dark'>
-    <Dual>
+  <ParallaxBackground color='sec-dark'>
       <Calendly first />
-      <Atlas second />
-    </Dual>
-  </Section>
+  </ParallaxBackground>
 )
 
 export default Join
