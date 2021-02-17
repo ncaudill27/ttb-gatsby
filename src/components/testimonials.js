@@ -2,6 +2,8 @@ import React from 'react'
 
 import Section from './section'
 import Testimonial from './testimonial'
+import Arch from './images/testimonialsArch'
+
 import styles from './testimonials.module.css'
 
 const testimonials = [
@@ -29,7 +31,8 @@ const Testimonials = () => (
   <Section color='pri-med' background>
     <div className={styles.root}>
       <div className={styles.header}>
-        <h1>
+        <Arch className={styles.arch} />
+        <h1 className={styles.title}>
           Family <br />
           Testimonials
         </h1>

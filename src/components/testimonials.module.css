@@ -1,14 +1,26 @@
 .root {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .header {
+  position: relative;
   margin: 1rem;
-  height: 250px;
   width: 400px;
-  border: 1px solid red;
+  height: 400px;
+}
+
+.arch {
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  left: 3rem;
+  bottom: 7rem;
 }
 
 .grid {
@@ -19,4 +31,16 @@
   grid-row-end: span 1;
   width: 100%;
   max-width: 700px;
+}
+
+@media (min-width: 700px) {
+  .arch {
+    width: 350px;
+    left: 0;
+    bottom: 1rem;
+  }
+
+  .title {  
+    left: 4rem;
+  }
 }
