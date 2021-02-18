@@ -1,0 +1,32 @@
+.root {
+  color: white;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.service {
+  margin: 0 1rem;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid white;
+  /* width: 100%; */
+  width: 360px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .service {
+    width: 160px;    
+  }
+
+  .service:nth-child(4n) {
+    width: 360px;
+  }
+}
