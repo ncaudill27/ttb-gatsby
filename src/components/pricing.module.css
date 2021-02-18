@@ -1,11 +1,13 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .title {
   font-size: 4rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .lists {
@@ -18,8 +20,16 @@
   margin: 0 0 0 1.5rem;
 }
 
-@media (min-width: 1353px) {
-  .wrapper {
-    justify-content: center;
+.tiers {
+  font-size: 3rem;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .list {
+    width: 100%;
   }
 }

@@ -2,17 +2,30 @@
 
 .root {
   margin: 1.5rem 1.5rem 0;
-  padding: 2rem 3rem;
-  height: 305px;
+  padding: 2rem;
+  height: 325px;
   width: 285px;
-  background-color: var(--pri-light);
+  background-color: var(--sec-dark);
+  color: white;
   box-shadow: 5px 4px 17px 2px rgba(0, 0, 0, 0.166);
   border-radius: 3px;
 }
 
+.pricing {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.age {
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
 .price {
   position: relative; 
-  margin: 0 0 2.5rem 2px;
+  margin: 0 0 0 4px;
 }
 
 .sign {
@@ -22,6 +35,6 @@
   bottom: 40%;
 }
 
-.pricing {
-  margin-bottom: 0.25rem;
+.details {
+  font-size: 0.85rem;
 }
