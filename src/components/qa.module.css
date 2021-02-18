@@ -51,6 +51,7 @@
   background-color: var(--sec-dark);
   transition: all 200ms ease-in-out;
   overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .answer.open {
