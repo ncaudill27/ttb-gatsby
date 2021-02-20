@@ -8,6 +8,9 @@ import styles from './mom.module.css'
 
 const Mom = () => (
   <Section className={styles.landing} color='sec-dark'>
+    <div className={styles.intro}>
+      <h2 className={styles.title}>A LETTER FROM THE DOC</h2>
+    </div>
     <Dual>
       <div className={styles.copy} first>
         <h1 className={styles.header}>

@@ -45,9 +45,8 @@ const Pricing = () => (
             <li>All well check up visits as per American Academy of Pediatrics guidelines</li>
           </ul>
           <ul className={styles.list}>
-            <li>Discounted price on medications</li>
+            <li>Discounted price on medications and labs</li>
             <li>Lactation support</li>
-            <li>Most labs included</li>
             <li>Incision/drainage and simple sutures</li>
             <li>Chronic care management and coordinations</li>
             <li>Lifestyle Medicine education</li>
@@ -59,6 +58,7 @@ const Pricing = () => (
       <div className={styles.wrapper}>
         <div>
           <h1 className={styles.tiers}>
+            Monthly <br/>
             Membership <br/>
             Tiers:
           </h1>

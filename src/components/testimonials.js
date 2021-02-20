@@ -22,7 +22,7 @@ const testimonials = [
 ]
 
 const Testimonials = () => (
-  <Section color='pri-med' background>
+  <Section color='pri-med'>
     <h1>
       Family Testimonials
     </h1>

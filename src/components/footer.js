@@ -14,7 +14,11 @@ function Footer() {
         <div className={styles.info}>
           <div>
             <h3>ADDRESS</h3>
-            <p>51 Johnny Mercer Blvd.<br/>Wilmington Island, GA 31400</p>
+            <p>
+              51 Johnny Mercer Blvd. <br/>
+              Building A-2 Suite A<br/>
+              Savannah, GA 31400
+            </p>
           </div>
           <div>
             <h3>SOCIAL</h3>
@@ -25,11 +29,11 @@ function Footer() {
           </div>
           <div>
             <h3>PHONE</h3>
-            <p>(912) 123-4567</p>
+            <p>(912) 777-6830</p>
           </div>
           <div>
             <h3>EMAIL</h3>
-            <p>thetinybeet@mailchimp.com</p>
+            <p>thedoctorbeet@gmail.com</p>
           </div>
           <div>
             <h3>HOURS</h3>
@@ -37,7 +41,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.copy}>
-          <p>&copy; 2020 The Tiny Beet. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Tiny Beet. All Rights Reserved.</p>
           <p>Created by Thunder & Lighting.</p>
         </div>
       </div>

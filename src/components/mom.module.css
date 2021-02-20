@@ -1,3 +1,22 @@
+.copy {
+  color: white;
+}
+
+.intro {
+  width: 100%;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  margin: 0 auto 2rem;
+  max-width: 900px;
+}
+
+.title {
+  margin: 0.5em;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 400;
+}
+
 @media (max-width: 700px) {
   .landing {
     padding: 4rem 1rem 2rem;
@@ -21,8 +40,4 @@
   .header {
     font-size: 2.5rem;
   }
-}
-
-.copy {
-  color: white;
 }

@@ -21,8 +21,8 @@ const IndexPage = () => (
     <Intro />
     <Lifestyle />
     <Quote
-      quote='The doctor or the future will give no medicine but will interest his patients in the care of the human frame, in diet and in the cause and prevention of disease.'
-      by='Thomas A. Edison'
+      quote='I totally regret eating healthy today'
+      by='no one ever'
     />
     <Mom />
     <DPC />

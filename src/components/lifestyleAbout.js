@@ -10,7 +10,7 @@ import styles from './lifestyleAbout.module.css'
 const Lifestyle = () => {
 
   return (
-    <Section id='lifestyle'>
+    <Section id='lifestyle' color='pri-dark'>
       <Dual className={styles.dual}>
         <div className={styles.copy} first>
           <h1>The Lifestyle Medicine Approach</h1>

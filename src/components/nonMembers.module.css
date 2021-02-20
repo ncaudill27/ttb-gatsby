@@ -21,6 +21,9 @@
   font-weight: 600;
 }
 
+.copy { margin-bottom: 0; }
+.note { font-size: 0.8rem; }
+
 @media (min-width: 700px) {
   .service {
     width: 160px;    

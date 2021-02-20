@@ -14,19 +14,9 @@ import styles from './pillarsGrid.module.css'
 
 const pillars = [
   {
-    text: 'SLEEP',
-    color: '#387EC3',
-    image: <Sleep />
-  },
-  {
     text: 'FOOD',
     color: '#97BF67',
     image: <Eating />
-  },
-  {
-    text: 'STRESS',
-    color: '#E578CB',
-    image: <Stress />
   },
   {
     text: 'ACTIVITY',
@@ -34,9 +24,14 @@ const pillars = [
     image: <Physical />
   },
   {
-    text: 'AWARENESS',
-    color: '#FFB693',
-    image: <Abuse />
+    text: 'SLEEP',
+    color: '#387EC3',
+    image: <Sleep />
+  },
+  {
+    text: 'STRESS',
+    color: '#E578CB',
+    image: <Stress />
   },
   {
     text: 'CONNECTION',

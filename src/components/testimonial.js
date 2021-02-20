@@ -18,9 +18,12 @@ const Testimonial = ({name, testimonial}) => {
       if (isResizing) setGridRowEnd(`span ${rowEnd}`)
   }, [isResizing])
 
+  // generate random color for name
+  const color = `var(--${['beet', 'blueberry', 'carrot'][Math.floor(Math.random() * Math.floor(3))]})`
+
   return (
     <div className={styles.root} style={{gridRowEnd}}>
-      <h3 className={styles.name}>{name}</h3>
+      <h3 className={styles.name} style={{color}}>{name}</h3>
       <p className={styles.testimonial} ref={testimonialEl}>{testimonial}</p>
     </div>
   )

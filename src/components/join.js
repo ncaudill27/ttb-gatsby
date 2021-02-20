@@ -7,7 +7,7 @@ import ParallaxBackground from './backgrounds/parallax'
 
 const Join = () => (
   <ParallaxBackground color='sec-dark'>
-      <Calendly first />
+    <Calendly first />
   </ParallaxBackground>
 )
 

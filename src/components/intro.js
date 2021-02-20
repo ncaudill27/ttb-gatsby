@@ -10,7 +10,7 @@ const Intro = () => (
     <MainLogo className={styles.img} />
     <div className={styles.copy}>
       <h1 className={styles.title}>
-        We’re here to inspire Savannah families to live healthy lifestyles, welcome to The Tiny Beet.
+        Welcome to The Tiny Beet, we are here to inspire families of Savannah to live healthier lifestyles.
       </h1>
       <p>
         Dr. Caudill is on a mission to help her patients develop and maintain healthier lifestyles through general pediatrics and lifestyle medicine.

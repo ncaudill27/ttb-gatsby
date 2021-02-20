@@ -12,7 +12,7 @@ const Calendly = (props) => (
         READY TO BECOME A MEMBER?
       </h2>
     </div>
-    <h3 className={styles.title}>Click below to schedule a zoom meet &amp; greet with the Doctor Beet!</h3>
+    <h3 className={styles.title}>Click below to schedule a virtual meet &amp; greet with the Doctor Beet!</h3>
     <CalendlyButton
       url='https://calendly.com/thetinybeet/meet-greet'
       pageSettings={{

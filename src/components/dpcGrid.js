@@ -60,7 +60,7 @@ const Grid = () => (
       </div>
       <div className={styles.veggies}>
         <VeggiesIcon className={styles.icon} />
-        <p>Lifestyle Medicine teachings for patients or consults</p>
+        <p>Lifestyle Medicine teachings</p>
       </div>
     </div>
   </div>

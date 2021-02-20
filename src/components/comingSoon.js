@@ -11,8 +11,9 @@ const ComingSoon = () => (
       Coming soon!
     </h1>
     <p className={styles.caption}>
-      Dr. Caudill is pleased to announce opening her pediatric practice, the tiny beet.
-      Currently accepting Telemedicine patients.
+      Dr. Caudill is pleased to announce opening of her pediatric practice, the tiny beet.
+      She is currently accepting Telemedicine patients.
+      Click below to schedule a meet and greet with the doctor to get your membership started, or scroll on to learn more!
     </p>
     <CalendlyButton
       url='https://calendly.com/thetinybeet/meet-greet'
