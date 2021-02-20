@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import TextSpin from './textSpin'
-import Abuse from './images/pillarAbuse'
 import Connection from './images/pillarConnection'
 import Eating from './images/pillarEating'
 import Physical from './images/pillarPhysical'

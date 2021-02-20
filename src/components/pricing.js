@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Section from './section'
-import Dual from './dual'
 import PriceCard from './priceCard'
 
 import styles from './pricing.module.css'

@@ -2,7 +2,6 @@ import React from 'react'
 
 import Section from './section'
 import Testimonial from './testimonial'
-import Arch from './images/testimonialsArch'
 
 import styles from './testimonials.module.css'
 

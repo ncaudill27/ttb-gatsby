@@ -24,7 +24,7 @@ export default function useWindowSize() {
       window.removeEventListener("resize", changeWindowSize)
       clearTimeout(timer)
     }
-  }, [windowSize]);
+  }, [windowSize, changeWindowSize]);
 
   return [windowSize, isResizing, changeWindowSize]
 }

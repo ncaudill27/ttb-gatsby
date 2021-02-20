@@ -44,7 +44,7 @@ export default function useParallax(ref, color) {
     }
     
 
-  }, [ref, scrollTop, imgTop])
+  }, [ref, scrollTop, imgTop, color])
 
   return backgroundStyle
 }

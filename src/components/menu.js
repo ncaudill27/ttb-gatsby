@@ -18,11 +18,10 @@ const Menu = ({routes}) => {
         id='menubutton'
         className={styles.button}
         // handlers
-        onKeyDown={toggleOpen}
         onClick={toggleOpen}
+        onKeyDown={handleEnterKey(toggleOpen)}
         // accessibility
         tabIndex={0}
-        onKeyDown={handleEnterKey(toggleOpen)}
         role='button'
         aria-haspopup='true'
         aria-controls='menu'

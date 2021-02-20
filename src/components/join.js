@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Section from './section'
 import Calendly from './calendly'
 import ParallaxBackground from './backgrounds/parallax'
 

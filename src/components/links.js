@@ -22,7 +22,6 @@ const MenuLinks = ({routes, toggleOpen}) => {
       ref={firstLinkEl}
       path='/'
       toggleOpen={toggleOpen}
-      tabIndex={1}
     />
     {routes.map( ({path}) => (
       <MenuLink

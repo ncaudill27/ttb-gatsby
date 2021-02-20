@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import React, { useState, useEffect } from 'react'
 
 import styles from './form.module.css'
 
