@@ -7,7 +7,7 @@ const AbusePillar = props => {
     query {
       logo: file(relativePath: { eq: "Pillars_Abuse.png" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 200, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

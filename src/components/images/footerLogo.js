@@ -7,7 +7,7 @@ const FooterLogo = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "footer-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 150) {
+          fluid(maxWidth: 150, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

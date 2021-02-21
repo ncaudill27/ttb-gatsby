@@ -7,7 +7,7 @@ const ChevronIcon = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "chevron.png" }) {
         childImageSharp {
-          fixed(height: 23) {
+          fixed(height: 23, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }

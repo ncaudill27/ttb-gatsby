@@ -7,7 +7,7 @@ const HouseIcon = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "dpcHouse.png" }) {
         childImageSharp {
-          fixed(width: 70) {
+          fixed(width: 70, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }

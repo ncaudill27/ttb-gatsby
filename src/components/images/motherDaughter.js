@@ -7,7 +7,7 @@ const MotherDaughter = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "mother-daughter.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
+          fluid(maxWidth: 700, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

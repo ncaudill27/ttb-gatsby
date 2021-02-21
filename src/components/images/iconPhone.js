@@ -7,7 +7,7 @@ const PhoneIcon = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "dpcPhone.png" }) {
         childImageSharp {
-          fixed(width: 70) {
+          fixed(width: 70, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }

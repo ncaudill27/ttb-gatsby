@@ -7,21 +7,21 @@ const Insta = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "insta.png" }) {
         childImageSharp {
-          fluid(maxWidth: 45) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 55, quality: 100) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
   
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.placeholderImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>
   }
 
   return (
     <div {...props}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      <Img fixed={data.placeholderImage.childImageSharp.fixed} />
     </div>
   )
 }

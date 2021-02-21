@@ -38,8 +38,12 @@ function Footer() {
             <div>
               <h3>FIND US ON SOCIAL!</h3>
               <div className={styles.icons}>
-                <Insta className={styles.icon} />
-                <FB className={styles.icon} />
+                <a href='https://instagram.com/thedoctorbeet?igshid=1e95ag0yyg2o4' className={styles.icon}>
+                  <Insta />
+                </a>
+                <a href='https://www.facebook.com/thedoctorbeet/' className={styles.icon}>
+                  <FB />
+                </a>
               </div>
             </div>
             <div className={styles.copy}>

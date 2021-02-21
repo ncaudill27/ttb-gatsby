@@ -7,7 +7,7 @@ const PhysicalPillar = props => {
     query {
       logo: file(relativePath: { eq: "Pillars_Physical.png" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 200, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

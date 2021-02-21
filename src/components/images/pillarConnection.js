@@ -7,7 +7,7 @@ const ConnectionPillar = props => {
     query {
       logo: file(relativePath: { eq: "Pillars_Connection.png" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 200, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

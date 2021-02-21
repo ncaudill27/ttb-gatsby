@@ -7,7 +7,7 @@ const MainLogo = (props) => {
     query {
       mainLogo: file(relativePath: { eq: "main-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

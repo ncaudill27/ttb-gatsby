@@ -7,7 +7,7 @@ const ChiaDesktop = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "chia-seeds.png" }) {
         childImageSharp {
-          fluid(maxWidth: 2100) {
+          fluid(maxWidth: 2100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

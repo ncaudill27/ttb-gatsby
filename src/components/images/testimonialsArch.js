@@ -7,7 +7,7 @@ const Arch = (props) => {
     query {
       mainLogo: file(relativePath: { eq: "testimonials-arch.png" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

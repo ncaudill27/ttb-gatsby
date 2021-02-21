@@ -7,7 +7,7 @@ const ChiaMobile = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "chia-seeds.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
+          fluid(maxWidth: 700, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

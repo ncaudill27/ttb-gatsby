@@ -7,7 +7,7 @@ const HeaderLogo = props => {
     query {
       logo: file(relativePath: { eq: "ttb-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 290) {
+          fluid(maxWidth: 290, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
