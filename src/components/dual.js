@@ -8,19 +8,20 @@ import styles from './dual.module.css'
 
 const Dual = ({className, children, ...props}) => {
   const breakpoints = useBreakpoint()
-  const [, isResizing] = useWindowSize()
+  const width = useWindowSize()
 
   const dualEl = useRef(null)
   const [height, setHeight] = useState()
+  const [sectionWidth, setSectionWidth] = useState()
 
   useEffect(() => {
-      const height = dualEl.current.getBoundingClientRect().height
-      setHeight(height)
+      const elHeight = dualEl.current.getBoundingClientRect().height
+      const elWidth = dualEl.current.getBoundingClientRect().width
+      setHeight(elHeight)
+      setSectionWidth(elWidth)
 
-      if (isResizing) {
-        setHeight(height)
-      }
-  }, [dualEl, isResizing, breakpoints])
+      if (sectionWidth !== elWidth) setHeight(elHeight)
+  }, [dualEl, width, sectionWidth])
 
   const updatedChildren = () => React.Children.map(children, child => {
     if (React.isValidElement(child)) {
