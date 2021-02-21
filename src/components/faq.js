@@ -20,11 +20,11 @@ const qaList = [
   },
   {
     question: "Is DPC the same as concierge medicine?",
-    answer: "No. Though they are similar in the sense that they are a membership model of care. Concierge medical practices usually bill a higher fee, in addition to the patient’s health insurance for their services. The DPC depends on membership fees to cover its costs and does not charge health insurance for services provided. Though members can use their insurance to cover labs, radiology, referrals and hospital admissions."
+    answer: "No. Though they are similar in the sense that they are a membership model of care. Concierge medical practices usually bill a higher fee, in addition to the patient’s health insurance for their services. The DPC depends on membership fees to cover its costs and does not charge health insurance for services provided. Most patients find that they can use their insurance to cover labs, radiology, referrals, and hospital admissions."
   },
   {
     question: "Do you accept my insurance?",
-    answer: "Due to above mentioned reasons, The Tiny Beet will be able to provide individualized quality of care working directly with the patient as an out-of-network provider.  We do not bill insurance companies for any services provided. There is a set, flat fee for services, unless clearly specified. No copays or unexpected bills. Some patients see the value of choosing a high deductible PPO, because the high deductible might never be met, even with the membership services."
+    answer: "Due to above mentioned reasons, The Tiny Beet will be able to provide individualized quality of care working directly with the patient as an out-of-network provider.  We do not bill insurance companies for any services provided. There is a set, flat fee for services, unless clearly specified. No copays or unexpected bills."
   },
   {
     question: "Can you tell me more about Lifestyle Medicine (LM)?",
@@ -33,6 +33,10 @@ const qaList = [
   {
     question: "Do you accept patients without insurance?",
     answer: "Absolutely. For many families without insurance one visit to an Emergency Room might prove to be more expensive than a whole year of membership. The Tiny Beet is NOT an Emergency Room or Urgent Care. Dr. Rivera-Caudill is a general pediatrician that will strive to provide the most comprehensive service she can, in addition to deep discounts on diagnostic services."
+  },
+  {
+    question: "Do you require vaccinations?",
+    answer: "Yes. Dr. Rivera-Caudill follows all guidelines per American Academy of Pediatrics and CDC Advisory Committee on Immunizations (ACIP)."
   },
   {
     question: "I am ready to be a member! How do I secure my spot?",
@@ -59,16 +63,8 @@ const qaList = [
     answer: "This is actually one of the benefits, The Tiny Beet will be your medical home even if you are out of town. We will do our best to help you from afar via Telemedicine or phone/text. Depending on the nature of the illness, the patient might still need to be seen locally for further evaluation or treatment."
   },
   {
-    question: "What happens if Dr. Rivera-Caudill goes on vacation or gets ill?",
-    answer: "Yes. A membership can be cancelled with 30 days notice. Though, ifThe Tiny Beet strives to provide the most comprehensive quality pediatric care. We will keep our members informed of planned or unforeseen circumstances as they arise. For the most part Dr. Rivera-Caudill will continue electronic communication in cases when she is out of town. If the time away is prolonged she will arrange to have coverage for her patients. you change your mind,  there is a re-enrollment fee of $200 per child. In addition since we allow a limited number of patients, once we have a full panel you could lose your spot. Once we are full, we will not accept more patients, and we will open a waiting list for enrollment."
-  },
-  {
     question: "Can a membership be cancelled?",
     answer: "Yes. A membership can be cancelled at any time with 30 days notice. If you decide to re-enroll later there is a fee of $200 per child. Since we allow a limited number of patients, once we have reached full capacity on memberships, you could lose your spot. Once we are full we will not accept more patients and will open a waiting list for enrollment."
-  },
-  {
-    question: "What services are not covered in the membership?",
-    answer: "The list can be seen on the website. It includes cosmetic procedures like ear piercing. The Tiny Beet is a general pediatrics office not an Emergency Room. We do not have the resources or expertise to provide Emergency care."
   },
   {
     question: "Will Dr. Rivera-Caudill see my child if they are admitted or in the ER?",
