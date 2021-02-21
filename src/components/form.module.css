@@ -2,14 +2,10 @@
 
 .overlay {
   position: absolute;
-  height: calc(100% + 4rem);
+  height: calc(100% + 12rem);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-@media (min-width: 1233px) {
-  .overlay { height: calc(100% + 8rem);}
 }
 
 .form {
@@ -33,4 +29,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .overlay { height: calc(100% + 16rem); }
+}
+
+@media (min-width: 1233px) {
+  .overlay { height: calc(100% + 20rem); }
 }

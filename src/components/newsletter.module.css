@@ -4,10 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
-.icons {
-  composes: flex from './values.module.css';
-  margin-bottom: 1rem;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

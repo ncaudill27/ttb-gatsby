@@ -49,7 +49,7 @@ const NonMembers = () => (
     <h1>Non-member services</h1>
     <div className={styles.services}>
       {services.map(({price, service, note}) => (
-        <div className={styles.service}>
+        <div key={service} className={styles.service}>
           <p className={styles.price}>&#36;{price}</p>
           <p className={styles.copy}>{service}</p>
           {note && <p className={styles.note}>{note}</p>}
