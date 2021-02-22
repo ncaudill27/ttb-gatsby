@@ -27,20 +27,13 @@ export default function useParallax(ref, color) {
       // set updated screen changes
       setImgTop(`${15 - top / 9}px`)
 
-      if (elInView) {
         setBackgroundStyle({
-          maxWidth: `${width}px`,
-          width: `${width}px`,
+          width: `100%`,
           height: '120%',
-          top: `${imgTop}`,
+          top: `0`,
           backgroundColor: `var(--${color})`,
           zIndex: '-1'
         })
-      } else {
-        setBackgroundStyle({
-          display: 'none'
-        })
-      }
     }
     
 
