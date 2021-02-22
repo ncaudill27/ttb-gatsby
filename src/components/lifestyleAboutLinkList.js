@@ -23,4 +23,4 @@ const LinkList = () => (
   </ul>
 )
 
-export default LinkListw
+export default LinkList

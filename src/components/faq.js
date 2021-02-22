@@ -52,7 +52,7 @@ const qaList = [
   },
   {
     question: "How do I schedule appointments?",
-    answer: "Once the contract is signed you will be provided with access to the app and instructions on how to contact Dr. Rivera-Caudill personally. From there you can schedule in person or digital visits. Appointments are scheduled every 30 minutes, based on the family’s need or request. "
+    answer: "Once the contract is signed you will be provided with access to the app and instructions on how to contact Dr. Rivera-Caudill personally. From there you can schedule in person or digital visits. Appointments are scheduled every 30 minutes, based on the family’s need or request."
   },
   {
     question: "But my child is really healthy and only sees the pediatrician for well exams. Where's the benefit in paying a monthly fee for that?",
