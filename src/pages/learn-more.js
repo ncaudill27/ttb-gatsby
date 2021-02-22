@@ -22,7 +22,7 @@ const AboutPage = () => (
     <Pricing />
     <NonMembers />
     <Newsletter />
-    {/* { typeof window !== 'undefined' && <Map /> } */}
+    { typeof window !== 'undefined' && <Map /> }
   </Layout>
 )
 

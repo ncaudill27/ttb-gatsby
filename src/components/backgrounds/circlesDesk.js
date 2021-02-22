@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import classNames from 'classnames'
 
 import BackgroundImage from 'gatsby-background-image'
 
@@ -30,7 +31,7 @@ const BackgroundContainer = React.forwardRef(({className, children, color}, ref)
       Tag='section'
       fluid={data.desktop.childImageSharp.fluid}
       backgroundColor={`var(--${color})`}      
-      className={className || styles.section}
+      className={classNames(styles.section, className)}
     >
       <div ref={ref}>
         {children}

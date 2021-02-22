@@ -11,7 +11,7 @@ const BackgroundContainer = React.forwardRef(({className, children, color}, ref)
   const data = useStaticQuery(
     graphql`
       query {
-        mobile: file(relativePath: { eq: "circles-vert-alt.png" }) {
+        mobile: file(relativePath: { eq: "fruits_mobile.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid_withWebp
