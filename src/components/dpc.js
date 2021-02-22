@@ -29,7 +29,7 @@ const DPC = () => {
             The benefits of a DPC practice.
           </h1>
           <p>
-            A DPC model, similar to concierge medicine, allows for a tailored experience with each individual patient and works as a monthly membership. Dr. Caudill is looking forward to is spending more time with her patients at The Tiny Beet.
+            A DPC model, similar to concierge medicine, allows for a tailored experience with each individual patient and works as a monthly membership. Dr. Caudill is looking forward to spending more time with her patients at The Tiny Beet.
           </p>
           { !breakpoints.sm && <DPCButton /> }
         </div>

@@ -48,8 +48,8 @@ function addMarker(map, link) {
 Map.defaultProps = {
   options: {
     center: {
-      lat: 32.019275,
-      lng: -80.972615
+      lat: 32.03474634954871,
+      lng: -81.01038494681949
     },
     zoom: 13,
   },
@@ -57,8 +57,8 @@ Map.defaultProps = {
   onMount: addMarker,
   onMountProps: {
     coords: {
-      lat: 32.019275,
-      lng: -80.972615
+      lat: 32.03474634954871,
+      lng: -81.01038494681949
     },
     title: 'The Tiny Beet'
   }

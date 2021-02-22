@@ -12,14 +12,6 @@ const links = [
   {
     to: 'https://nutritionstudies.org/whole-food-plant-based-diet-guide/',
     copy: 'Plant based diet guide'
-  },
-  {
-    to: '',
-    copy: 'Link to an article'
-  },
-  {
-    to: '',
-    copy: 'Link to an article'
   }
 ]
 // TODO use a real key when there is real data

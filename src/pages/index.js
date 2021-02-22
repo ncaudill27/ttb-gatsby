@@ -21,8 +21,8 @@ const IndexPage = () => (
     <Intro />
     <Lifestyle />
     <Quote
-      quote='I totally regret eating healthy today'
-      by='no one ever'
+      quote="You're off to great places! Today is your day! Your mountain is waiting, So get on your way!"
+      by='Dr. Seuss'
     />
     <Mom />
     <DPC />

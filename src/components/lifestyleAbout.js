@@ -19,7 +19,10 @@ const Lifestyle = () => {
             Using evidence-based medicine, LM treats each patient from the root cause.
             We will focus on the 6 pillars of LM together (listed in the circles) and help you develop healthier lifestyle decisions to prevent any chronic illness in your future.
           </p>
-          <h3 className={styles.subheader}>Helpful resources on Lifestyle Medicine:</h3>
+          <h3 className={styles.subheader}>
+            Below are some Lifestyle Medicine resources 
+            I highly recommend:
+          </h3>
           <LinkList />
         </div>
         <div className={styles.grid} second>

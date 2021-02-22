@@ -50,10 +50,6 @@ const Grid = () => (
           text, phone, telemedicine
         </p>
       </div>
-      <div className={styles.syringe}>
-        <SyringeIcon className={styles.icon} />
-        <p>immunizations</p>
-      </div>
       <div className={styles.timer}>
         <TimerIcon className={styles.icon} />
         <p>minimal or no wait times in waiting room</p>
