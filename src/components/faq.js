@@ -52,7 +52,7 @@ const qaList = [
   },
   {
     question: "How do I schedule appointments?",
-    answer: "It is a blessing to have a child that seldom needs a doctor, but even in those circumstances life happens. In those unpredictable moments, having the peace of mind of the advice of a pediatrician that knows your child and your family’s individual needs can be priceless. Many families even with healthy children find themselves using internet searches for answers that are not always a reliable source. Also we might be able to avoid a visit to an Urgent Care or Emergency Room, which could be the equivalent of months of personalized TTB care. There's also the no waiting time factor in a waiting room. \n\nIn addition by being part of TTB you could be part at no extra cost of educational meetings individualized (or in groups once COVID restrictions subside) to your childs age and family’s needs addressing mind and body health at no extra cost. \n\nYou might never want to go back to a traditional type of care."
+    answer: "Once the contract is signed you will be provided with access to the app and instructions on how to contact Dr. Rivera-Caudill personally. From there you can schedule in person or digital visits. Appointments are scheduled every 30 minutes, based on the family’s need or request. "
   },
   {
     question: "But my child is really healthy and only sees the pediatrician for well exams. Where's the benefit in paying a monthly fee for that?",
