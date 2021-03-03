@@ -17,17 +17,17 @@ const Mom = () => (
           Hi, I'm Dr. Yolanda Rivera-Caudill.
         </h1>
         <p>
-          After 30 years of practicing peds, I’m excited to announce the founding of my practice.
+          Also known as Dr. Caudill, or most recently, the Dr. Beet. After 30 years as a Pediatrician, I’m excited to announce the founding of my practice. The Tiny Beet is a general pediatric direct primary care (DPC) practice specializing in Lifestyle Medicine in order to focus on the root cause of my patients’ health.
         </p>
         <p>
-          We are a general pediatric Direct Primary Care (DPC) practice specializing in Lifestyle Medicine to be able to focus on the root cause of my patients’ health.
+          I invite you and your family to join me in improving the health in our Savannah community, a tiny step at a time.
         </p>
         <p>
           "I invite you and your family to join me in improving the health in our community, a tiny step at a time."
         </p>
         <p>
-          Dr. Yolanda Rivera-Caudill, MD, FAAP, DipABLM <br />
-          -The Dr. Beet
+          Dr. Yolanda Rivera-Caudill, MD, FAAP, DipABLM <br/>
+          “The Dr. Beet” 
         </p>
       </div>
       <MomImage className={styles.img} second />

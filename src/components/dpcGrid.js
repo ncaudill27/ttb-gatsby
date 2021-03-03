@@ -6,7 +6,7 @@ import DoctorIcon from './images/iconDoctor'
 import HoopIcon from './images/iconHoop'
 import HouseIcon from './images/iconHouse'
 import PhoneIcon from './images/iconPhone'
-import SyringeIcon from './images/iconSyringe'
+// import SyringeIcon from './images/iconSyringe'
 import TimerIcon from './images/iconTimer'
 import VeggiesIcon from './images/iconVeggies'
 
@@ -41,7 +41,7 @@ const Grid = () => (
       <div className={styles.house}>
         <HouseIcon className={styles.icon} />
         <p>
-          at home visits for new borns
+          at home visits for newborns
         </p>
       </div>
       <div className={styles.phone}>

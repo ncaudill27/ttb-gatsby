@@ -17,7 +17,7 @@ const Lifestyle = () => (
           </h1>
           <p>
             The Lifestyle Medicine approach is comprehensive, evidence-based, and focuses on the root cause of the patient's health.
-            It involves counseling patients on their lifestyle choices like healthy eating, getting a good night’s sleep, and the importance of physical activity and healthy relationships, with the goal of preventing chronic diseases in your kids’ future...and having a bit of fun along the way.
+            It involves counseling patients on their lifestyle choices like healthy eating, getting a good night’s sleep, the importance of physical activity and maintaining healthy relationships. All with the goal of preventing chronic diseases in your kids’ future...and having a bit of fun along the way.
           </p>
           <AnchorLink
             to='/learn-more#lifestyle'

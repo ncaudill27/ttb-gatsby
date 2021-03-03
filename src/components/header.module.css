@@ -33,11 +33,7 @@
   }
 }
 
-@media (max-width: 365px) {
-  .root {
-    top: 1rem;
-  }
-  
+@media (max-width: 365px) {  
   .logo {
     display: none;
   }

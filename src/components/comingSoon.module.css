@@ -9,15 +9,25 @@
 }
 
 .title {
-  margin: 0 auto 1rem;
-  max-width: 900px;
-  color: var(--grapefruit);
+  margin: 0 auto 2rem;
   text-align: center;
+  font-size: 4rem;
 }
 
 .caption {
-  margin-top: 1rem;
+  margin: 0 1.4rem 1rem;
   font-size: 1rem;
   text-align: center;
   max-width: 700px;
+}
+
+@media (max-width: 300px) {
+  .root {
+    height: 100vh;
+    padding-top: 3rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
 }

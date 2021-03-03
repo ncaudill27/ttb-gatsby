@@ -21,8 +21,8 @@ const IndexPage = () => (
     <Intro />
     <Lifestyle />
     <Quote
-      quote="You're off to great places! Today is your day! Your mountain is waiting, So get on your way!"
-      by='Dr. Seuss'
+      quote="I alone cannot change the world, but I can cast a stone across the water to create many ripples."
+      by='Mother Teresa'
     />
     <Mom />
     <DPC />

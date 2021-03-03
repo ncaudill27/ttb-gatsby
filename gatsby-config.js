@@ -7,7 +7,7 @@ const breakpoints = {
 module.exports = {
   siteMetadata: {
     title: `The Tiny Beet`,
-    description: `Using Lifestyle Medicine to nuture a better life for your children and family.`,
+    description: `Using Lifestyle Medicine to nurture a better life for your children and family.`,
     author: `Dr. Yolanda Rivera-Caudill`,
     siteUrl: `https://thetinybeet.netlify.app`,
     keywords: [

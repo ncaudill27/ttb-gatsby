@@ -12,13 +12,21 @@ const links = [
   {
     to: 'https://nutritionstudies.org/whole-food-plant-based-diet-guide/',
     copy: 'Plant based diet guide'
+  },
+  {
+    to: 'https://www.primalplay.com/',
+    copy: 'Primal Play'
+  },
+  {
+    to: 'https://www.unwindinganxiety.com/',
+    copy: 'Unwinding Anxiety'
   }
 ]
 // TODO use a real key when there is real data
 const LinkList = () => (
   <ul className={styles.root}>
-    {links.map((link, idx) => (
-      <Link key={idx} {...link} />
+    {links.map(link => (
+      <Link key={link.to} {...link} />
     ))}
   </ul>
 )

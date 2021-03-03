@@ -61,6 +61,7 @@ const Pricing = () => (
             Membership <br/>
             Tiers:
           </h1>
+          <p>$100 registration fee, per family</p>
           <p>Discounts available for 3 or more children</p>
         </div>
         <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>

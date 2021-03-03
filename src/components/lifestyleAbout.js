@@ -16,8 +16,7 @@ const Lifestyle = () => {
           <h1>The Lifestyle Medicine Approach</h1>
           <p>
             Lifestyle Medicine is the specialty I came across that ultimately pushed me to open my own practice.
-            Using evidence-based medicine, LM treats each patient from the root cause.
-            We will focus on the 6 pillars of LM together (listed in the circles) and help you develop healthier lifestyle decisions to prevent any chronic illness in your future.
+            LM treats each patient from the root cause by focusing on its pillars: eating healthy (we’re big fans of plant-based meals), having fun with physical activity, the importance of sleep, harvesting healthy relationships, stress management, and avoiding substances.
           </p>
           <h3 className={styles.subheader}>
             Below are some Lifestyle Medicine resources 
