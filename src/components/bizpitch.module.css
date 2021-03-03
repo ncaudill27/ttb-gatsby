@@ -1,0 +1,30 @@
+@import '../styles/custom-properties.css';
+
+.wrapper {
+  border-top: 3px solid var(--carrot);
+  border-bottom: 3px solid var(--carrot);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  color: black;
+}
+
+.copy {
+  flex-grow: 1;
+}
+
+.logo {
+  flex-grow: 1;
+  margin-top: 2rem;
+  width: 300px;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}

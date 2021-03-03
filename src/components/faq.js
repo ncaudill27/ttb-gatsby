@@ -32,7 +32,7 @@ const qaList = [
   },
   {
     question: "Do you accept patients without insurance?",
-    answer: "Absolutely. For many families without insurance one visit to an Emergency Room, for a non-urgent problem, might prove to be more expensive than a whole year of membership. The Tiny Beet is NOT an Emergency Room or Urgent Care. Dr. Rivera-Caudill is a general pediatrician that will strive to provide the most comprehensive service she can, in addition to deep discounts on diagnostic services."
+    answer: "Absolutely. For many families without insurance one visit to an Emergency Room, for a non-urgent problem, might prove to be more expensive than months of membership. The Tiny Beet is NOT an Emergency Room or Urgent Care. Dr. Rivera-Caudill is a general pediatrician that will strive to provide the most comprehensive service she can, in addition to deep discounts on diagnostic services."
   },
   {
     question: "Do you require vaccinations?",

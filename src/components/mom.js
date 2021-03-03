@@ -23,9 +23,6 @@ const Mom = () => (
           I invite you and your family to join me in improving the health in our Savannah community, a tiny step at a time.
         </p>
         <p>
-          "I invite you and your family to join me in improving the health in our community, a tiny step at a time."
-        </p>
-        <p>
           Dr. Yolanda Rivera-Caudill, MD, FAAP, DipABLM <br/>
           “The Dr. Beet” 
         </p>

@@ -11,6 +11,7 @@ import Join from '../components/join'
 import Quote from '../components/quote'
 import Testimonials from '../components/testimonials'
 import FAQ from '../components/faq'
+import Bizpitch from '../components/bizpitch'
 
 import '../styles/calendly.css'
 
@@ -29,6 +30,7 @@ const IndexPage = () => (
     <FAQ />
     <Join />
     <Testimonials />
+    <Bizpitch />
   </Layout>
 )
 

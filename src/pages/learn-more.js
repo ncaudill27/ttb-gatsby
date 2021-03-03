@@ -23,6 +23,7 @@ const AboutPage = () => (
     <NonMembers />
     <Newsletter />
     { typeof window !== 'undefined' && <Map /> }
+
   </Layout>
 )
 
