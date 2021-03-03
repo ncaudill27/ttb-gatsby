@@ -1,6 +1,7 @@
 @import '../styles/custom-properties.css';
 
 .root {
+  margin-top: 90px;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +12,6 @@
 .title {
   margin: 0 auto 2rem;
   text-align: center;
-  font-size: 4rem;
 }
 
 .caption {
@@ -26,8 +26,10 @@
     height: 100vh;
     padding-top: 3rem;
   }
+}
 
+@media (min-width: 700px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }

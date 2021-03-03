@@ -28,19 +28,19 @@ const qaList = [
   },
   {
     question: "Can you tell me more about Lifestyle Medicine (LM)?",
-    answer: "Lifestyle Medicine addresses the root cause of disease with evidence-based (scientifically proven) therapies on behaviors such as diet, sleep, social connectivity and stress management  and how these correlate to many chronic illnesses. We believe that children that learn this approach early in life greatly increase their odds to live a long, healthy life as adults.\n\nLM approach is an addition to conventional treatments—like antibiotics or other medications. The Tiny Beet strives to provide its members with personalized education in the pillars of Lifestyle Medicine where a family deems necessary."
+    answer: "Lifestyle Medicine addresses the root cause of disease with evidence-based (scientifically proven) therapies on behaviors such as diet, sleep, social connectivity and stress management  and how these correlate to many chronic illnesses. We believe that children that learn this approach early in life greatly increase their odds to live a long, healthy life as adults.\n\nLM approach is an addition to conventional treatments—like antibiotics or other medication—not a replacement. The Tiny Beet strives to provide its members with personalized education in the pillars of Lifestyle Medicine where a family deems necessary."
   },
   {
     question: "Do you accept patients without insurance?",
-    answer: "Absolutely. For many families without insurance one visit to an Emergency Room might prove to be more expensive than a whole year of membership. The Tiny Beet is NOT an Emergency Room or Urgent Care. Dr. Rivera-Caudill is a general pediatrician that will strive to provide the most comprehensive service she can, in addition to deep discounts on diagnostic services."
+    answer: "Absolutely. For many families without insurance one visit to an Emergency Room, for a non-urgent problem, might prove to be more expensive than a whole year of membership. The Tiny Beet is NOT an Emergency Room or Urgent Care. Dr. Rivera-Caudill is a general pediatrician that will strive to provide the most comprehensive service she can, in addition to deep discounts on diagnostic services."
   },
   {
     question: "Do you require vaccinations?",
-    answer: "Yes. Dr. Rivera-Caudill follows all guidelines per American Academy of Pediatrics and CDC Advisory Committee on Immunizations (ACIP)."
+    answer: "Yes. Dr. Rivera-Caudill follows guidelines per American Academy of Pediatrics and CDC Advisory Committee on Immunizations (ACIP)."
   },
   {
     question: "I am ready to be a member! How do I secure my spot?",
-    answer: "So glad you’re interested! Schedule a meet and greet with Dr. Caudill on the website. She will go into detail with how the practice works, meet the family, and answer any questions you might have. Once you decide to become a member we’ll send you a link to our EMR portal to register. We’re glad you want to join the bunch!"
+    answer: "So glad you’re interested! Schedule a meet and greet with Dr. Caudill on the website. She will go into detail with how the practice works, meet your family, and answer any questions you might have. We’re glad you want to join the bunch!"
   },
   {
     question: "How do I pay?",
