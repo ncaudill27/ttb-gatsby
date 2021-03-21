@@ -16,46 +16,46 @@ const Grid = () => (
   <div className={styles.container}>
     <div className={styles.grid}>
       <div className={styles.board}>
-        <BoardIcon className={styles.icon} />
+        <BoardIcon className={styles.icon} alt="minimalist outline of a cutting board with a chef's knife carrots, tofu, tomatoes" />
         <p>teaching how to cook healthy meals</p>
         <p>(with budget and timing in mind)</p>
       </div>
       <div className={styles.clock}>
-        <ClockIcon className={styles.icon} />
+        <ClockIcon className={styles.icon} alt='minimalist outline of a clock' />
         <p>
           30min visits with the doctor
         </p>
       </div>
       <div className={styles.doctor}>
-        <DoctorIcon className={styles.icon} />
+        <DoctorIcon className={styles.icon} alt='minimalist outline of a doctor wearing a mask' />
         <p>
           in-office visits
         </p>
       </div>
       <div className={styles.hoop}>
-        <HoopIcon className={styles.icon} />
+        <HoopIcon className={styles.icon} alt='minimalist outline of basketball hoop' />
         <p>
           sport physicals
         </p>
       </div>
       <div className={styles.house}>
-        <HouseIcon className={styles.icon} />
+        <HouseIcon className={styles.icon} alt='minimalist outline of the front of a house' />
         <p>
           at home visits for newborns
         </p>
       </div>
       <div className={styles.phone}>
-        <PhoneIcon className={styles.icon} />
+        <PhoneIcon className={styles.icon} alt='minimalist outline of a phone with a masked doctor on the screen' />
         <p>
           text, phone, telemedicine
         </p>
       </div>
       <div className={styles.timer}>
-        <TimerIcon className={styles.icon} />
+        <TimerIcon className={styles.icon} alt='minimalist outline of an hourglass' />
         <p>minimal or no wait times in waiting room</p>
       </div>
       <div className={styles.veggies}>
-        <VeggiesIcon className={styles.icon} />
+        <VeggiesIcon className={styles.icon} alt='minimalist outline of vegetables' />
         <p>Lifestyle Medicine teachings</p>
       </div>
     </div>

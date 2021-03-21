@@ -39,10 +39,10 @@ function Footer() {
               <h3>FIND US ON SOCIAL!</h3>
               <div className={styles.icons}>
                 <a href='https://instagram.com/thedoctorbeet?igshid=1e95ag0yyg2o4' className={styles.icon}>
-                  <Insta />
+                  <Insta alt='Instagram logo linking to The Tiny Beet social media' />
                 </a>
                 <a href='https://www.facebook.com/thedoctorbeet/' className={styles.icon}>
-                  <FB />
+                  <FB alt='Facebook logo linking to The Tiny Beet social media' />
                 </a>
               </div>
             </div>

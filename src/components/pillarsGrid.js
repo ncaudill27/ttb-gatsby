@@ -14,27 +14,32 @@ const pillars = [
   {
     text: 'FOOD',
     color: '#97BF67',
-    image: <Eating />
+    image: <Eating />,
+    alt: 'cute cartoon beet, smiley happy face, green background'
   },
   {
     text: 'ACTIVITY',
     color: '#F9951D',
-    image: <Physical />
+    image: <Physical />,
+    alt: 'cute cartoon beet, sweaty, happy, and wearing a headband, orange background'
   },
   {
     text: 'SLEEP',
     color: '#387EC3',
-    image: <Sleep />
+    image: <Sleep />,
+    alt: 'cute cartoon beet, smiling and resting, blue background'
   },
   {
     text: 'STRESS',
     color: '#E578CB',
-    image: <Stress />
+    image: <Stress />,
+    alt: 'cute cartoon beet, stressed out and frowning, light fuschia background'
   },
   {
     text: 'CONNECTION',
     color: '#CA6D50',
-    image: <Connection />
+    image: <Connection />,
+    alt: 'cute cartoon beet, smiling with heart eyes, burnt orange background'
   },
 ]
 

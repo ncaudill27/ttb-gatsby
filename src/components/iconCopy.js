@@ -6,7 +6,7 @@ import styles from './iconCopy.module.css'
 
 const IconCopy = ({header, description}) => (
   <div className={styles.item}>
-    <BeetIcon className={styles.icon} />
+    <BeetIcon className={styles.icon} alt='black beet icon' />
     <div className={styles.copy}>
       <h3>{header}</h3>
       <p>{description}</p>

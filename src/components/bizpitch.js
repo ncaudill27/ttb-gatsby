@@ -12,7 +12,7 @@ const Bizpitch = () => (
         <h1>Dr. Caudill was a 2020 BizPitch Savannah finalist!</h1>
         <a className={styles.link} href='https://www.youtube.com/watch?v=Lt5b6MbtumQ'>Check out her pitch by clicking here.</a>
       </div>
-      <BizpitchLogo className={styles.logo} />
+      <BizpitchLogo className={styles.logo} alt="BizPitch logo. Reads: 2020 bizpitch finalist" />
     </div>
   </Section>
 )

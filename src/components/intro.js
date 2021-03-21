@@ -7,7 +7,10 @@ import styles from './intro.module.css'
 
 const Intro = () => (
   <Section color='pri-light' className={styles.root}>
-    <MainLogo className={styles.img} />
+    <MainLogo
+      className={styles.img}
+      alt='The Tiny Beet logo, sitting in a white arch. Reads: The Tiny Beet Lifestyle Medicine Pediatrics.'
+    />
     <div className={styles.copy}>
       <h1 className={styles.title}>
         Welcome to The Tiny Beet, we are here to inspire families of Savannah to live healthier lifestyles.

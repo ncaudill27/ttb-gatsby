@@ -27,7 +27,7 @@ const Mom = () => (
           “The Dr. Beet” 
         </p>
       </div>
-      <MomImage className={styles.img} second />
+      <MomImage className={styles.img} alt="A picture of Dr. Caudill smiling, wearing her physician's coat, and red glasses" second />
     </Dual>
   </Section>
 )

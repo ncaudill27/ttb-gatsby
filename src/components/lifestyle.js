@@ -25,7 +25,12 @@ const Lifestyle = () => (
             className={styles.anchor}
           />
         </div>
-        <MotherDaughter className={styles.img} style={{borderRadius: '50%'}} second />
+        <MotherDaughter
+          alt='A mother standing behind her daughter and helping you prepare dinner.'
+          className={styles.img}
+          style={{borderRadius: '50%'}}
+          second
+        />
       </Dual>
     </Section>
 )
