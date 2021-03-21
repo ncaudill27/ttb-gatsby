@@ -24,7 +24,7 @@
 .copy { margin-bottom: 0; }
 .note { font-size: 0.8rem; }
 
-@media (min-width: 700px) {
+@media (min-width: 1057px) {
   .service {
     width: 160px;    
   }
