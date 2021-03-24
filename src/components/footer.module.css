@@ -14,11 +14,13 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 .details {
   display: flex;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 .logo {
@@ -33,13 +35,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: 16px;
 }
 
 .icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 1rem;
+  gap: 16px;
 }
 
 .icon {
@@ -47,10 +50,6 @@
   height: 55px;
   margin-top: 0.5rem;
   cursor: pointer;
-}
-
-.icon:not(:first-child) {
-  margin-left: 1rem ;
 }
 
 .copy > * {

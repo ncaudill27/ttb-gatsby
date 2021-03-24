@@ -3,6 +3,8 @@ import React from 'react'
 import FooterLogo from './images/footerLogo'
 import FB from './images/iconFB'
 import Insta from './images/iconInsta'
+import ACLM from './images/logoACLM'
+import AAP from './images/logoAAP'
 
 import styles from './footer.module.css'
 
@@ -48,6 +50,15 @@ function Footer() {
             </div>
             <div className={styles.copy}>
               <p>&copy; {new Date().getFullYear()} The Tiny Beet. All Rights Reserved.</p>
+            </div>
+          </div>
+          <div className={styles.stack} style={{gap: '32px'}}>
+            <h3>BOARD CERTIFICATIONS</h3>
+            <div className={styles.board}>
+              <AAP />
+            </div>
+            <div className={styles.board}>
+              <ACLM />
             </div>
           </div>
         </div>
