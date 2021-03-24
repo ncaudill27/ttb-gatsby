@@ -7,7 +7,7 @@ import MomImage from './images/momImage'
 import styles from './mom.module.css'
 
 const Mom = () => (
-  <Section className={styles.landing} color='sec-dark'>
+  <Section className={styles.landing} color='sec-light'>
     <div className={styles.intro}>
       <h2 className={styles.title}>A LETTER FROM THE DOC</h2>
     </div>

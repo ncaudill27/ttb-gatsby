@@ -27,7 +27,7 @@ Quote.propTypes = {
 }
 
 Quote.defaultProps = {
-  color: 'sec-light'
+  color: 'sec-dark'
 }
 
 export default Quote

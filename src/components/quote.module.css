@@ -1,7 +1,10 @@
+@import '../styles/custom-properties.css';
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .wrapper {
@@ -14,9 +17,14 @@
   font-size: 2.6rem;
   text-align: center;
   font-weight: 400;
+  display: inline-block;
+  backdrop-filter: blur(1px);
+  width: fit-content;
 }
 
 .by {
+  display: block;
   text-align: right;
   margin-right: 2rem;
+  background-color: var(--sec-dark);
 }
