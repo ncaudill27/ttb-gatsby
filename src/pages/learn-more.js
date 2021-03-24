@@ -6,9 +6,9 @@ import AboutIntro from '../components/aboutIntro'
 // import Quote from '../components/quote'
 import Newsletter from '../components/newsletter'
 import Lifestyle from '../components/lifestyleAbout'
-import Pricing from '../components/pricing'
+// import Pricing from '../components/pricing'
 import Map from '../components/map'
-import NonMembers from '../components/nonMembers'
+// import NonMembers from '../components/nonMembers'
 
 const AboutPage = () => (
   <Layout>
@@ -19,8 +19,8 @@ const AboutPage = () => (
       by='Maya Angelou'
     /> */}
     <Lifestyle />
-    <Pricing />
-    <NonMembers />
+    {/* <Pricing />
+    <NonMembers /> */}
     <Newsletter />
     { typeof window !== 'undefined' && <Map /> }
 
