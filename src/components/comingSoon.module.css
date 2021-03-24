@@ -3,6 +3,9 @@
 .root {
   margin-top: 90px;
   height: 80vh;
+  max-width: 270px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +20,7 @@
 .caption {
   margin: 0 1.4rem 1rem;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   max-width: 700px;
 }
 
@@ -29,7 +32,21 @@
 }
 
 @media (min-width: 700px) {
+  .root {
+    max-width: 484px;
+  }
+  
   .title {
     font-size: 4rem;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1100px) {
+  .root {
+    max-width: unset;
   }
 }
