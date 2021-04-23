@@ -12,7 +12,7 @@ const Background = React.forwardRef(({background, children, ...props}, ref) => {
 })
 
 Background.propTypes = {
-  background: PropTypes.element.isRequired,
+  background: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired
 }
 
