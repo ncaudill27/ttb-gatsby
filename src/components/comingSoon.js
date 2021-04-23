@@ -27,13 +27,15 @@ const ComingSoon = () => {
           <p className={styles.caption}>
             Dr. Caudill is pleased to announce her pediatric practice, The Tiny Beet. Secure your spot by scheduling a Meet &amp; Greet with Doctor Beet! Scroll on to learn more!
           </p>
-          <CalendlyButton
-            url='https://calendly.com/thetinybeet/meet-greet'
-            pageSettings={{
-              hideLandingPageDetails: true,
-              hideEventTypeDetails: true,
-            }}
-          />
+          <div className={styles.buttonWrapper}>
+            <CalendlyButton
+              url='https://calendly.com/thetinybeet/meet-greet'
+              pageSettings={{
+                hideLandingPageDetails: true,
+                hideEventTypeDetails: true,
+              }}
+            />
+          </div>
         </div>
       </div>
     </Background>

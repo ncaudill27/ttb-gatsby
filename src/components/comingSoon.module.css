@@ -61,4 +61,30 @@
   .root {
     max-width: unset;
   }
+
+  .card {
+    top: 215px;
+    left: -305px;
+    background: var(--sec-light);
+    height: fit-content;
+    width: 520px;
+    padding: 24px 32px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    text-align: left;
+    margin: 0 0 24px;
+  }
+
+  .caption {
+    text-align: left;
+    margin: 0 0 16px;
+  }
+
+  .buttonWrapper {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(51%);
+  }
 }
