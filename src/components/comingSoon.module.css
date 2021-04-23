@@ -29,10 +29,12 @@
   backdrop-filter: blur(10px);
 }
 
+.first {
+  display: inline-block;
+}
+
 .first:after {
   display: inline-block;
-  position: relative;
-  top: 0;
   content: 'st';
   font-size: 0.75em;
   transform: translateY(-35%);
