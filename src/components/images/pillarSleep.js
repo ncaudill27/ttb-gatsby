@@ -14,7 +14,7 @@ const SleepPillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const SleepPillar = props => {
   )
 }
 
-export default SleepPillar;
+export default SleepPillar

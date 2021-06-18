@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const TimerIcon = (props) => {
+const TimerIcon = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "dpcTimer.png" }) {
@@ -14,7 +14,7 @@ const TimerIcon = (props) => {
       }
     }
   `)
-  
+
   if (!data?.placeholderImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>
   }

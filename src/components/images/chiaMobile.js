@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const ChiaMobile = (props) => {
+const ChiaMobile = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "chia-seeds.png" }) {
@@ -14,7 +14,7 @@ const ChiaMobile = (props) => {
       }
     }
   `)
-  
+
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }

@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react"
 
-import MenuLink from './menuLink'
+import MenuLink from "./menuLink"
 
-import styles from './links.module.css'
+import styles from "./links.module.css"
 
-const MenuLinks = ({routes, toggleOpen}) => {
+const MenuLinks = ({ routes, toggleOpen }) => {
   const firstLinkEl = useRef()
 
   useEffect(() => {
@@ -13,24 +13,16 @@ const MenuLinks = ({routes, toggleOpen}) => {
 
   return (
     <div
-      id='menu'
+      id="menu"
       className={styles.root}
-      role='menu'
-      aria-labelledby='menubutton'
+      role="menu"
+      aria-labelledby="menubutton"
     >
-    <MenuLink
-      ref={firstLinkEl}
-      path='/'
-      toggleOpen={toggleOpen}
-    />
-    {routes.map( ({path}) => (
-      <MenuLink
-        key={path}
-        path={path}
-        toggleOpen={toggleOpen}
-      />
-    ))}
-  </div>
+      <MenuLink ref={firstLinkEl} path="/" toggleOpen={toggleOpen} />
+      {routes.map(({ path }) => (
+        <MenuLink key={path} path={path} toggleOpen={toggleOpen} />
+      ))}
+    </div>
   )
 }
 

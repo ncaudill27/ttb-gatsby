@@ -1,49 +1,47 @@
-import React, { useState } from 'react'
-import { handleEnterKey } from '../utils/handlers'
-import PropTypes from 'prop-types'
+import React, { useState } from "react"
+import { handleEnterKey } from "../utils/handlers"
+import PropTypes from "prop-types"
 
-import MenuButton from './menuButton'
-import MenuLinks from './links'
+import MenuButton from "./menuButton"
+import MenuLinks from "./links"
 
-import styles from './menu.module.css'
+import styles from "./menu.module.css"
 
-const Menu = ({routes}) => {
-  
+const Menu = ({ routes }) => {
   const [isOpen, setOpen] = useState(false)
-  const toggleOpen = () => setOpen( prev => !prev )
+  const toggleOpen = () => setOpen(prev => !prev)
 
   return (
     <>
       <MenuButton
-        id='menubutton'
+        id="menubutton"
         className={styles.button}
         // handlers
         onClick={toggleOpen}
         onKeyDown={handleEnterKey(toggleOpen)}
         // accessibility
         tabIndex={0}
-        role='button'
-        aria-haspopup='true'
-        aria-controls='menu'
+        role="button"
+        aria-haspopup="true"
+        aria-controls="menu"
         aria-expanded={isOpen}
       />
-      {isOpen && <>
-        <div
-          className={styles.overlay}
-          aria-hidden='true'
-          onClick={toggleOpen}
-        />
-        <MenuLinks
-          toggleOpen={toggleOpen}
-          routes={routes}
-        />
-      </>}
+      {isOpen && (
+        <>
+          <div
+            className={styles.overlay}
+            aria-hidden="true"
+            onClick={toggleOpen}
+          />
+          <MenuLinks toggleOpen={toggleOpen} routes={routes} />
+        </>
+      )}
     </>
   )
 }
 
 Menu.propTypes = {
-  routes: PropTypes.arrayOf(PropTypes.object)
+  routes: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default Menu

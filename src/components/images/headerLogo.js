@@ -14,7 +14,7 @@ const HeaderLogo = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const HeaderLogo = props => {
   )
 }
 
-export default HeaderLogo;
+export default HeaderLogo

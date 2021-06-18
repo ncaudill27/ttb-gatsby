@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Navlink from './navlink'
+import Navlink from "./navlink"
 
-const Navbar = ({routes}) => (
+const Navbar = ({ routes }) => (
   <>
-    {routes.map( ({path}) => (
+    {routes.map(({ path }) => (
       <Navlink path={path} key={path} />
     ))}
   </>

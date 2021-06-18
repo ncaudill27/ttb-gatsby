@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Calendly from './calendly'
-import ParallaxBackground from './backgrounds/parallax'
-
+import Calendly from "./calendly"
+import ParallaxBackground from "./backgrounds/parallax"
 
 const Join = () => (
-  <ParallaxBackground color='sec-dark'>
+  <ParallaxBackground color="sec-dark">
     <Calendly first />
   </ParallaxBackground>
 )

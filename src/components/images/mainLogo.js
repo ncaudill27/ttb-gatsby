@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const MainLogo = (props) => {
+const MainLogo = props => {
   const data = useStaticQuery(graphql`
     query {
       mainLogo: file(relativePath: { eq: "main-logo.png" }) {
@@ -14,7 +14,7 @@ const MainLogo = (props) => {
       }
     }
   `)
-  
+
   if (!data?.mainLogo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }

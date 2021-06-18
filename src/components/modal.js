@@ -1,16 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
-import Dialog from '@reach/dialog'
-import '../styles/custom-properties.css'
+import Dialog from "@reach/dialog"
+import "../styles/custom-properties.css"
 
-const Modal = ({showDialog, closeDialog, children, ...props}) => (
-  <StyledDialog
-    isOpen={showDialog}
-    onDismiss={closeDialog}
-    {...props}
-  >
+const Modal = ({ showDialog, closeDialog, children, ...props }) => (
+  <StyledDialog isOpen={showDialog} onDismiss={closeDialog} {...props}>
     {children}
   </StyledDialog>
 )
@@ -44,5 +40,7 @@ const StyledDialog = styled(Dialog)`
 Modal.propTypes = {
   ariaLabelledby: PropTypes.string.isRequired,
   showDialog: PropTypes.func.isRequired,
-  closeDialog: PropTypes.func.isRequired
+  closeDialog: PropTypes.func.isRequired,
 }
+
+export default Modal

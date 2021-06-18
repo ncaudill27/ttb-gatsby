@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const HeaderLogo = (props) => {
+const HeaderLogo = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "menu.png" }) {
@@ -26,4 +26,4 @@ const HeaderLogo = (props) => {
   )
 }
 
-export default HeaderLogo;
+export default HeaderLogo

@@ -14,10 +14,8 @@ function SEO({ description, lang, meta, title }) {
   const {
     site,
     metaImage: {
-      childImageSharp: {
-        fixed: metaImage 
-      }
-    }
+      childImageSharp: { fixed: metaImage },
+    },
   } = useStaticQuery(
     graphql`
       query {
@@ -30,7 +28,7 @@ function SEO({ description, lang, meta, title }) {
             siteUrl
           }
         }
-        metaImage: file(relativePath: {eq: "main-logo.png"}) {
+        metaImage: file(relativePath: { eq: "main-logo.png" }) {
           childImageSharp {
             fixed(width: 64, height: 82) {
               src
@@ -47,7 +45,7 @@ function SEO({ description, lang, meta, title }) {
   const defaultTitle = site.siteMetadata?.title
   const metaKeywords = site.siteMetadata?.keywords?.join(",")
   const image =
-      metaImage && metaImage.src
+    metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null
 
@@ -64,8 +62,8 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: 'keywords',
-          content: metaKeywords
+          name: "keywords",
+          content: metaKeywords,
         },
         {
           property: `og:title`,
@@ -92,34 +90,34 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ]
-      .concat(
-        metaImage
-          ? [
-              {
-                property: `og:image`,
-                content: image,
-              },
-              {
-                property: `og:image:width`,
-                content: metaImage.width,
-              },
-              {
-                property: `og:image:height`,
-                content: metaImage.height,
-              },
-              {
-                name: `twitter:card`,
-                content: `summary_large_image`,
-              },
-            ]
-          : [
-              {
-                name: `twitter:card`,
-                content: `summary`,
-              },
-            ]
-      )
-      .concat(meta)}
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: `og:image`,
+                  content: image,
+                },
+                {
+                  property: `og:image:width`,
+                  content: metaImage.width,
+                },
+                {
+                  property: `og:image:height`,
+                  content: metaImage.height,
+                },
+                {
+                  name: `twitter:card`,
+                  content: `summary_large_image`,
+                },
+              ]
+            : [
+                {
+                  name: `twitter:card`,
+                  content: `summary`,
+                },
+              ]
+        )
+        .concat(meta)}
     />
   )
 }
@@ -128,14 +126,14 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-  keywords: ``
+  keywords: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 }
 
 export default SEO

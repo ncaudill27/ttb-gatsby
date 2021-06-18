@@ -14,7 +14,7 @@ const ConnectionPillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const ConnectionPillar = props => {
   )
 }
 
-export default ConnectionPillar;
+export default ConnectionPillar

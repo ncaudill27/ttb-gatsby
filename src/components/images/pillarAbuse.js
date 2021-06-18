@@ -14,7 +14,7 @@ const AbusePillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const AbusePillar = props => {
   )
 }
 
-export default AbusePillar;
+export default AbusePillar

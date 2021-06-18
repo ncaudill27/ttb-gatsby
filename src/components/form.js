@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
-import styles from './form.module.css'
+import styles from "./form.module.css"
 
-const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
-
+const Form = ({ showForm, toggleForm, resetForm, children, ...props }) => {
   const [resetCalled, setResetCalled] = useState(false)
   useEffect(() => {
     if (!showForm && !resetCalled) {
@@ -15,20 +14,12 @@ const Form = ({showForm, toggleForm, resetForm, children, ...props}) => {
 
   return (
     <>
-      <div
-        className={styles.overlay}
-        onClick={toggleForm}
-        aria-hidden='true'
-      />
-      <form
-        className={styles.form}
-        {...props}
-      >
+      <div className={styles.overlay} onClick={toggleForm} aria-hidden="true" />
+      <form className={styles.form} {...props}>
         {children}
       </form>
     </>
   )
-
 }
 
 export default Form

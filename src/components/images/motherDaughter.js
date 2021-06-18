@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const MotherDaughter = (props) => {
+const MotherDaughter = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "mother-daughter.jpg" }) {
@@ -21,7 +21,10 @@ const MotherDaughter = (props) => {
 
   return (
     <div {...props}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid}  style={{borderRadius: '50%'}} />
+      <Img
+        fluid={data.placeholderImage.childImageSharp.fluid}
+        style={{ borderRadius: "50%" }}
+      />
     </div>
   )
 }

@@ -14,7 +14,7 @@ const StressPillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const StressPillar = props => {
   )
 }
 
-export default StressPillar;
+export default StressPillar

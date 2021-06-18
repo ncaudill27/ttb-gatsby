@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import styles from './flex.module.css'
+import styles from "./flex.module.css"
 
-const Flex = ({children, ...props}) => {
+const Flex = ({ children, ...props }) => {
   return (
     <div className={styles.flex} {...props}>
       {children}

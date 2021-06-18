@@ -1,17 +1,14 @@
-import { useEffect, useState } from 'react'
-import useScroll from './useScroll'
-
+import { useEffect, useState } from "react"
+import useScroll from "./useScroll"
 
 export default function useParallax(ref, color) {
-
   const [, scrollTop] = useScroll()
   const [backgroundStyle, setBackgroundStyle] = useState(null)
 
   // const [imgTop, setImgTop] = useState(null)
 
-  useEffect( () => {
-
-    if (typeof window !== 'undefined') {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       // const screenHeight = window.innerHeight
 
       // use bounds of ref
@@ -27,16 +24,14 @@ export default function useParallax(ref, color) {
       // set updated screen changes
       // setImgTop(`${15 - top / 9}px`)
 
-        setBackgroundStyle({
-          width: `100%`,
-          height: '120%',
-          top: `0`,
-          backgroundColor: `var(--${color})`,
-          zIndex: '-1'
-        })
+      setBackgroundStyle({
+        width: `100%`,
+        height: "120%",
+        top: `0`,
+        backgroundColor: `var(--${color})`,
+        zIndex: "-1",
+      })
     }
-    
-
   }, [ref, scrollTop, color])
 
   return backgroundStyle

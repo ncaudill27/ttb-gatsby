@@ -14,7 +14,7 @@ const EatingPillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const EatingPillar = props => {
   )
 }
 
-export default EatingPillar;
+export default EatingPillar

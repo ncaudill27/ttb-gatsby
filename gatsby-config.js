@@ -1,7 +1,7 @@
 const breakpoints = {
-  sm: '(max-width: 700px)',
-  md: '(max-width: 1232px)',
-  l: '(min-width: 1233px)'
+  sm: "(max-width: 700px)",
+  md: "(max-width: 1232px)",
+  l: "(min-width: 1233px)",
 }
 
 module.exports = {
@@ -31,8 +31,8 @@ module.exports = {
       "concierge doctor",
       "pediatrician with no health insurance",
       "What if I don't have insurance for my children?",
-      "What if I don't have insurance for my child?"
-    ]
+      "What if I don't have insurance for my child?",
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -49,8 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-breakpoints`,
       options: {
-        queries: breakpoints
-      }
+        queries: breakpoints,
+      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
@@ -58,11 +58,11 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Tenor Sans',
+              family: "Tenor Sans",
             },
             {
-              family: 'Montserrat',
-              variants: ['400', '600'],
+              family: "Montserrat",
+              variants: ["400", "600"],
             },
           ],
         },
@@ -71,7 +71,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
-        offset: -111
+        offset: -111,
       },
     },
     {

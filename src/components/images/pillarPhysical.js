@@ -14,7 +14,7 @@ const PhysicalPillar = props => {
       }
     }
   `)
-  
+
   if (!data?.logo?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
@@ -26,4 +26,4 @@ const PhysicalPillar = props => {
   )
 }
 
-export default PhysicalPillar;
+export default PhysicalPillar

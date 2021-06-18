@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import Section from './section'
+import Section from "./section"
 
 const AboutIntro = () => (
-  <Root color='pri-dark' background>
+  <Root color="pri-dark" background>
     <Wrapper>
       <Title>
         The Tiny Beet is Savannah’s first Lifestyle Medicine pediatric practice.

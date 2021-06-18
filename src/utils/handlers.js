@@ -3,7 +3,7 @@ export const handleEnterKey = func => e => {
 }
 
 export const handleEscKey = func => e => {
-  if (e.key !== 'Escape') {
+  if (e.key !== "Escape") {
     return
   } else {
     func()
@@ -11,5 +11,5 @@ export const handleEscKey = func => e => {
 }
 
 export const handleTabKey = func => e => {
-  if (e.key === 'Tab') func()
+  if (e.key === "Tab") func()
 }
