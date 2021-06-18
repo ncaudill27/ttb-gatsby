@@ -13,11 +13,11 @@ import styles from "./subscribeForm.module.css"
 const SubscribeForm = props => {
   const firstInputEl = useRef()
 
-  useEffect(() => {
-    if (props.showForm) {
-      firstInputEl.current.focus()
-    }
-  }, [props.showForm])
+  // useEffect(() => {
+  //   if (props.showForm) {
+  //     firstInputEl.current.focus()
+  //   }
+  // }, [props.showForm])
 
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState("")
@@ -95,11 +95,12 @@ const SubscribeForm = props => {
       <div className={styles.inputs}>
         <TextField
           id="firstName"
-          ref={firstInputEl}
+          // ref={firstInputEl}
           name={name}
           placeholder="Please enter your first name"
           handleChange={handleChange(setName, clearNameError)}
-          onKeyDown={handleEscKey(props.toggleForm)}
+          
+          onKeyDown={handleEscKey(props.closeForm)}
           disabled={loading}
           error={nameError}
         />
@@ -108,7 +109,8 @@ const SubscribeForm = props => {
           name={email}
           placeholder="Please enter your email"
           handleChange={handleChange(setEmail, clearEmailError)}
-          onKeyDown={handleEscKey(props.toggleForm)}
+          
+          onKeyDown={handleEscKey(props.closeForm)}
           disabled={loading}
           error={emailError}
         />
@@ -120,7 +122,9 @@ const SubscribeForm = props => {
           ))}
         </div>
       )}
-      <Button disabled={loading} onKeyDown={handleEscKey(props.toggleForm)}>
+      <Button disabled={loading} 
+      onKeyDown={handleEscKey(props.closeForm)}
+      >
         Join our newsletter
       </Button>
     </Form>

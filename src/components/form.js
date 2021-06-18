@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
 
+import Modal from '../components/modal'
+
 import styles from "./form.module.css"
 
-const Form = ({ showForm, toggleForm, resetForm, children, ...props }) => {
+const Form = ({ showForm, closeForm, resetForm, children, ...props }) => {
   const [resetCalled, setResetCalled] = useState(false)
   useEffect(() => {
     if (!showForm && !resetCalled) {
@@ -13,12 +15,11 @@ const Form = ({ showForm, toggleForm, resetForm, children, ...props }) => {
   }, [showForm, resetForm, resetCalled, setResetCalled])
 
   return (
-    <>
-      <div className={styles.overlay} onClick={toggleForm} aria-hidden="true" />
+    <Modal onDismiss={closeForm}>
       <form className={styles.form} {...props}>
         {children}
       </form>
-    </>
+    </Modal>
   )
 }
 

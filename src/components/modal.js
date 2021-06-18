@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Dialog from "@reach/dialog"
+import '@reach/dialog/styles.css'
 import "../styles/custom-properties.css"
 
 const Modal = ({ showDialog, closeDialog, children, ...props }) => (
@@ -12,21 +13,15 @@ const Modal = ({ showDialog, closeDialog, children, ...props }) => (
 )
 
 const StyledDialog = styled(Dialog)`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
   margin: auto;
-  height: 100vh;
   width: 100%;
-  padding: 1rem;
-  background-color: var(--pri-light);
-  overflow-y: scroll;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: none;
+  padding: 0;
 
   @media (min-width: 700px) {
     max-width: 500px;
@@ -35,6 +30,7 @@ const StyledDialog = styled(Dialog)`
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  
 `
 
 Modal.propTypes = {

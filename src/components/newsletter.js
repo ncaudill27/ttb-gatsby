@@ -9,7 +9,8 @@ import styles from "./newsletter.module.css"
 
 const Newsletter = () => {
   const [showForm, setShowForm] = useState(false)
-  const toggleForm = () => setShowForm(prev => !prev)
+  const openForm = () => setShowForm(true)
+  const closeForm = () => setShowForm(false)
 
   return (
     <Section color="pri-dark" background>
@@ -23,10 +24,10 @@ const Newsletter = () => {
             </p>
           </div>
           <div className={styles.center} second>
-            <Button onClick={toggleForm}>Subscribe</Button>
+            <Button onClick={openForm}>Subscribe</Button>
           </div>
         </Dual>
-        <SubscribeForm showForm={showForm} toggleForm={toggleForm} />
+        <SubscribeForm showForm={showForm} closeForm={closeForm} openForm={openForm} />
       </div>
     </Section>
   )
