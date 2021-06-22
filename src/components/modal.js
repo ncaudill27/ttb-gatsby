@@ -3,11 +3,15 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Dialog from "@reach/dialog"
-import '@reach/dialog/styles.css'
+import "@reach/dialog/styles.css"
 // import "../styles/custom-properties.css"
 
-const Modal = ({ showDialog, closeDialog, children, ...props }) => (
-  <StyledDialog isOpen={showDialog} onDismiss={closeDialog} {...props}>
+const Modal = ({ showDialog, closeDialog, ariaLabelledby, children }) => (
+  <StyledDialog
+    isOpen={showDialog}
+    onDismiss={closeDialog}
+    aria-labelledby={ariaLabelledby}
+  >
     {children}
   </StyledDialog>
 )
@@ -28,7 +32,6 @@ const StyledDialog = styled(Dialog)`
     max-width: 500px;
     border-radius: 3px;
   }
-  
 `
 
 Modal.propTypes = {

@@ -1,5 +1,10 @@
 @import '../styles/custom-properties.css';
 
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   font-size: 2rem;
   margin-bottom: 0;
@@ -10,11 +15,10 @@
 }
 
 .response {
-  padding: 0 0 1rem;
   color: green;
   font-weight: bold
 }
 
 .error {
-  color: red;;
+  color: red;
 }

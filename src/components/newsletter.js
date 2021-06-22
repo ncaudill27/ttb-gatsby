@@ -18,15 +18,18 @@ const Newsletter = () => {
         <div first>
           <h1>Keep yourself in the loop</h1>
           <p>
-            Stay up to date on all of The Tiny Beet updates, news, and
-            seminars.
+            Stay up to date on all of The Tiny Beet updates, news, and seminars.
           </p>
         </div>
         <div className={styles.center} second>
-          <Button onClick={openForm}>Subscribe</Button>
+          <SubscribeForm
+          showForm={showForm}
+          closeForm={closeForm}
+          openForm={openForm}
+          />
         </div>
       </Dual>
-      <SubscribeForm showForm={showForm} closeForm={closeForm} openForm={openForm} />
+      
     </Section>
   )
 }

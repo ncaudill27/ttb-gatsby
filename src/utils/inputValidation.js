@@ -1,7 +1,7 @@
-const validateName = name => {
-  const regex = new RegExp(/^[a-z ,.'-]+$/, "i")
-  return regex.test(name)
-}
+// const validateName = name => {
+//   const regex = new RegExp(/^[a-z ,.'-]+$/, "i")
+//   return regex.test(name)
+// }
 
 const validateEmail = email => {
   const regex = new RegExp(
@@ -15,17 +15,17 @@ const validateEmail = email => {
 const validateSubmission = async ({ loggingFunc, name, email }) => {
   let [validName, validEmail] = [true, true]
 
-  if (!name) loggingFunc("First Name cannot be empty")
+  // if (!name) loggingFunc("First Name cannot be empty")
   if (!email) loggingFunc("Email cannot be empty")
 
   if (!validateEmail(email)) loggingFunc("Please enter a valid email")
-  if (!validateName(name)) loggingFunc("Please enter a valid first name")
+  // if (!validateName(name)) loggingFunc("Please enter a valid first name")
 
-  if (!name || !validateName(name)) validName = false
+  // if (!name || !validateName(name)) validName = false
 
   if (!email || !validateEmail(email)) validEmail = false
 
-  return { validName, validEmail }
+  return { validEmail }
 }
 
 export { validateSubmission }

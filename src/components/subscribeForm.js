@@ -13,55 +13,51 @@ import styles from "./subscribeForm.module.css"
 const SubscribeForm = props => {
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState("")
-  const [name, setName] = useState("")
+  // const [name, setName] = useState("")
   const [response, setResponse] = useState([])
-  const [nameError, setNameError] = useState(false)
+  // const [nameError, setNameError] = useState(false)
   const [emailError, setEmailError] = useState(false)
   const [serverError, setServerError] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
 
   const resetState = () => {
     setLoading(false)
     setEmail("")
-    setName("")
+    // setName("")
     setResponse([])
-    setNameError(false)
+    // setNameError(false)
     setEmailError(false)
     setServerError(false)
-  }
-
-  const clearNameError = () => {
-    if (nameError) setNameError(false)
-  }
-  const clearEmailError = () => {
-    if (emailError) setEmailError(false)
   }
 
   const updateResponse = string => {
     setResponse(responses => [...responses, string])
   }
-  const handleChange = (setFn, clearErrorFn) => e => {
+  const handleChange = (setFn) => e => {
     setFn(e.target.value)
-    clearErrorFn()
   }
 
   const handleSubmit = async e => {
+
+    if (!!honeypot) return
+    
     e.preventDefault()
     // clear any current responses
     setResponse([])
     // call validation function to check inputs and log any discrepancies
-    const { validName, validEmail } = await validateSubmission({
+    const { validEmail } = await validateSubmission({
       loggingFunc: updateResponse,
-      name,
+      // name,
       email,
     })
     // update styling if errors
-    if (!validName) setNameError(true)
+    // if (!validName) setNameError(true)
     if (!validEmail) setEmailError(true)
     // block from sending request to mailchimp if not validated
-    if (!validName || !validEmail) return
+    if (!validEmail) return
 
     setLoading(true)
-    const { error } = await postMailchimpSubscriber(email, name)
+    const { error } = await postMailchimpSubscriber(email)
     setLoading(false)
 
     if (error) {
@@ -69,52 +65,42 @@ const SubscribeForm = props => {
       setServerError(true)
       return // kick out response
     }
-
+ 
     updateResponse("You're all signed up! Thank you!")
     //? anything useful we can do with the return data
     //? possibly log is somewhere
   }
 
   const responseStyles =
-    nameError || emailError || serverError
+    emailError || serverError
       ? classNames(styles.response, styles.error)
       : styles.response
 
-  if (!props.showForm) return null
   return (
-    <Form onSubmit={handleSubmit} resetForm={resetState} {...props}>
-      <h1 className={styles.header}>Subscribe</h1>
+    <form onSubmit={handleSubmit} resetForm={resetState} {...props} className={styles.root}>
+      <div className={responseStyles}>
+        {response.map(response => (
+          <div key={response}>{response}</div>
+        ))}
+      </div>
       <div className={styles.inputs}>
-        <TextField
-          id="firstName"
-          value={name}
-          placeholder="Please enter your first name"
-          onChange={handleChange(setName, clearNameError)}
-          disabled={loading}
-          error={nameError}
-        />
+        <div style={{display: 'none'}}>
+          <label htmlFor='name'>Name</label>
+          <input id='name' value={honeypot} onChange={handleChange(setHoneypot)} />
+        </div>
         <TextField
           id="email"
           value={email}
           placeholder="Please enter your email"
-          onChange={handleChange(setEmail, clearEmailError)}
+          onChange={handleChange(setEmail)}
           disabled={loading}
           error={emailError}
         />
       </div>
-      {!!response.length && (
-        <div className={responseStyles}>
-          {response.map(response => (
-            <div key={response}>{response}</div>
-          ))}
-        </div>
-      )}
-      <Button disabled={loading} 
-      onKeyDown={handleEscKey(props.closeForm)}
-      >
+      <Button disabled={loading} onKeyDown={handleEscKey(props.closeForm)}>
         Join our newsletter
       </Button>
-    </Form>
+    </form>
   )
 }
 
