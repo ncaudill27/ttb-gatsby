@@ -1,12 +1,3 @@
-.wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 4rem auto;
-}
-
 .center {
   display: flex;
   align-items: center;

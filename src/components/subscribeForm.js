@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState } from "react"
 import classNames from "classnames"
 import { postMailchimpSubscriber } from "../utils/requests"
 import { validateSubmission } from "../utils/inputValidation"
@@ -11,14 +11,6 @@ import TextField from "./textField"
 import styles from "./subscribeForm.module.css"
 
 const SubscribeForm = props => {
-  const firstInputEl = useRef()
-
-  // useEffect(() => {
-  //   if (props.showForm) {
-  //     firstInputEl.current.focus()
-  //   }
-  // }, [props.showForm])
-
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
@@ -95,22 +87,17 @@ const SubscribeForm = props => {
       <div className={styles.inputs}>
         <TextField
           id="firstName"
-          // ref={firstInputEl}
-          name={name}
+          value={name}
           placeholder="Please enter your first name"
-          handleChange={handleChange(setName, clearNameError)}
-          
-          onKeyDown={handleEscKey(props.closeForm)}
+          onChange={handleChange(setName, clearNameError)}
           disabled={loading}
           error={nameError}
         />
         <TextField
           id="email"
-          name={email}
+          value={email}
           placeholder="Please enter your email"
-          handleChange={handleChange(setEmail, clearEmailError)}
-          
-          onKeyDown={handleEscKey(props.closeForm)}
+          onChange={handleChange(setEmail, clearEmailError)}
           disabled={loading}
           error={emailError}
         />

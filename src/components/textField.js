@@ -5,7 +5,7 @@ import { parseLabel } from "../utils/parse"
 import styles from "./textField.module.css"
 
 const TextField = React.forwardRef(
-  ({ id, name, handleChange, error, ...props }, ref) => {
+  ({ id, error, ...props }, ref) => {
     const inputStyles = error
       ? classNames(styles.input, styles.error)
       : styles.input
@@ -19,8 +19,6 @@ const TextField = React.forwardRef(
           id={id}
           ref={ref}
           className={inputStyles}
-          value={name}
-          onChange={handleChange}
           {...props}
         />
       </div>

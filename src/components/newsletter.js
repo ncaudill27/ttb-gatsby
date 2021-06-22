@@ -14,21 +14,19 @@ const Newsletter = () => {
 
   return (
     <Section color="pri-dark" background>
-      <div className={styles.wrapper}>
-        <Dual>
-          <div first>
-            <h1>Keep yourself in the loop</h1>
-            <p>
-              Stay up to date on all of The Tiny Beet updates, news, and
-              seminars.
-            </p>
-          </div>
-          <div className={styles.center} second>
-            <Button onClick={openForm}>Subscribe</Button>
-          </div>
-        </Dual>
-        <SubscribeForm showForm={showForm} closeForm={closeForm} openForm={openForm} />
-      </div>
+      <Dual>
+        <div first>
+          <h1>Keep yourself in the loop</h1>
+          <p>
+            Stay up to date on all of The Tiny Beet updates, news, and
+            seminars.
+          </p>
+        </div>
+        <div className={styles.center} second>
+          <Button onClick={openForm}>Subscribe</Button>
+        </div>
+      </Dual>
+      <SubscribeForm showForm={showForm} closeForm={closeForm} openForm={openForm} />
     </Section>
   )
 }
