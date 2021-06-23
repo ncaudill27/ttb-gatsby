@@ -4,7 +4,6 @@ import { postMailchimpSubscriber } from "../utils/requests"
 import { validateSubmission } from "../utils/inputValidation"
 import { handleEscKey } from "../utils/handlers"
 
-import Form from "./form"
 import Button from "./button"
 import TextField from "./textField"
 
@@ -98,7 +97,7 @@ const SubscribeForm = props => {
         />
       </div>
       <Button disabled={loading} onKeyDown={handleEscKey(props.closeForm)}>
-        Join our newsletter
+        Join
       </Button>
     </form>
   )
